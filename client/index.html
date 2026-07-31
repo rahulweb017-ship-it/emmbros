@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmbros Autocomp Ltd | Auto Parts Mfr in Baddi, HP</title>
+    <style>
+      html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; background: #fff; }
+      #root { height: 100%; width: 100%; overflow: hidden; display: block; }
+      
+      .page-transition-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      
+      /* Fix for iframe responsiveness on mobile/iOS */
+      .emmbros-frame { 
+        border: 0; 
+        width: 100%; 
+        height: 100%; 
+        display: block; 
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+        transform: translateY(10px);
+      }
+      
+      .frame-loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .loading-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: #555;
+        font-family: sans-serif;
+      }
+      
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(0,0,0,0.1);
+        border-radius: 50%;
+        border-top-color: #e3000f;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

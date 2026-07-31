@@ -1,0 +1,15 @@
+{
+  "name": "emmbros-react",
+  "private": true,
+  "version": "1.0.0",
+  "description": "React + Node conversion of the Emmbros Autocomp WordPress site.",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install && npm --prefix tools install",
+    "mirror": "node tools/crawl.js",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "serve": "npm --prefix client run build && npm --prefix server start",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev"
+  }
+}
