@@ -173,6 +173,186 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-code{box-sizing:border-box}.wp-block-code code{direction:ltr;display:block;font-family:inherit;overflow-wrap:break-word;text-align:initial;white-space:pre-wrap}
 /*# sourceURL=/wp-includes/blocks/code/style.min.css */
 </style>
+<style id="leadership-slider-styles">
+#leadership {
+  background-color: #94b9d5 !important;
+  padding: 35px 20px 40px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+#ourjourney .elementor-element-9470eaa {
+  position: relative !important;
+  z-index: 10 !important;
+}
+.leadership-title-main {
+  color: #0B141F !important;
+  font-family: "Cabin Condensed", Sans-serif !important;
+  font-size: 46px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  margin: 0 0 20px 0 !important;
+  text-shadow: none !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.2em !important;
+}
+@media (max-width: 1024px) {
+  .leadership-title-main {
+    font-size: 36px !important;
+    margin-bottom: 18px !important;
+  }
+}
+@media (max-width: 767px) {
+  .leadership-title-main {
+    font-size: 32px !important;
+    margin-bottom: 16px !important;
+  }
+}
+.leadership-card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+.leadership-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px 36px 0 36px;
+  position: relative;
+  box-shadow: 6px 12px 0px #092333, 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.leadership-card.active {
+  display: block;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .leadership-card {
+    padding: 20px 16px 0 16px;
+    border-radius: 18px;
+  }
+}
+.leadership-linkedin-btn {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.leadership-linkedin-btn:hover {
+  transform: scale(1.08);
+}
+.leadership-slide-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 900px) {
+  .leadership-slide-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .leadership-slide-content.reverse-mobile {
+    flex-direction: column-reverse;
+  }
+}
+.leadership-text-col {
+  flex: 1.25;
+  text-align: left;
+}
+.leadership-img-col {
+  flex: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.leadership-img-col img {
+  max-height: 380px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+  display: block;
+}
+@media (max-width: 768px) {
+  .leadership-img-col img {
+    max-height: 280px;
+  }
+}
+.leadership-member-name {
+  color: #dd3b34 !important;
+  font-family: "Cabin Condensed", "Inter", sans-serif !important;
+  font-size: 51px !important;
+  font-weight: 700 !important;
+  margin: 0 0 4px 0 !important;
+  line-height: 1.2 !important;
+}
+@media (max-width: 768px) {
+  .leadership-member-name {
+    font-size: 39px !important;
+  }
+}
+.leadership-member-role {
+  color: #334155;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 18px;
+  display: block;
+}
+.leadership-member-desc {
+  color: #334155;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0 0 12px 0;
+}
+.leadership-member-desc:last-child {
+  margin-bottom: 0;
+}
+.leadership-arrow-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 16px;
+}
+.leadership-arrow-btn {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: #334155 !important;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  outline: none;
+  box-shadow: none !important;
+}
+.leadership-arrow-btn:hover,
+.leadership-arrow-btn:focus {
+  transform: scale(1.15);
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.leadership-arrow-btn svg {
+  width: 44px;
+  height: 44px;
+  fill: #334155 !important;
+  filter: none !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+</style>
 <link rel="stylesheet" id="popup-maker-site-css" href="/wp-content/plugins/popup-maker/dist/assets/site.css?ver=1.23.0" media="all">
 <style id="popup-maker-site-inline-css">
 /* Popup Google Fonts */
@@ -573,14 +753,143 @@ div#pum-16135 {
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-5e2917b team-slider e-flex e-con-boxed e-con e-parent" data-id="5e2917b" data-element_type="container" data-e-type="container" id="leadership" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-ecf4b43 e-con-full e-flex e-con e-child" data-id="ecf4b43" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-1821b38 elementor-widget elementor-widget-heading" data-id="1821b38" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">Leadership That Drives Progress</h2>				</div>
-				</div>
+		<div class="elementor-element elementor-element-5e2917b team-slider e-flex e-con-boxed e-con e-parent" data-id="5e2917b" data-element_type="container" data-e-type="container" id="leadership">
+			<div class="e-con-inner" style="flex-direction: column; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+				<h2 class="leadership-title-main">Leadership That Drives Progress</h2>
+
+				<div class="leadership-card-wrapper" id="leadership-slider-container">
+					<!-- SLIDE 1: Mr. Harish Mehta (Text Left, Image Right) -->
+					<div class="leadership-card active" data-slide-index="0">
+						<a href="https://www.linkedin.com/company/emmbros-autocomp-limited" target="_blank" class="leadership-linkedin-btn" aria-label="LinkedIn Profile">
+							<svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="32" height="32" rx="6" fill="#0077B5"/>
+								<path d="M9.2 11.5H12.4V22H9.2V11.5ZM10.8 7.25C9.75 7.25 8.9 8.1 8.9 9.15C8.9 10.2 9.75 11.05 10.8 11.05C11.85 11.05 12.7 10.2 12.7 9.15C12.7 8.1 11.85 7.25 10.8 7.25ZM14.4 11.5H17.4V12.95H17.45C17.9 12.1 19 11.2 20.65 11.2C24.05 11.2 24.7 13.45 24.7 16.35V22H21.5V17C21.5 15.8 21.48 13.9 19.8 13.9C18.1 13.9 17.85 15.25 17.85 16.9V22H14.4V11.5Z" fill="white"/>
+							</svg>
+						</a>
+						<div class="leadership-slide-content">
+							<!-- Left Text Column -->
+							<div class="leadership-text-col">
+								<h3 class="leadership-member-name">Mr. Harish Mehta</h3>
+								<span class="leadership-member-role">( Executive Chairman and Managing Director )</span>
+								<p class="leadership-member-desc">A visionary first-generation entrepreneur, Mr. Harish Mehta founded Emmbros Autocomp Group in 1991 with a singular ambition — to build an institution defined by precision, integrity, and engineering excellence. With over four decades of distinguished experience in the automotive industry and a strong technical foundation, he has shaped the Group into a globally respected manufacturing enterprise. Guided by discipline, innovation, and uncompromising values, he continues to lead Emmbros toward sustained growth, global partnerships, and long-term industry leadership.</p>
+								<p class="leadership-member-desc">Mr Harish Mehta also holds directorship in other companies namely Avlon Overseas Private Limited and P.A. Promoters and Developers Private Limited.</p>
+							</div>
+							<!-- Right Image Column -->
+							<div class="leadership-img-col">
+								<img src="/wp-content/uploads/2626 new/Slide/New-Project-86.png" alt="Mr. Harish Mehta" loading="lazy">
+							</div>
+						</div>
+					</div>
+
+					<!-- SLIDE 2: Mr. Pulkit Mehta (Image Left, Text Right) -->
+					<div class="leadership-card" data-slide-index="1">
+						<a href="https://www.linkedin.com/company/emmbros-autocomp-limited" target="_blank" class="leadership-linkedin-btn" aria-label="LinkedIn Profile">
+							<svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="32" height="32" rx="6" fill="#0077B5"/>
+								<path d="M9.2 11.5H12.4V22H9.2V11.5ZM10.8 7.25C9.75 7.25 8.9 8.1 8.9 9.15C8.9 10.2 9.75 11.05 10.8 11.05C11.85 11.05 12.7 10.2 12.7 9.15C12.7 8.1 11.85 7.25 10.8 7.25ZM14.4 11.5H17.4V12.95H17.45C17.9 12.1 19 11.2 20.65 11.2C24.05 11.2 24.7 13.45 24.7 16.35V22H21.5V17C21.5 15.8 21.48 13.9 19.8 13.9C18.1 13.9 17.85 15.25 17.85 16.9V22H14.4V11.5Z" fill="white"/>
+							</svg>
+						</a>
+						<div class="leadership-slide-content reverse-mobile">
+							<!-- Left Image Column -->
+							<div class="leadership-img-col">
+								<img src="/wp-content/uploads/2626 new/Slide/New-Project-85.png" alt="Mr. Pulkit Mehta" loading="lazy">
+							</div>
+							<!-- Right Text Column -->
+							<div class="leadership-text-col">
+								<h3 class="leadership-member-name">Mr. Pulkit Mehta</h3>
+								<span class="leadership-member-role">( Whole Time Director )</span>
+								<p class="leadership-desc">Mr. Pulkit Mehta is a young dynamic and energetic director and has done Master’s in International Business Marketing from university of Birmingham and has rich experience which spans over a period of 10 long years and has built global businesses in US , Asia and Europe.</p>
+								<p class="leadership-desc">He looks after the finance, marketing and administration of the Company, which is the backbone of the EAL autocomp industry.</p>
+								<p class="leadership-desc">He is responsible for global business growth, leading sales, marketing, strategy and the corporate development function of the company.</p>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<!-- Navigation Arrows -->
+				<div class="leadership-arrow-nav">
+					<button type="button" class="leadership-arrow-btn" id="leadership-prev-btn" aria-label="Previous Leader">
+						<svg width="44" height="44" viewBox="0 0 24 24" fill="white">
+							<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+						</svg>
+					</button>
+					<button type="button" class="leadership-arrow-btn" id="leadership-next-btn" aria-label="Next Leader">
+						<svg width="44" height="44" viewBox="0 0 24 24" fill="white">
+							<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script id="leadership-slider-script">
+		(function() {
+			function initLeadershipSlider() {
+				var container = document.getElementById("leadership-slider-container");
+				if (!container) return;
+				var cards = container.querySelectorAll(".leadership-card");
+				var prevBtn = document.getElementById("leadership-prev-btn");
+				var nextBtn = document.getElementById("leadership-next-btn");
+				if (!cards || cards.length === 0) return;
+
+				var currentIndex = 0;
+				var total = cards.length;
+				var timer = null;
+				var isPaused = false;
+
+				function showSlide(idx) {
+					currentIndex = (idx + total) % total;
+					for (var i = 0; i < total; i++) {
+						if (i === currentIndex) {
+							cards[i].classList.add("active");
+						} else {
+							cards[i].classList.remove("active");
+						}
+					}
+				}
+
+				function next() { showSlide(currentIndex + 1); }
+				function prev() { showSlide(currentIndex - 1); }
+
+				function startTimer() {
+					stopTimer();
+					timer = setInterval(function() {
+						if (!isPaused) next();
+					}, 6000);
+				}
+
+				function stopTimer() {
+					if (timer) clearInterval(timer);
+				}
+
+				if (prevBtn) {
+					prevBtn.addEventListener("click", function(e) {
+						e.preventDefault();
+						prev();
+						startTimer();
+					});
+				}
+				if (nextBtn) {
+					nextBtn.addEventListener("click", function(e) {
+						e.preventDefault();
+						next();
+						startTimer();
+					});
+				}
+
+				container.addEventListener("mouseenter", function() { isPaused = true; });
+				container.addEventListener("mouseleave", function() { isPaused = false; });
+
+				startTimer();
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", initLeadershipSlider);
+			} else {
+				initLeadershipSlider();
+			}
+		})();
+		</script>
 		<div class="elementor-element elementor-element-fe7abbc e-con-full e-flex e-con e-parent" data-id="fe7abbc" data-element_type="container" data-e-type="container" id="ourjourney">
 		<div class="elementor-element elementor-element-9470eaa e-flex e-con-boxed e-con e-child" data-id="9470eaa" data-element_type="container" data-e-type="container">
 					<div class="e-con-inner">
@@ -1016,27 +1325,67 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 <script id="__emmbros_bridge">
 (function(){
-  function samePath(href){
-    try{ var u=new URL(href, location.href); return u.origin===location.origin && !u.hash || (u.origin===location.origin && u.pathname!==location.pathname); }catch(e){ return false; }
+  function getCanonicalPath(p) {
+    if (!p) return '/';
+    p = p.replace('/pages/', '/').replace(/\.html$/, '');
+    if (p.length > 1 && !p.endsWith('/')) p += '/';
+    return p;
   }
+
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href]');
     if(!a) return;
     var href = a.getAttribute('href');
     if(!href) return;
-    // let pure in-page anchors scroll natively inside the iframe
-    if(href.charAt(0)==='#') return;
+
+    if(href.charAt(0) === '#'){
+      var targetId = href.slice(1);
+      if(!targetId) return;
+      var el = document.getElementById(targetId);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth'});
+        if(parent && parent.postMessage){
+          parent.postMessage({ __emmbros:true, type:'updateHash', hash: targetId }, '*');
+        }
+      }
+      return;
+    }
+
     var u;
     try{ u = new URL(href, location.href); }catch(err){ return; }
-    if(u.origin!==location.origin) return; // external -> default (opens in iframe; ok)
-    // internal navigation -> hand off to parent router
-    if(u.pathname!==location.pathname){
+    if(u.origin !== location.origin) return;
+
+    var currentCanon = getCanonicalPath(location.pathname);
+    var targetCanon = getCanonicalPath(u.pathname);
+
+    if(targetCanon === currentCanon){
+      if(u.hash){
+        var hashId = u.hash.slice(1);
+        var targetEl = document.getElementById(hashId);
+        if(targetEl){
+          e.preventDefault();
+          targetEl.scrollIntoView({behavior:'smooth'});
+          if(parent && parent.postMessage){
+            parent.postMessage({ __emmbros:true, type:'updateHash', hash: hashId }, '*');
+          }
+        } else {
+          e.preventDefault();
+          window.scrollTo({top: 0, behavior: 'smooth'});
+          if(parent && parent.postMessage){
+            parent.postMessage({ __emmbros:true, type:'updateHash', hash: '' }, '*');
+          }
+        }
+      } else {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        if(parent && parent.postMessage){
+          parent.postMessage({ __emmbros:true, type:'updateHash', hash: '' }, '*');
+        }
+      }
+    } else {
       e.preventDefault();
-      parent.postMessage({ __emmbros:true, type:'navigate', path:u.pathname + u.hash }, '*');
-    } else if(u.hash){
-      // same page hash -> scroll within iframe
-      var el = document.getElementById(u.hash.slice(1));
-      if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      parent.postMessage({ __emmbros:true, type:'navigate', path: targetCanon + u.hash }, '*');
     }
   }, true);
 
@@ -1049,7 +1398,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     if(!isCf7 && !isMeta) return;
     e.preventDefault();
     var fd = new FormData(form);
-    fd.append('__page', (location.pathname.replace('/pages/','/').replace(/.html$/,'/')) );
+    fd.append('__page', getCanonicalPath(location.pathname));
     var btn = form.querySelector('[type=submit]');
     if(btn){ btn.disabled=true; }
     fetch('/api/contact', {method:'POST', body:fd})
@@ -1068,25 +1417,32 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   // Parent -> iframe: scroll to an anchor after cross-page navigation
   window.addEventListener('message', function(e){
     var d = e.data;
-    if(d && d.__emmbros_parent && d.type==='scroll' && d.hash){
-      var el = document.getElementById(d.hash);
-      if(el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 300);
+    if(d && d.__emmbros_parent && d.type==='scroll'){
+      if(d.hash){
+        var el = document.getElementById(d.hash);
+        if(el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 250);
+      } else {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
     }
   });
 
-  // Smooth slide-up loading effect on scroll without fade-out/fade-in
+  // Scroll text reveal animation (reveals once on enter, never hides again)
   var style = document.createElement('style');
   style.textContent = [
-    '.scroll-loading {',
-    '  transform: translateY(30px);',
-    '  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);',
-    '  will-change: transform;',
+    '.scroll-reveal {',
+    '  opacity: 0;',
+    '  transform: translateY(45px);',
+    '  clip-path: inset(0 0 100% 0);',
+    '  transition: opacity 0.7s ease, transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), clip-path 0.85s cubic-bezier(0.16, 1, 0.3, 1);',
+    '  will-change: transform, opacity, clip-path;',
     '}',
-    '.scroll-loading.visible {',
-    '  transform: translateY(0) !important;',
+    '.scroll-reveal.revealed {',
+    '  opacity: 1;',
+    '  transform: translateY(0);',
+    '  clip-path: inset(0 0 0 0);',
     '}'
-  ].join('
-');
+  ].join('\n');
   document.head.appendChild(style);
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -1094,34 +1450,55 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
       '.elementor-widget-heading:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-heading-title, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) p, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) li, ' +
-      '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) strong, ' +
+      '.elementor-widget-icon-list:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-list-item, ' +
       '.elementor-widget-image:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) img, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-title, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-description, ' +
+      '.elementor-widget-icon-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-box-content, ' +
+      '.elementor-widget-counter:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-counter, ' +
       '.elementor-widget-button:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-button'
     )).filter(function(el) {
       return !el.closest('.ekit-template-content-header') && !el.closest('.ekit-template-content-footer');
     });
 
+    // Stagger siblings slightly for a premium cascading reveal
+    var parentCounts = new Map();
     animateElements.forEach(function(el) {
-      el.classList.add('scroll-loading');
+      var n = parentCounts.get(el.parentElement) || 0;
+      el.style.transitionDelay = Math.min(n * 90, 450) + 'ms';
+      parentCounts.set(el.parentElement, n + 1);
+      el.classList.add('scroll-reveal');
     });
 
     if (typeof IntersectionObserver !== 'undefined') {
+      // clip-path on a hidden target makes IntersectionObserver report zero
+      // intersection, so observe each target's un-clipped parent instead.
+      var watchMap = new Map();
+      animateElements.forEach(function(el) {
+        var w = el.parentElement || el;
+        if (!watchMap.has(w)) watchMap.set(w, []);
+        watchMap.get(w).push(el);
+      });
+
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            var targets = watchMap.get(entry.target) || [];
+            targets.forEach(function(t) { t.classList.add('revealed'); });
+            observer.unobserve(entry.target); // reveal once, never hide again
           }
         });
       }, {
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.05
       });
 
-      animateElements.forEach(function(el) {
-        observer.observe(el);
+      watchMap.forEach(function(_, w) {
+        observer.observe(w);
       });
     } else {
       animateElements.forEach(function(el) {
-        el.classList.add('visible');
+        el.classList.add('revealed');
       });
     }
   });

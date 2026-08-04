@@ -937,27 +937,67 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 <script id="__emmbros_bridge">
 (function(){
-  function samePath(href){
-    try{ var u=new URL(href, location.href); return u.origin===location.origin && !u.hash || (u.origin===location.origin && u.pathname!==location.pathname); }catch(e){ return false; }
+  function getCanonicalPath(p) {
+    if (!p) return '/';
+    p = p.replace('/pages/', '/').replace(/\.html$/, '');
+    if (p.length > 1 && !p.endsWith('/')) p += '/';
+    return p;
   }
+
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href]');
     if(!a) return;
     var href = a.getAttribute('href');
     if(!href) return;
-    // let pure in-page anchors scroll natively inside the iframe
-    if(href.charAt(0)==='#') return;
+
+    if(href.charAt(0) === '#'){
+      var targetId = href.slice(1);
+      if(!targetId) return;
+      var el = document.getElementById(targetId);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth'});
+        if(parent && parent.postMessage){
+          parent.postMessage({ __emmbros:true, type:'updateHash', hash: targetId }, '*');
+        }
+      }
+      return;
+    }
+
     var u;
     try{ u = new URL(href, location.href); }catch(err){ return; }
-    if(u.origin!==location.origin) return; // external -> default (opens in iframe; ok)
-    // internal navigation -> hand off to parent router
-    if(u.pathname!==location.pathname){
+    if(u.origin !== location.origin) return;
+
+    var currentCanon = getCanonicalPath(location.pathname);
+    var targetCanon = getCanonicalPath(u.pathname);
+
+    if(targetCanon === currentCanon){
+      if(u.hash){
+        var hashId = u.hash.slice(1);
+        var targetEl = document.getElementById(hashId);
+        if(targetEl){
+          e.preventDefault();
+          targetEl.scrollIntoView({behavior:'smooth'});
+          if(parent && parent.postMessage){
+            parent.postMessage({ __emmbros:true, type:'updateHash', hash: hashId }, '*');
+          }
+        } else {
+          e.preventDefault();
+          window.scrollTo({top: 0, behavior: 'smooth'});
+          if(parent && parent.postMessage){
+            parent.postMessage({ __emmbros:true, type:'updateHash', hash: '' }, '*');
+          }
+        }
+      } else {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        if(parent && parent.postMessage){
+          parent.postMessage({ __emmbros:true, type:'updateHash', hash: '' }, '*');
+        }
+      }
+    } else {
       e.preventDefault();
-      parent.postMessage({ __emmbros:true, type:'navigate', path:u.pathname + u.hash }, '*');
-    } else if(u.hash){
-      // same page hash -> scroll within iframe
-      var el = document.getElementById(u.hash.slice(1));
-      if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      parent.postMessage({ __emmbros:true, type:'navigate', path: targetCanon + u.hash }, '*');
     }
   }, true);
 
@@ -970,7 +1010,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     if(!isCf7 && !isMeta) return;
     e.preventDefault();
     var fd = new FormData(form);
-    fd.append('__page', (location.pathname.replace('/pages/','/').replace(/.html$/,'/')) );
+    fd.append('__page', getCanonicalPath(location.pathname));
     var btn = form.querySelector('[type=submit]');
     if(btn){ btn.disabled=true; }
     fetch('/api/contact', {method:'POST', body:fd})
@@ -989,25 +1029,32 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   // Parent -> iframe: scroll to an anchor after cross-page navigation
   window.addEventListener('message', function(e){
     var d = e.data;
-    if(d && d.__emmbros_parent && d.type==='scroll' && d.hash){
-      var el = document.getElementById(d.hash);
-      if(el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 300);
+    if(d && d.__emmbros_parent && d.type==='scroll'){
+      if(d.hash){
+        var el = document.getElementById(d.hash);
+        if(el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 250);
+      } else {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
     }
   });
 
-  // Smooth slide-up loading effect on scroll without fade-out/fade-in
+  // Scroll text reveal animation (reveals once on enter, never hides again)
   var style = document.createElement('style');
   style.textContent = [
-    '.scroll-loading {',
-    '  transform: translateY(30px);',
-    '  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);',
-    '  will-change: transform;',
+    '.scroll-reveal {',
+    '  opacity: 0;',
+    '  transform: translateY(45px);',
+    '  clip-path: inset(0 0 100% 0);',
+    '  transition: opacity 0.7s ease, transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), clip-path 0.85s cubic-bezier(0.16, 1, 0.3, 1);',
+    '  will-change: transform, opacity, clip-path;',
     '}',
-    '.scroll-loading.visible {',
-    '  transform: translateY(0) !important;',
+    '.scroll-reveal.revealed {',
+    '  opacity: 1;',
+    '  transform: translateY(0);',
+    '  clip-path: inset(0 0 0 0);',
     '}'
-  ].join('
-');
+  ].join('\n');
   document.head.appendChild(style);
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -1015,34 +1062,55 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
       '.elementor-widget-heading:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-heading-title, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) p, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) li, ' +
-      '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) strong, ' +
+      '.elementor-widget-icon-list:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-list-item, ' +
       '.elementor-widget-image:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) img, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-title, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-description, ' +
+      '.elementor-widget-icon-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-box-content, ' +
+      '.elementor-widget-counter:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-counter, ' +
       '.elementor-widget-button:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-button'
     )).filter(function(el) {
       return !el.closest('.ekit-template-content-header') && !el.closest('.ekit-template-content-footer');
     });
 
+    // Stagger siblings slightly for a premium cascading reveal
+    var parentCounts = new Map();
     animateElements.forEach(function(el) {
-      el.classList.add('scroll-loading');
+      var n = parentCounts.get(el.parentElement) || 0;
+      el.style.transitionDelay = Math.min(n * 90, 450) + 'ms';
+      parentCounts.set(el.parentElement, n + 1);
+      el.classList.add('scroll-reveal');
     });
 
     if (typeof IntersectionObserver !== 'undefined') {
+      // clip-path on a hidden target makes IntersectionObserver report zero
+      // intersection, so observe each target's un-clipped parent instead.
+      var watchMap = new Map();
+      animateElements.forEach(function(el) {
+        var w = el.parentElement || el;
+        if (!watchMap.has(w)) watchMap.set(w, []);
+        watchMap.get(w).push(el);
+      });
+
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            var targets = watchMap.get(entry.target) || [];
+            targets.forEach(function(t) { t.classList.add('revealed'); });
+            observer.unobserve(entry.target); // reveal once, never hide again
           }
         });
       }, {
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.05
       });
 
-      animateElements.forEach(function(el) {
-        observer.observe(el);
+      watchMap.forEach(function(_, w) {
+        observer.observe(w);
       });
     } else {
       animateElements.forEach(function(el) {
-        el.classList.add('visible');
+        el.classList.add('revealed');
       });
     }
   });

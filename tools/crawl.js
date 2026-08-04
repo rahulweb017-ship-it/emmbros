@@ -220,16 +220,20 @@ const BRIDGE = `
     }
   });
 
-  // Smooth slide-up loading effect on scroll without fade-out/fade-in
+  // Scroll text reveal animation (reveals once on enter, never hides again)
   var style = document.createElement('style');
   style.textContent = [
-    '.scroll-loading {',
-    '  transform: translateY(30px);',
-    '  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);',
-    '  will-change: transform;',
+    '.scroll-reveal {',
+    '  opacity: 0;',
+    '  transform: translateY(45px);',
+    '  clip-path: inset(0 0 100% 0);',
+    '  transition: opacity 0.7s ease, transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), clip-path 0.85s cubic-bezier(0.16, 1, 0.3, 1);',
+    '  will-change: transform, opacity, clip-path;',
     '}',
-    '.scroll-loading.visible {',
-    '  transform: translateY(0) !important;',
+    '.scroll-reveal.revealed {',
+    '  opacity: 1;',
+    '  transform: translateY(0);',
+    '  clip-path: inset(0 0 0 0);',
     '}'
   ].join('\n');
   document.head.appendChild(style);
@@ -239,34 +243,55 @@ const BRIDGE = `
       '.elementor-widget-heading:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-heading-title, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) p, ' +
       '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) li, ' +
-      '.elementor-widget-text-editor:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) strong, ' +
+      '.elementor-widget-icon-list:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-list-item, ' +
       '.elementor-widget-image:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) img, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-title, ' +
+      '.elementor-widget-image-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-image-box-description, ' +
+      '.elementor-widget-icon-box:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-icon-box-content, ' +
+      '.elementor-widget-counter:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-counter, ' +
       '.elementor-widget-button:not(.elementor-absolute):not(.elementor-fixed):not(.e-transform) .elementor-button'
     )).filter(function(el) {
       return !el.closest('.ekit-template-content-header') && !el.closest('.ekit-template-content-footer');
     });
 
+    // Stagger siblings slightly for a premium cascading reveal
+    var parentCounts = new Map();
     animateElements.forEach(function(el) {
-      el.classList.add('scroll-loading');
+      var n = parentCounts.get(el.parentElement) || 0;
+      el.style.transitionDelay = Math.min(n * 90, 450) + 'ms';
+      parentCounts.set(el.parentElement, n + 1);
+      el.classList.add('scroll-reveal');
     });
 
     if (typeof IntersectionObserver !== 'undefined') {
+      // clip-path on a hidden target makes IntersectionObserver report zero
+      // intersection, so observe each target's un-clipped parent instead.
+      var watchMap = new Map();
+      animateElements.forEach(function(el) {
+        var w = el.parentElement || el;
+        if (!watchMap.has(w)) watchMap.set(w, []);
+        watchMap.get(w).push(el);
+      });
+
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            var targets = watchMap.get(entry.target) || [];
+            targets.forEach(function(t) { t.classList.add('revealed'); });
+            observer.unobserve(entry.target); // reveal once, never hide again
           }
         });
       }, {
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.05
       });
 
-      animateElements.forEach(function(el) {
-        observer.observe(el);
+      watchMap.forEach(function(_, w) {
+        observer.observe(w);
       });
     } else {
       animateElements.forEach(function(el) {
-        el.classList.add('visible');
+        el.classList.add('revealed');
       });
     }
   });
