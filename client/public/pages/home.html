@@ -157,8 +157,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 @media (max-width: 640px) {
   .emmbros-hero-slider {
-    min-height: 420px;
-    height: 70vh;
+    min-height: 400px;
+    height: 62vh;
   }
 }
 .hero-slide {
@@ -195,25 +195,38 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   background: linear-gradient(90deg, rgba(7, 19, 33, 0.96) 0%, rgba(7, 19, 33, 0.85) 38%, rgba(7, 19, 33, 0.45) 65%, rgba(7, 19, 33, 0.05) 90%);
   z-index: 3;
 }
+@media (max-width: 640px) {
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(7, 19, 33, 0.38) 0%, rgba(7, 19, 33, 0.55) 50%, rgba(7, 19, 33, 0.88) 100%);
+  }
+  .hero-slide-bg {
+    object-position: center center !important;
+  }
+}
 .hero-content-wrapper {
   position: relative;
   z-index: 4;
   height: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: left;
 }
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .hero-content-wrapper {
-    padding: 0;
+    padding: 0 72px;
   }
 }
-.hero-title {
+@media (max-width: 640px) {
+  .hero-content-wrapper {
+    padding: 0 22px;
+  }
+}
+.emmbros-hero-slider .hero-title {
   color: #ffffff !important;
   font-size: 54px;
   font-weight: 700;
@@ -225,16 +238,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 1024px) {
-  .hero-title {
+  .emmbros-hero-slider .hero-title {
     font-size: 42px;
   }
 }
 @media (max-width: 640px) {
-  .hero-title {
-    font-size: 30px;
+  .emmbros-hero-slider .hero-title {
+    font-size: 26px;
+    line-height: 1.22;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+    max-width: 100%;
   }
 }
-.hero-subtitle {
+.emmbros-hero-slider .hero-subtitle {
   color: #f1f5f9;
   font-size: 17px;
   font-weight: 400;
@@ -246,9 +263,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 640px) {
-  .hero-subtitle {
+  .emmbros-hero-slider .hero-subtitle {
     font-size: 14px;
-    margin-bottom: 24px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    max-width: 100%;
   }
 }
 .hero-cta-btn {
@@ -301,9 +320,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .hero-arrow-prev { left: 20px !important; }
 .hero-arrow-next { right: 20px !important; }
 @media (max-width: 640px) {
-  .hero-arrow { width: 34px; height: 40px; }
-  .hero-arrow-prev { left: 10px !important; }
-  .hero-arrow-next { right: 10px !important; }
+  .hero-arrow {
+    width: 34px;
+    height: 38px;
+    top: auto;
+    bottom: 16px;
+    transform: none;
+    opacity: 0.7 !important;
+  }
+  .hero-arrow-prev { left: 14px !important; }
+  .hero-arrow-next { right: 14px !important; }
 }
 .hero-dots-container {
   position: absolute;
@@ -320,23 +346,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   border-radius: 9999px;
   backdrop-filter: blur(4px);
 }
-.hero-dot {
+.emmbros-hero-slider .hero-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: none !important;
   cursor: pointer;
   transition: all 300ms ease;
   padding: 0;
+  min-width: 0;
 }
-.hero-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
+.emmbros-hero-slider .hero-dot:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
 }
-.hero-dot.active {
+.emmbros-hero-slider .hero-dot.active {
   width: 28px;
   border-radius: 9999px;
-  background: #ffffff;
+  background: #ffffff !important;
 }
 </style>
 <link rel="stylesheet" id="ht_ctc_main_css-css" href="/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/css/main.css?ver=4.41" media="all">
@@ -732,7 +759,7 @@ div#pum-16135 {
 				</div>
 		<div class="elementor-element elementor-element-0c90f0c e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="0c90f0c" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-e53249a elementor-widget elementor-widget-image" data-id="e53249a" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-																<a href="/emmpower/">
+																<a href="https://emmpower.in/" target="_blank" rel="noopener noreferrer">
 							<img width="171" height="94" src="/wp-content/uploads/2025/12/logo-1.jpg" class="attachment-full size-full wp-image-15221" alt="">								</a>
 															</div>
 				</div>
@@ -794,6 +821,9 @@ Durable, Relaible, built exact specification.</p>
 					<button type="button" class="hero-arrow hero-arrow-next" aria-label="Next Slide">
 						<svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"></path></svg>
 					</button>
+
+					<!-- Dots Navigation -->
+					<div class="hero-dots-container" role="tablist" aria-label="Slide navigation"></div>
 				</div>
 
 				<script id="emmbros-hero-slider-script">
@@ -805,10 +835,26 @@ Durable, Relaible, built exact specification.</p>
 						var slides = slider.querySelectorAll(".hero-slide");
 						var prevBtn = slider.querySelector(".hero-arrow-prev");
 						var nextBtn = slider.querySelector(".hero-arrow-next");
+						var dotsContainer = slider.querySelector(".hero-dots-container");
 						var totalSlides = slides.length;
 						var currentIndex = 0;
 						var timer = null;
 						var isPaused = false;
+						var dots = [];
+
+						if (dotsContainer) {
+							for (var d = 0; d < totalSlides; d++) {
+								(function(i) {
+									var dot = document.createElement("button");
+									dot.type = "button";
+									dot.className = "hero-dot" + (i === 0 ? " active" : "");
+									dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+									dot.addEventListener("click", function() { showSlide(i); startTimer(); });
+									dotsContainer.appendChild(dot);
+									dots.push(dot);
+								})(d);
+							}
+						}
 
 						function showSlide(index) {
 							currentIndex = (index + totalSlides) % totalSlides;
@@ -817,6 +863,13 @@ Durable, Relaible, built exact specification.</p>
 									slides[i].classList.add("active");
 								} else {
 									slides[i].classList.remove("active");
+								}
+							}
+							for (var j = 0; j < dots.length; j++) {
+								if (j === currentIndex) {
+									dots[j].classList.add("active");
+								} else {
+									dots[j].classList.remove("active");
 								}
 							}
 						}

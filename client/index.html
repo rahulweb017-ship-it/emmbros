@@ -39,22 +39,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        color: #555;
-        font-family: sans-serif;
+        justify-content: center;
+        z-index: 9999;
+        pointer-events: none;
       }
       
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(0,0,0,0.1);
-        border-radius: 50%;
-        border-top-color: #e3000f;
-        animation: spin 1s ease-in-out infinite;
+      .logo-bounce {
+        max-width: 200px;
+        width: 80vw;
+        height: auto;
+        animation: logoBounce 1.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+        filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
       }
       
-      @keyframes spin {
-        to { transform: rotate(360deg); }
+      @keyframes logoBounce {
+        0%, 100% {
+          transform: translateY(0) scale(0.98);
+          opacity: 0.85;
+        }
+        50% {
+          transform: translateY(-18px) scale(1.04);
+          opacity: 1;
+        }
       }
     </style>
   </head>

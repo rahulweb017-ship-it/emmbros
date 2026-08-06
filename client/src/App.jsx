@@ -66,7 +66,11 @@ export default function App() {
     <div className="page-transition-wrapper">
       {loading && (
         <div className="loading-spinner">
-          <div className="spinner"></div>
+          <img
+            src="/wp-content/uploads/2025/12/logo1.png"
+            alt="Emmbros Autocomp Ltd"
+            className="logo-bounce"
+          />
         </div>
       )}
       <iframe
