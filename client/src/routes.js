@@ -10,6 +10,12 @@ export const ROUTES = [
   { path: "/product-application/driveline-parts/", slug: "driveline-parts", title: "Driveline Parts | Emmbros Autocomp Ltd" },
   { path: "/product-application/hydraulic-parts/", slug: "hydraulic-parts", title: "Hydraulic Parts | Emmbros Autocomp Ltd" },
   { path: "/product-application/planetary-wheel-drive-parts/", slug: "planetary-wheel-drive-parts", title: "Planetary Wheel Drive Parts | Emmbros Autocomp Ltd" },
+  { path: "/front-axle-shaft/", slug: "front-axle-shaft", title: "Front Axle Parts | Emmbros Autocomp Ltd" },
+  { path: "/rear-axle-shaft/", slug: "rear-axle-shaft", title: "Rear Axle Parts | Emmbros Autocomp Ltd" },
+  { path: "/gear-box-parts/", slug: "gear-box-parts", title: "Gear Box Parts | Emmbros Autocomp Ltd" },
+  { path: "/driveline-parts/", slug: "driveline-parts", title: "Driveline Parts | Emmbros Autocomp Ltd" },
+  { path: "/hydraulic-parts/", slug: "hydraulic-parts", title: "Hydraulic Parts | Emmbros Autocomp Ltd" },
+  { path: "/planetary-wheel-drive-parts/", slug: "planetary-wheel-drive-parts", title: "Planetary Wheel Drive Parts | Emmbros Autocomp Ltd" },
   { path: "/career/", slug: "career", title: "Career | Emmbros Autocomp Ltd" },
 ];
 
@@ -22,8 +28,10 @@ function norm(p) {
 
 export function matchRoute(pathname) {
   const n = norm(pathname);
+  const cleanSlug = n.replace(/^\/|\/$/g, "").split("/").pop();
   return (
     ROUTES.find((r) => norm(r.path) === n) ||
+    ROUTES.find((r) => r.slug === cleanSlug) ||
     ROUTES.find((r) => r.path === "/")
   );
 }
