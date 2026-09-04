@@ -3,7 +3,7 @@ export const ROUTES = [
   { path: "/", slug: "home", title: "Emmbros Autocomp Ltd | Auto Parts Mfr in Baddi, HP" },
   { path: "/who-we-are/", slug: "who-we-are", title: "About Emmbros Autocomp Ltd | Precision Engineering Baddi" },
   { path: "/what-we-do/", slug: "what-we-do", title: "Forging Capabilities: Press & Upsetter Forged Parts | Emmbros" },
-  { path: "/product-application/", slug: "product-application", title: "Product Application | Emmbros Autocomp Ltd" },
+  { path: "/product-application/", slug: "product-application", title: "OEM Product Applications & Parts | Emmbros Autocomp" },
   { path: "/product-application/front-axle-shaft/", slug: "front-axle-shaft", title: "Front Axle Shafts & Wheel Shafts Manufacturer | Emmbros Autocomp" },
   { path: "/product-application/rear-axle-shaft/", slug: "rear-axle-shaft", title: "OEM Rear Axle Shafts Manufacturer | Emmbros Autocomp" },
   { path: "/product-application/gear-box-parts/", slug: "gear-box-parts", title: "OEM Gearbox Parts, Planet Carriers & Sprockets | Emmbros" },
@@ -16,7 +16,7 @@ export const ROUTES = [
   { path: "/driveline-parts/", slug: "driveline-parts", title: "OEM Driveline Parts, Cardan Shafts & Yokes Manufacturer | Emmbros" },
   { path: "/hydraulic-parts/", slug: "hydraulic-parts", title: "OEM Hydraulic Parts & Brake Pistons Manufacturer | Emmbros" },
   { path: "/planetary-wheel-drive-parts/", slug: "planetary-wheel-drive-parts", title: "Planetary Wheel Drive Parts & Flange Hubs | Emmbros" },
-  { path: "/career/", slug: "career", title: "Career | Emmbros Autocomp Ltd" },
+  { path: "/career/", slug: "career", title: "Careers & Job Openings in Baddi | Emmbros Autocomp Ltd" },
 ];
 
 function norm(p) {
