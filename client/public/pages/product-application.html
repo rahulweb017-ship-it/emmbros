@@ -587,26 +587,54 @@ div#pum-16135 {
   padding: 4px 10px;
   border-radius: 4px;
 }
-.emm-card-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: transparent;
-  color: #98c8e9;
-  border: 1px solid #98c8e9;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-align: center;
+/* Card Title Links - White text */
+.emm-card-title a,
+.emm-card-title a:link,
+.emm-card-title a:visited {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
 }
-.emm-card-btn:hover {
-  background: #98c8e9;
-  color: #0b141f;
-  box-shadow: 0 4px 14px rgba(152, 200, 233, 0.35);
+.emm-card-title a:hover,
+.emm-card-title a:focus {
+  color: #98c8e9 !important;
+}
+
+/* Product Card CTA Buttons - Crisp White Text with Brand Teal Background */
+a.emm-card-btn,
+.emm-card-btn,
+.emm-card-btn:link,
+.emm-card-btn:visited {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #167D8D !important;
+  color: #ffffff !important;
+  border: 1.5px solid #98c8e9 !important;
+  padding: 12px 22px !important;
+  border-radius: 6px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  cursor: pointer !important;
+}
+
+a.emm-card-btn:hover,
+a.emm-card-btn:focus,
+.emm-card-btn:hover,
+.emm-card-btn:focus {
+  background: #1f9cb0 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(22, 125, 141, 0.6) !important;
+  text-decoration: none !important;
+  transform: translateY(-2px);
 }
 
 /* Sectors Section */
@@ -745,20 +773,30 @@ div#pum-16135 {
   background: #b5daf0;
   box-shadow: 0 6px 18px rgba(152, 200, 233, 0.4);
 }
-.emm-btn-secondary {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.35);
-  font-weight: 500;
-  padding: 12px 26px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 15px;
-  transition: all 0.3s;
+a.emm-btn-secondary,
+.emm-btn-secondary,
+.emm-btn-secondary:link,
+.emm-btn-secondary:visited {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  font-weight: 500 !important;
+  padding: 12px 26px !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  transition: all 0.3s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
-.emm-btn-secondary:hover {
-  border-color: #98c8e9;
-  color: #98c8e9;
+a.emm-btn-secondary:hover,
+a.emm-btn-secondary:focus,
+.emm-btn-secondary:hover,
+.emm-btn-secondary:focus {
+  border-color: #98c8e9 !important;
+  color: #ffffff !important;
+  background: rgba(152, 200, 233, 0.15) !important;
 }
 </style>
 
