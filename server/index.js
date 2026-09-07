@@ -11,6 +11,25 @@ const CLIENT_DIST = path.resolve(__dirname, "../client/dist");
 const SUBMISSIONS_LOG = path.join(__dirname, "submissions.log");
 
 const app = express();
+app.disable("x-powered-by");
+
+// Security headers middleware
+app.use((req, res, next) => {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  next();
+});
+
+// Block spam query parameters from compromise history (returns 410 Gone)
+app.use((req, res, next) => {
+  if (req.query.a || req.query.c || (req.query.s && String(req.query.s).length > 80)) {
+    return res.status(410).send("410 Gone");
+  }
+  next();
+});
+
 app.use(express.json({ limit: "1mb" }));
 
 // Accept multipart form posts (resume/file uploads) up to 15MB.
@@ -114,9 +133,45 @@ app.get("/api/health", (req, res) => res.json({ ok: true, mail: !!transporter })
 
 // Serve the built React client (which includes the mirrored pages + assets).
 if (fs.existsSync(CLIENT_DIST)) {
-  app.use(express.static(CLIENT_DIST));
+  // WebP content negotiation: transparently serve .webp when requested .jpg/.png has a .webp version
+  app.get(/^\/wp-content\/uploads\/.+\.(jpe?g|png)$/i, (req, res, next) => {
+    const accept = req.headers.accept || "";
+    if (!accept.includes("image/webp")) return next();
+
+    const decodedPath = decodeURIComponent(req.path);
+    const ext = path.extname(decodedPath);
+    const webpRel = decodedPath.slice(0, -ext.length) + ".webp";
+    const webpPath = path.join(CLIENT_DIST, webpRel.replace(/^\//, ""));
+
+    if (fs.existsSync(webpPath)) {
+      res.setHeader("Content-Type", "image/webp");
+      res.setHeader("Vary", "Accept");
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      return res.sendFile(webpPath);
+    }
+    next();
+  });
+
+  // Serve static assets with efficient caching
+  app.use(
+    express.static(CLIENT_DIST, {
+      maxAge: "30d",
+      setHeaders: (res, filePath) => {
+        if (/\.(webp|jpg|jpeg|png|gif|svg|woff2?|ttf|eot|css|js|ico)$/i.test(filePath)) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        } else if (/\.(html|txt|xml)$/i.test(filePath)) {
+          res.setHeader("Cache-Control", "public, max-age=3600");
+        }
+      },
+    })
+  );
+
+  // Catch-all route for SPA navigation. Return 404 for missing files with extensions.
   app.get("*", (req, res, next) => {
     if (req.path.startsWith("/api/")) return next();
+    if (path.extname(req.path)) {
+      return res.status(404).send("File not found");
+    }
     res.sendFile(path.join(CLIENT_DIST, "index.html"));
   });
 } else {

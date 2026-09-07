@@ -63,13 +63,16 @@ export default function App() {
   }
 
   return (
-    <div className="page-transition-wrapper">
+    <main className="page-transition-wrapper" role="main">
       {loading && (
         <div className="loading-spinner">
           <img
-            src="/wp-content/uploads/2025/12/logo1.png"
+            src="/wp-content/uploads/2025/12/logo1.webp"
             alt="Emmbros Autocomp Ltd"
             className="logo-bounce"
+            width="200"
+            height="47"
+            fetchpriority="high"
           />
         </div>
       )}
@@ -81,7 +84,7 @@ export default function App() {
         title={route.title}
         onLoad={onFrameLoad}
       />
-    </div>
+    </main>
   );
 }
 
