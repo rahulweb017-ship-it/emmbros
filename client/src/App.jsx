@@ -63,7 +63,7 @@ export default function App() {
   }
 
   return (
-    <main className="page-transition-wrapper" role="main">
+    <main id="main-content" className="page-transition-wrapper" role="main">
       {loading && (
         <div className="loading-spinner">
           <img
