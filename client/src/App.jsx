@@ -1,13 +1,22 @@
-import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { matchRoute } from "./routes.js";
+import { LoadingSpinner } from "./admin/components/LoadingSpinner";
 
-export default function App() {
+import { BlogListPage } from "./public/pages/BlogListPage";
+import { BlogPostPage } from "./public/pages/BlogPostPage";
+import { CareersListPage } from "./public/pages/CareersListPage";
+import { JobDetailPage } from "./public/pages/JobDetailPage";
+
+// Lazy load Admin module to keep public website bundle minimal
+const AdminApp = lazy(() => import("./admin/AdminApp"));
+
+function PublicSiteWrapper() {
   const location = useLocation();
   const navigate = useNavigate();
   const frameRef = useRef(null);
   const route = matchRoute(location.pathname);
-  
+
   const [loading, setLoading] = useState(true);
 
   // Reset loading state when route changes
@@ -79,7 +88,7 @@ export default function App() {
       <iframe
         key={route.slug}
         ref={frameRef}
-        className={`emmbros-frame ${loading ? '' : 'frame-loaded'}`}
+        className={`emmbros-frame ${loading ? "" : "frame-loaded"}`}
         src={`/pages/${route.slug}.html`}
         title={route.title}
         onLoad={onFrameLoad}
@@ -88,3 +97,33 @@ export default function App() {
   );
 }
 
+export default function App() {
+  return (
+    <Routes>
+      {/* CMS Public React Views */}
+      <Route path="/blog" element={<BlogListPage />} />
+      <Route path="/blog/:slug" element={<BlogPostPage />} />
+      <Route path="/careers" element={<CareersListPage />} />
+      <Route path="/careers/:slug" element={<JobDetailPage />} />
+
+      {/* Lazy Loaded Admin Module under /admin/* */}
+      <Route
+        path="/admin/*"
+        element={
+          <Suspense
+            fallback={
+              <div className="admin-page-loading">
+                <LoadingSpinner message="Loading Admin Panel..." size="large" />
+              </div>
+            }
+          >
+            <AdminApp />
+          </Suspense>
+        }
+      />
+
+      {/* Public Site Mirrored Pages Wrapper */}
+      <Route path="*" element={<PublicSiteWrapper />} />
+    </Routes>
+  );
+}

@@ -1,10 +1,22 @@
 import "dotenv/config";
 import express from "express";
+import helmet from "helmet";
+import cookieParser from "cookie-parser";
 import nodemailer from "nodemailer";
 import multer from "multer";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { connectDB } from "./config/db.js";
+import authRoutes from "./routes/authRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
+import publicRoutes from "./routes/publicRoutes.js";
+import { errorHandler } from "./middleware/errorHandler.js";
+import { UPLOADS_DIR } from "./controllers/mediaController.js";
+import { initScheduledPostCron } from "./cron/postScheduler.js";
+import { Redirect } from "./models/Redirect.js";
+import { getSitemapXml, getRobotsTxt, injectSeoMetadata } from "./services/seoService.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CLIENT_DIST = path.resolve(__dirname, "../client/dist");
@@ -13,12 +25,57 @@ const SUBMISSIONS_LOG = path.join(__dirname, "submissions.log");
 const app = express();
 app.disable("x-powered-by");
 
-// Security headers middleware
+// Connect to MongoDB
+connectDB();
+
+// Initialize cron worker for scheduled posts & expired jobs
+initScheduledPostCron();
+
+// Security headers (Helmet) + custom headers
+app.use(
+  helmet({
+    contentSecurityPolicy: false, // Keep disabled to allow mirrored Elementor/iframe content
+    crossOriginEmbedderPolicy: false,
+  })
+);
+
 app.use((req, res, next) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("X-Frame-Options", "SAMEORIGIN");
   res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-  res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  next();
+});
+
+// CORS Security: Restrict allowed origins to production domain & local dev
+const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(",").map((o) => o.trim())
+  : ["http://localhost:4000", "http://127.0.0.1:4000", "https://emmbros.com"];
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+  }
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(204);
+  }
+  next();
+});
+
+// CSRF & Same-Origin Protection for State-Mutating State Requests
+app.use((req, res, next) => {
+  if (["POST", "PUT", "DELETE", "PATCH"].includes(req.method) && req.path.startsWith("/api/admin")) {
+    const origin = req.headers.origin || req.headers.referer;
+    if (origin) {
+      const isAllowed = ALLOWED_ORIGINS.some((allowed) => origin.startsWith(allowed));
+      if (!isAllowed) {
+        return res.status(403).json({ ok: false, error: "CSRF protection: Request origin not allowed." });
+      }
+    }
+  }
   next();
 });
 
@@ -30,7 +87,26 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.json({ limit: "1mb" }));
+// 301 Redirect Middleware (Intercepts incoming requests before routes)
+app.use(async (req, res, next) => {
+  if (req.path.startsWith("/api") || req.path.startsWith("/admin") || path.extname(req.path)) {
+    return next();
+  }
+  try {
+    const redirectRule = await Redirect.findOne({ fromUrl: req.path.toLowerCase(), active: true });
+    if (redirectRule) {
+      console.log(`[redirect] 301 Redirecting ${req.path} -> ${redirectRule.toUrl}`);
+      return res.redirect(redirectRule.statusCode || 301, redirectRule.toUrl);
+    }
+  } catch (err) {
+    console.error("[redirect] Error processing redirect rule:", err.message);
+  }
+  next();
+});
+
+app.use(express.json({ limit: "2mb" }));
+app.use(express.urlencoded({ extended: true, limit: "2mb" }));
+app.use(cookieParser());
 
 // Accept multipart form posts (resume/file uploads) up to 15MB.
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 15 * 1024 * 1024 } });
@@ -62,10 +138,7 @@ if (SMTP_HOST && SMTP_USER && SMTP_PASS) {
   );
 }
 
-function escapeHtml(s) {
-  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-}
-
+// Contact form submission route
 app.post("/api/contact", upload.any(), async (req, res) => {
   const data = { ...(req.body || {}) };
   const page = data.__page || "";
@@ -129,11 +202,47 @@ app.post("/api/contact", upload.any(), async (req, res) => {
   }
 });
 
+// Dynamic XML Sitemap
+app.get("/sitemap.xml", async (req, res, next) => {
+  try {
+    const xml = await getSitemapXml();
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    res.send(xml);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Dynamic Robots.txt
+app.get("/robots.txt", (req, res) => {
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.setHeader("Cache-Control", "public, max-age=86400");
+  res.send(getRobotsTxt());
+});
+
+// API Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api", publicRoutes);
+
 app.get("/api/health", (req, res) => res.json({ ok: true, mail: !!transporter }));
 
-// Serve the built React client (which includes the mirrored pages + assets).
+// Global Error Handler for API routes
+app.use(errorHandler);
+
+// Serve uploaded media files directly
+app.use("/uploads", express.static(UPLOADS_DIR, { maxAge: "30d" }));
+
+// Serve the built React client with Server-Side Meta Injection
 if (fs.existsSync(CLIENT_DIST)) {
-  // WebP content negotiation: transparently serve .webp when requested .jpg/.png has a .webp version
+  const indexHtmlPath = path.join(CLIENT_DIST, "index.html");
+  let rawIndexHtml = "";
+  if (fs.existsSync(indexHtmlPath)) {
+    rawIndexHtml = fs.readFileSync(indexHtmlPath, "utf-8");
+  }
+
+  // WebP content negotiation
   app.get(/^\/wp-content\/uploads\/.+\.(jpe?g|png)$/i, (req, res, next) => {
     const accept = req.headers.accept || "";
     if (!accept.includes("image/webp")) return next();
@@ -152,10 +261,11 @@ if (fs.existsSync(CLIENT_DIST)) {
     next();
   });
 
-  // Serve static assets with efficient caching
+  // Serve static assets with caching
   app.use(
     express.static(CLIENT_DIST, {
       maxAge: "30d",
+      index: false,
       setHeaders: (res, filePath) => {
         if (/\.(webp|jpg|jpeg|png|gif|svg|woff2?|ttf|eot|css|js|ico)$/i.test(filePath)) {
           res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
@@ -166,13 +276,23 @@ if (fs.existsSync(CLIENT_DIST)) {
     })
   );
 
-  // Catch-all route for SPA navigation. Return 404 for missing files with extensions.
-  app.get("*", (req, res, next) => {
+  // Catch-all route for SPA navigation with Server-Side Crawlable Meta Injection
+  app.get("*", async (req, res, next) => {
     if (req.path.startsWith("/api/")) return next();
-    if (path.extname(req.path)) {
+    if (path.extname(req.path) && !req.path.endsWith(".html")) {
       return res.status(404).send("File not found");
     }
-    res.sendFile(path.join(CLIENT_DIST, "index.html"));
+    try {
+      if (rawIndexHtml) {
+        const injectedHtml = await injectSeoMetadata(rawIndexHtml, req.path);
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        return res.send(injectedHtml);
+      }
+      res.sendFile(indexHtmlPath);
+    } catch (err) {
+      console.error("[seo] Error injecting meta tags:", err.message);
+      res.sendFile(indexHtmlPath);
+    }
   });
 } else {
   console.warn(`[static] ${CLIENT_DIST} not found. Run "npm run build" in client/ first.`);
