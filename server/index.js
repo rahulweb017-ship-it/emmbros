@@ -1,4 +1,4 @@
-import "dotenv/config";
+import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
@@ -7,6 +7,10 @@ import multer from "multer";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, ".env") });
+dotenv.config();
 
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -18,7 +22,6 @@ import { initScheduledPostCron } from "./cron/postScheduler.js";
 import { Redirect } from "./models/Redirect.js";
 import { getSitemapXml, getRobotsTxt, injectSeoMetadata } from "./services/seoService.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CLIENT_DIST = path.resolve(__dirname, "../client/dist");
 const SUBMISSIONS_LOG = path.join(__dirname, "submissions.log");
 
