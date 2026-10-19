@@ -1,0 +1,1164 @@
+{
+  "/wp-content/uploads/2025/12/New-Project-54.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/New-Project-54.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\New-Project-54.webp",
+    "targetRel": "/assets/images/new-project-54.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-54.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2025/12/hero-img-1.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/hero-img-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\hero-img-1.webp",
+    "targetRel": "/assets/images/hero-img-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\hero-img-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2025/12/hero-img-4.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/hero-img-4.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\hero-img-4.webp",
+    "targetRel": "/assets/images/hero-img-4.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\hero-img-4.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2025/12/icon.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/icon.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\icon.webp",
+    "targetRel": "/assets/images/icon.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\icon.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2025/12/logo-1.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/logo-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\logo-1.webp",
+    "targetRel": "/assets/images/logo-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\logo-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2025/12/logo1.webp": {
+    "sourceRel": "/wp-content/uploads/2025/12/logo1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2025\\12\\logo1.webp",
+    "targetRel": "/assets/images/logo1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\logo1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/DRIVELINE.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/DRIVELINE.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\DRIVELINE.webp",
+    "targetRel": "/assets/images/driveline.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\driveline.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/Front-axle.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/Front-axle.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\Front-axle.webp",
+    "targetRel": "/assets/images/front-axle.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\front-axle.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/Gear-Box.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/Gear-Box.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\Gear-Box.webp",
+    "targetRel": "/assets/images/gear-box.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gear-box.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/New-Project-31.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/New-Project-31.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\New-Project-31.webp",
+    "targetRel": "/assets/images/new-project-31.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-31.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/New-Project-33.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/New-Project-33.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\New-Project-33.webp",
+    "targetRel": "/assets/images/new-project-33.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-33.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/New-Project-34.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/New-Project-34.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\New-Project-34.webp",
+    "targetRel": "/assets/images/new-project-34.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-34.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/New-Project-36.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/New-Project-36.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\New-Project-36.webp",
+    "targetRel": "/assets/images/new-project-36.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-36.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/New-Project-39.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/New-Project-39.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\New-Project-39.webp",
+    "targetRel": "/assets/images/new-project-39.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-39.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/PLANETARY-Wheel-Drive.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/PLANETARY-Wheel-Drive.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\PLANETARY-Wheel-Drive.webp",
+    "targetRel": "/assets/images/planetary-wheel-drive.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\planetary-wheel-drive.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/Rear-axle.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/Rear-axle.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\Rear-axle.webp",
+    "targetRel": "/assets/images/rear-axle.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\rear-axle.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/about-us-bg.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/about-us-bg.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\about-us-bg.webp",
+    "targetRel": "/assets/images/about-us-bg.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\about-us-bg.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/certificate-four.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/certificate-four.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\certificate-four.webp",
+    "targetRel": "/assets/images/certificate-four.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\certificate-four.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/certificate-one.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/certificate-one.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\certificate-one.webp",
+    "targetRel": "/assets/images/certificate-one.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\certificate-one.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/certificate-three.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/certificate-three.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\certificate-three.webp",
+    "targetRel": "/assets/images/certificate-three.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\certificate-three.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/certificate-two.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/certificate-two.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\certificate-two.webp",
+    "targetRel": "/assets/images/certificate-two.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\certificate-two.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/01/hydraulics.webp": {
+    "sourceRel": "/wp-content/uploads/2026/01/hydraulics.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\01\\hydraulics.webp",
+    "targetRel": "/assets/images/hydraulics.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\hydraulics.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/Kubota.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/Kubota.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\Kubota.webp",
+    "targetRel": "/assets/images/kubota.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\kubota.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-20.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-20.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-20.webp",
+    "targetRel": "/assets/images/new-project-20.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-20.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-21.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-21.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-21.webp",
+    "targetRel": "/assets/images/new-project-21.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-21.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-30-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-30-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-30-1.webp",
+    "targetRel": "/assets/images/new-project-30-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-30-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-37-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-37-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-37-1.webp",
+    "targetRel": "/assets/images/new-project-37-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-37-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-40.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-40.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-40.webp",
+    "targetRel": "/assets/images/new-project-40.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-40.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-41.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-41.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-41.webp",
+    "targetRel": "/assets/images/new-project-41.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-41.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-42.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-42.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-42.webp",
+    "targetRel": "/assets/images/new-project-42.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-42.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-43.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-43.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-43.webp",
+    "targetRel": "/assets/images/new-project-43.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-43.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-44.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-44.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-44.webp",
+    "targetRel": "/assets/images/new-project-44.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-44.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-45.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-45.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-45.webp",
+    "targetRel": "/assets/images/new-project-45.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-45.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-48.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-48.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-48.webp",
+    "targetRel": "/assets/images/new-project-48.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-48.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-49.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-49.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-49.webp",
+    "targetRel": "/assets/images/new-project-49.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-49.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-51.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-51.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-51.webp",
+    "targetRel": "/assets/images/new-project-51.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-51.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-52.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-52.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-52.webp",
+    "targetRel": "/assets/images/new-project-52.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-52.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/New-Project-53.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/New-Project-53.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\New-Project-53.webp",
+    "targetRel": "/assets/images/new-project-53.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-53.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/katha-plant-image.jpg-e1770114833911.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/katha-plant-image.jpg-e1770114833911.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\katha-plant-image.jpg-e1770114833911.webp",
+    "targetRel": "/assets/images/katha-plant-image.jpg-e1770114833911.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\katha-plant-image.jpg-e1770114833911.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/new-emm-image.jpg.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/new-emm-image.jpg.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\new-emm-image.jpg.webp",
+    "targetRel": "/assets/images/new-emm-image.jpg.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-emm-image.jpg.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/product-2523.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/product-2523.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\product-2523.webp",
+    "targetRel": "/assets/images/product-2523.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\product-2523.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/02/product-2567.webp": {
+    "sourceRel": "/wp-content/uploads/2026/02/product-2567.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\02\\product-2567.webp",
+    "targetRel": "/assets/images/product-2567.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\product-2567.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/101882.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/101882.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\101882.webp",
+    "targetRel": "/assets/images/101882.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\101882.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Boom-lock.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Boom-lock.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Boom-lock.webp",
+    "targetRel": "/assets/images/boom-lock.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\boom-lock.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_06_42-PM.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_06_42-PM.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\ChatGPT-Image-Mar-17-2026-04_06_42-PM.webp",
+    "targetRel": "/assets/images/chatgpt-image-mar-17-2026-04_06_42-pm.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\chatgpt-image-mar-17-2026-04_06_42-pm.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_17_52-PM.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_17_52-PM.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\ChatGPT-Image-Mar-17-2026-04_17_52-PM.webp",
+    "targetRel": "/assets/images/chatgpt-image-mar-17-2026-04_17_52-pm.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\chatgpt-image-mar-17-2026-04_17_52-pm.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_49_43-PM.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_49_43-PM.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\ChatGPT-Image-Mar-17-2026-04_49_43-PM.webp",
+    "targetRel": "/assets/images/chatgpt-image-mar-17-2026-04_49_43-pm.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\chatgpt-image-mar-17-2026-04_49_43-pm.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_57_53-PM.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/ChatGPT-Image-Mar-17-2026-04_57_53-PM.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\ChatGPT-Image-Mar-17-2026-04_57_53-PM.webp",
+    "targetRel": "/assets/images/chatgpt-image-mar-17-2026-04_57_53-pm.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\chatgpt-image-mar-17-2026-04_57_53-pm.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_1nkmod1nkmod1nkm-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_1nkmod1nkmod1nkm-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_1nkmod1nkmod1nkm-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_1nkmod1nkmod1nkm-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_1nkmod1nkmod1nkm-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_73wmp873wmp873wm-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_73wmp873wmp873wm-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_73wmp873wmp873wm-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_73wmp873wmp873wm-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_73wmp873wmp873wm-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_83p8ee83p8ee83p8-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_83p8ee83p8ee83p8-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_83p8ee83p8ee83p8-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_83p8ee83p8ee83p8-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_83p8ee83p8ee83p8-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_ac4cppac4cppac4c.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_ac4cppac4cppac4c.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_ac4cppac4cppac4c.webp",
+    "targetRel": "/assets/images/gemini_generated_image_ac4cppac4cppac4c.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_ac4cppac4cppac4c.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_av2uq6av2uq6av2u-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_av2uq6av2uq6av2u-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_av2uq6av2uq6av2u-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_av2uq6av2uq6av2u-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_av2uq6av2uq6av2u-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_e5vdy5e5vdy5e5vd-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_e5vdy5e5vdy5e5vd-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_e5vdy5e5vdy5e5vd-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_e5vdy5e5vdy5e5vd-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_e5vdy5e5vdy5e5vd-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_ih86rhih86rhih86-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_ih86rhih86rhih86-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_ih86rhih86rhih86-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_ih86rhih86rhih86-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_ih86rhih86rhih86-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_lqorgilqorgilqor.jpg.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_lqorgilqorgilqor.jpg.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_lqorgilqorgilqor.jpg.webp",
+    "targetRel": "/assets/images/gemini_generated_image_lqorgilqorgilqor.jpg.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_lqorgilqorgilqor.jpg.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_pefc4gpefc4gpefc-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_pefc4gpefc4gpefc-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_pefc4gpefc4gpefc-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_pefc4gpefc4gpefc-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_pefc4gpefc4gpefc-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_pito8upito8upito-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_pito8upito8upito-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_pito8upito8upito-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_pito8upito8upito-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_pito8upito8upito-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_q3jxc7q3jxc7q3jx-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_q3jxc7q3jxc7q3jx-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_q3jxc7q3jxc7q3jx-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_q3jxc7q3jxc7q3jx-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_q3jxc7q3jxc7q3jx-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/Gemini_Generated_Image_xdt7rfxdt7rfxdt7-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/Gemini_Generated_Image_xdt7rfxdt7rfxdt7-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\Gemini_Generated_Image_xdt7rfxdt7rfxdt7-1.webp",
+    "targetRel": "/assets/images/gemini_generated_image_xdt7rfxdt7rfxdt7-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gemini_generated_image_xdt7rfxdt7rfxdt7-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/IMG-20240610-WA0001.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/IMG-20240610-WA0001.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\IMG-20240610-WA0001.webp",
+    "targetRel": "/assets/images/img-20240610-wa0001.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\img-20240610-wa0001.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-100.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-100.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-100.webp",
+    "targetRel": "/assets/images/new-project-100.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-100.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-18.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-18.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-18.webp",
+    "targetRel": "/assets/images/new-project-18.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-18.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T171015.962.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T171015.962.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T171015.962.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t171015.962.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t171015.962.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T171027.121.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T171027.121.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T171027.121.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t171027.121.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t171027.121.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T171036.679.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T171036.679.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T171036.679.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t171036.679.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t171036.679.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T171049.248.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T171049.248.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T171049.248.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t171049.248.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t171049.248.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T173043.862.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T173043.862.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T173043.862.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t173043.862.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t173043.862.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T173126.625.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T173126.625.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T173126.625.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t173126.625.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t173126.625.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174148.884.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174148.884.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174148.884.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174148.884.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174148.884.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174211.260.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174211.260.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174211.260.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174211.260.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174211.260.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174231.734.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174231.734.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174231.734.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174231.734.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174231.734.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174253.161.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174253.161.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174253.161.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174253.161.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174253.161.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174308.361.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174308.361.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174308.361.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174308.361.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174308.361.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174321.900.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174321.900.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174321.900.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174321.900.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174321.900.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174339.702.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174339.702.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174339.702.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174339.702.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174339.702.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-13T174353.032.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-13T174353.032.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-13T174353.032.webp",
+    "targetRel": "/assets/images/new-project-2026-03-13t174353.032.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-13t174353.032.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-18T190404.445.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-18T190404.445.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-18T190404.445.webp",
+    "targetRel": "/assets/images/new-project-2026-03-18t190404.445.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-18t190404.445.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-18T192503.996.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-18T192503.996.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-18T192503.996.webp",
+    "targetRel": "/assets/images/new-project-2026-03-18t192503.996.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-18t192503.996.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-26T174004.390.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-26T174004.390.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-26T174004.390.webp",
+    "targetRel": "/assets/images/new-project-2026-03-26t174004.390.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-26t174004.390.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-2026-03-28T161357.419.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-2026-03-28T161357.419.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-2026-03-28T161357.419.webp",
+    "targetRel": "/assets/images/new-project-2026-03-28t161357.419.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-03-28t161357.419.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-22.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-22.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-22.webp",
+    "targetRel": "/assets/images/new-project-22.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-22.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-23.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-23.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-23.webp",
+    "targetRel": "/assets/images/new-project-23.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-23.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-25.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-25.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-25.webp",
+    "targetRel": "/assets/images/new-project-25.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-25.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-26.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-26.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-26.webp",
+    "targetRel": "/assets/images/new-project-26.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-26.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-27.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-27.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-27.webp",
+    "targetRel": "/assets/images/new-project-27.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-27.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-28.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-28.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-28.webp",
+    "targetRel": "/assets/images/new-project-28.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-28.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-29.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-29.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-29.webp",
+    "targetRel": "/assets/images/new-project-29.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-29.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-30.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-30.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-30.webp",
+    "targetRel": "/assets/images/new-project-30.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-30.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-31.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-31.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-31.webp",
+    "targetRel": "/assets/images/new-project-31-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-31-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-32.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-32.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-32.webp",
+    "targetRel": "/assets/images/new-project-32.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-32.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-33.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-33.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-33.webp",
+    "targetRel": "/assets/images/new-project-33-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-33-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-34.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-34.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-34.webp",
+    "targetRel": "/assets/images/new-project-34-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-34-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-35.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-35.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-35.webp",
+    "targetRel": "/assets/images/new-project-35.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-35.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-36.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-36.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-36.webp",
+    "targetRel": "/assets/images/new-project-36-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-36-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-37.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-37.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-37.webp",
+    "targetRel": "/assets/images/new-project-37.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-37.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-38-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-38-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-38-1.webp",
+    "targetRel": "/assets/images/new-project-38-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-38-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-40.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-40.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-40.webp",
+    "targetRel": "/assets/images/new-project-40-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-40-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-41.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-41.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-41.webp",
+    "targetRel": "/assets/images/new-project-41-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-41-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-42.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-42.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-42.webp",
+    "targetRel": "/assets/images/new-project-42-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-42-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-56.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-56.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-56.webp",
+    "targetRel": "/assets/images/new-project-56.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-56.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-58.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-58.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-58.webp",
+    "targetRel": "/assets/images/new-project-58.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-58.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-59.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-59.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-59.webp",
+    "targetRel": "/assets/images/new-project-59.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-59.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-60.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-60.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-60.webp",
+    "targetRel": "/assets/images/new-project-60.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-60.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-63.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-63.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-63.webp",
+    "targetRel": "/assets/images/new-project-63.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-63.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-68.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-68.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-68.webp",
+    "targetRel": "/assets/images/new-project-68.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-68.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-70.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-70.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-70.webp",
+    "targetRel": "/assets/images/new-project-70.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-70.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-71.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-71.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-71.webp",
+    "targetRel": "/assets/images/new-project-71.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-71.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-72.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-72.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-72.webp",
+    "targetRel": "/assets/images/new-project-72.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-72.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-73.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-73.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-73.webp",
+    "targetRel": "/assets/images/new-project-73.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-73.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-74.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-74.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-74.webp",
+    "targetRel": "/assets/images/new-project-74.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-74.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-75.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-75.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-75.webp",
+    "targetRel": "/assets/images/new-project-75.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-75.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-76.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-76.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-76.webp",
+    "targetRel": "/assets/images/new-project-76.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-76.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-77.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-77.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-77.webp",
+    "targetRel": "/assets/images/new-project-77.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-77.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-78.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-78.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-78.webp",
+    "targetRel": "/assets/images/new-project-78.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-78.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-79.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-79.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-79.webp",
+    "targetRel": "/assets/images/new-project-79.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-79.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-80.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-80.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-80.webp",
+    "targetRel": "/assets/images/new-project-80.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-80.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-81.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-81.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-81.webp",
+    "targetRel": "/assets/images/new-project-81.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-81.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-82.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-82.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-82.webp",
+    "targetRel": "/assets/images/new-project-82.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-82.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-83.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-83.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-83.webp",
+    "targetRel": "/assets/images/new-project-83.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-83.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-84.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-84.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-84.webp",
+    "targetRel": "/assets/images/new-project-84.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-84.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-88.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-88.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-88.webp",
+    "targetRel": "/assets/images/new-project-88.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-88.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-89.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-89.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-89.webp",
+    "targetRel": "/assets/images/new-project-89.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-89.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-90.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-90.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-90.webp",
+    "targetRel": "/assets/images/new-project-90.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-90.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-93.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-93.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-93.webp",
+    "targetRel": "/assets/images/new-project-93.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-93.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-96.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-96.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-96.webp",
+    "targetRel": "/assets/images/new-project-96.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-96.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-97.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-97.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-97.webp",
+    "targetRel": "/assets/images/new-project-97.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-97.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-98.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-98.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-98.webp",
+    "targetRel": "/assets/images/new-project-98.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-98.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/New-Project-99.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/New-Project-99.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\New-Project-99.webp",
+    "targetRel": "/assets/images/new-project-99.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-99.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-2.11.29-PM-Copy-Copy.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-11-at-2.11.29-PM-Copy-Copy.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\WhatsApp-Image-2026-03-11-at-2.11.29-PM-Copy-Copy.webp",
+    "targetRel": "/assets/images/whatsapp-image-2026-03-11-at-2.11.29-pm-copy-copy.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\whatsapp-image-2026-03-11-at-2.11.29-pm-copy-copy.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/WhatsApp-Video-2026-03-11-at-4.28.01-PM-1.mp4": {
+    "sourceRel": "/wp-content/uploads/2026/03/WhatsApp-Video-2026-03-11-at-4.28.01-PM-1.mp4",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\WhatsApp-Video-2026-03-11-at-4.28.01-PM-1.mp4",
+    "targetRel": "/assets/videos/whatsapp-video-2026-03-11-at-4.28.01-pm-1.mp4",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\videos\\whatsapp-video-2026-03-11-at-4.28.01-pm-1.mp4",
+    "category": "videos"
+  },
+  "/wp-content/uploads/2026/03/WhatsApp-Video-2026-03-11-at-4.28.07-PM.mp4": {
+    "sourceRel": "/wp-content/uploads/2026/03/WhatsApp-Video-2026-03-11-at-4.28.07-PM.mp4",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\WhatsApp-Video-2026-03-11-at-4.28.07-PM.mp4",
+    "targetRel": "/assets/videos/whatsapp-video-2026-03-11-at-4.28.07-pm.mp4",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\videos\\whatsapp-video-2026-03-11-at-4.28.07-pm.mp4",
+    "category": "videos"
+  },
+  "/wp-content/uploads/2026/03/bush.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/bush.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\bush.webp",
+    "targetRel": "/assets/images/bush.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\bush.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/cardan-shaft.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/cardan-shaft.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\cardan-shaft.webp",
+    "targetRel": "/assets/images/cardan-shaft.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\cardan-shaft.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/case-2564.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/case-2564.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\case-2564.webp",
+    "targetRel": "/assets/images/case-2564.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\case-2564.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/diff-nut-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/diff-nut-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\diff-nut-1.webp",
+    "targetRel": "/assets/images/diff-nut-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\diff-nut-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/disc-brake-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/disc-brake-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\disc-brake-1.webp",
+    "targetRel": "/assets/images/disc-brake-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\disc-brake-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/emm-mileston.jpg-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/emm-mileston.jpg-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\emm-mileston.jpg-1.webp",
+    "targetRel": "/assets/images/emm-mileston.jpg-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\emm-mileston.jpg-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/gland.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/gland.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\gland.webp",
+    "targetRel": "/assets/images/gland.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\gland.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/housing-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/housing-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\housing-1.webp",
+    "targetRel": "/assets/images/housing-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\housing-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/icon2.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/icon2.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\icon2.webp",
+    "targetRel": "/assets/images/icon2.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\icon2.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/icon3.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/icon3.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\icon3.webp",
+    "targetRel": "/assets/images/icon3.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\icon3.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/image-1-R-D.jpg.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/image-1-R-D.jpg.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\image-1-R-D.jpg.webp",
+    "targetRel": "/assets/images/image-1-r-d.jpg.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\image-1-r-d.jpg.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/image-3-R-D.jpg.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/image-3-R-D.jpg.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\image-3-R-D.jpg.webp",
+    "targetRel": "/assets/images/image-3-r-d.jpg.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\image-3-r-d.jpg.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/image-7.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/image-7.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\image-7.webp",
+    "targetRel": "/assets/images/image-7.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\image-7.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/lever-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/lever-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\lever-1.webp",
+    "targetRel": "/assets/images/lever-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\lever-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/manu-packing1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/manu-packing1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\manu-packing1.webp",
+    "targetRel": "/assets/images/manu-packing1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\manu-packing1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/manu-packing2.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/manu-packing2.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\manu-packing2.webp",
+    "targetRel": "/assets/images/manu-packing2.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\manu-packing2.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/manu-packing3.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/manu-packing3.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\manu-packing3.webp",
+    "targetRel": "/assets/images/manu-packing3.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\manu-packing3.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/product-2583-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/product-2583-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\product-2583-1.webp",
+    "targetRel": "/assets/images/product-2583-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\product-2583-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/spool-2507.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/spool-2507.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\spool-2507.webp",
+    "targetRel": "/assets/images/spool-2507.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\spool-2507.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/startor3-1.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/startor3-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\startor3-1.webp",
+    "targetRel": "/assets/images/startor3-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\startor3-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/sterring-2538.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/sterring-2538.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\sterring-2538.webp",
+    "targetRel": "/assets/images/sterring-2538.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\sterring-2538.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/truck.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/truck.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\truck.webp",
+    "targetRel": "/assets/images/truck.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\truck.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/trunnion-3.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/trunnion-3.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\trunnion-3.webp",
+    "targetRel": "/assets/images/trunnion-3.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\trunnion-3.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/03/yoke-2.webp": {
+    "sourceRel": "/wp-content/uploads/2026/03/yoke-2.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\03\\yoke-2.webp",
+    "targetRel": "/assets/images/yoke-2.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\yoke-2.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/04/New-Project-2026-04-27T154744.797.webp": {
+    "sourceRel": "/wp-content/uploads/2026/04/New-Project-2026-04-27T154744.797.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\04\\New-Project-2026-04-27T154744.797.webp",
+    "targetRel": "/assets/images/new-project-2026-04-27t154744.797.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-04-27t154744.797.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/04/New-Project-2026-04-27T154818.164.webp": {
+    "sourceRel": "/wp-content/uploads/2026/04/New-Project-2026-04-27T154818.164.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\04\\New-Project-2026-04-27T154818.164.webp",
+    "targetRel": "/assets/images/new-project-2026-04-27t154818.164.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-2026-04-27t154818.164.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2026/04/New-Project-47.webp": {
+    "sourceRel": "/wp-content/uploads/2026/04/New-Project-47.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2026\\04\\New-Project-47.webp",
+    "targetRel": "/assets/images/new-project-47.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\new-project-47.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide-1.webp": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide-1.webp",
+    "targetRel": "/assets/images/slide-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\slide-1.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide-2.webp": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide-2.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide-2.webp",
+    "targetRel": "/assets/images/slide-2.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\slide-2.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide-3.webp": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide-3.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide-3.webp",
+    "targetRel": "/assets/images/slide-3.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\slide-3.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide-4.webp": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide-4.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide-4.webp",
+    "targetRel": "/assets/images/slide-4.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\slide-4.webp",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide/harish-mehta.png": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide/harish-mehta.png",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide\\harish-mehta.png",
+    "targetRel": "/assets/images/harish-mehta.png",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\harish-mehta.png",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626 new/Slide/pulkit-mehta.png": {
+    "sourceRel": "/wp-content/uploads/2626 new/Slide/pulkit-mehta.png",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide\\pulkit-mehta.png",
+    "targetRel": "/assets/images/pulkit-mehta.png",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\pulkit-mehta.png",
+    "category": "images"
+  },
+  "/wp-content/uploads/2626%20new/Slide-1.webp": {
+    "sourceRel": "/wp-content/uploads/2626%20new/Slide-1.webp",
+    "sourceAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\wp-content\\uploads\\2626 new\\Slide-1.webp",
+    "targetRel": "/assets/images/slide-1-1.webp",
+    "targetAbs": "C:\\xampp\\htdocs\\Emmbros\\emmbros-react\\client\\public\\assets\\images\\slide-1-1.webp",
+    "category": "images"
+  }
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Basic:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:400,500,600,700,800&display=swap');
+
+:root {
+  --eal-global-typography-primary-font-family: "Fira Sans Condensed", sans-serif;
+  --eal-global-typography-secondary-font-family: "Fira Sans Condensed", sans-serif;
+  --eal-global-typography-text-font-family: "Inter", sans-serif;
+  --eal-global-typography-accent-font-family: "Inter", sans-serif;
+  --font-cabin: "Cabin Condensed", sans-serif;
+  --font-saira: "Saira Extra Condensed", sans-serif;
+  --font-basic: "Basic", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-fira: "Fira Sans Condensed", sans-serif;
+}

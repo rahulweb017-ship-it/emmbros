@@ -17,6 +17,7 @@ export async function sendJobApplicationNotification({ job, application }) {
       host: SMTP_HOST,
       port: parseInt(SMTP_PORT || "587", 10),
       secure: parseInt(SMTP_PORT || "587", 10) === 465,
+      requireTLS: parseInt(SMTP_PORT || "587", 10) === 587,
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS,

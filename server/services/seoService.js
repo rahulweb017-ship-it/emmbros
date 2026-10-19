@@ -23,10 +23,19 @@ export async function getSitemapXml() {
   const baseUrl = "https://emmbros.com";
   const nowStr = new Date().toISOString().split("T")[0];
 
-  // Static core routes
+  // Static core canonical marketing routes
   const staticUrls = [
     { loc: `${baseUrl}/`, priority: "1.0", changefreq: "daily" },
     { loc: `${baseUrl}/who-we-are`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/what-we-do`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/front-axle-shaft`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/rear-axle-shaft`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/gear-box-parts`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/driveline-parts`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/hydraulic-parts`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/product-application/planetary-wheel-drive-parts`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${baseUrl}/career`, priority: "0.8", changefreq: "weekly" },
     { loc: `${baseUrl}/blog`, priority: "0.9", changefreq: "daily" },
     { loc: `${baseUrl}/careers`, priority: "0.9", changefreq: "daily" },
   ];
@@ -77,22 +86,81 @@ Sitemap: https://emmbros.com/sitemap.xml
 `;
 }
 
+// Canonical static marketing page SEO directory
+const STATIC_PAGE_META = {
+  "/": {
+    title: "Emmbros Autocomp Ltd | Auto Parts Mfr in Baddi, HP",
+    desc: "IATF 16949 certified rear axle shaft & driveline parts manufacturer in Baddi, HP since 1991. Trusted OEM supplier to Tata, Leyland & global clients worldwide",
+  },
+  "/who-we-are": {
+    title: "About Emmbros Autocomp Ltd | Precision Engineering Baddi",
+    desc: "Learn about Emmbros Autocomp Ltd, our history since 1991, leadership, and manufacturing excellence in automotive forgings.",
+  },
+  "/what-we-do": {
+    title: "Forging Capabilities: Press & Upsetter Forged Parts | Emmbros",
+    desc: "Explore our press forging, upsetter forging, heat treatment, and precision machining capabilities.",
+  },
+  "/product-application": {
+    title: "OEM Product Applications & Parts | Emmbros Autocomp",
+    desc: "Overview of OEM automotive parts: axle shafts, gearbox components, cardan shafts, and hydraulic pistons.",
+  },
+  "/product-application/front-axle-shaft": {
+    title: "Front Axle Shafts & Wheel Shafts Manufacturer | Emmbros Autocomp",
+    desc: "Manufacturer of OEM front axle shafts, wheel shafts, and steering drive components.",
+  },
+  "/product-application/rear-axle-shaft": {
+    title: "OEM Rear Axle Shafts Manufacturer | Emmbros Autocomp",
+    desc: "Specialist manufacturer of induction hardened rear axle shafts for commercial vehicles and tractors.",
+  },
+  "/product-application/gear-box-parts": {
+    title: "OEM Gearbox Parts, Planet Carriers & Sprockets | Emmbros",
+    desc: "Precision forged and CNC machined transmission gears, planet carriers, and sprockets.",
+  },
+  "/product-application/driveline-parts": {
+    title: "OEM Driveline Parts, Cardan Shafts & Yokes Manufacturer | Emmbros",
+    desc: "Driveline assemblies, propeller shafts, cardan shafts, slip yokes, and flange yokes.",
+  },
+  "/product-application/hydraulic-parts": {
+    title: "OEM Hydraulic Parts & Brake Pistons Manufacturer | Emmbros",
+    desc: "Precision automotive hydraulic cylinders, brake pistons, and fluid system assemblies.",
+  },
+  "/product-application/planetary-wheel-drive-parts": {
+    title: "Planetary Wheel Drive Parts & Flange Hubs | Emmbros",
+    desc: "High-torque planetary wheel drive parts, ring gears, and flange hubs for heavy duty axles.",
+  },
+  "/career": {
+    title: "Careers & Job Openings in Baddi | Emmbros Autocomp Ltd",
+    desc: "Join the engineering team at Emmbros Autocomp Ltd in Baddi, Himachal Pradesh.",
+  },
+};
+
 export async function injectSeoMetadata(htmlTemplate, reqPath) {
-  const cached = metaCache.get(reqPath);
+  const normPath = reqPath.replace(/\/$/, "") || "/";
+  const cached = metaCache.get(normPath);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
-    return cached.html;
+    let modifiedHtml = htmlTemplate;
+    if (modifiedHtml.includes("<title>")) {
+      modifiedHtml = modifiedHtml.replace(/<title>[\s\S]*?<\/title>/i, "");
+    }
+    return modifiedHtml.replace("</head>", `${cached.metaBlock}\n</head>`);
   }
 
   let title = "Emmbros Autocomp Ltd | Leading Automotive Forging Manufacturer";
   let description = "Emmbros Autocomp Ltd is a premier Tier-1 manufacturer of closed-die automotive forging components based in Baddi, Himachal Pradesh.";
-  let canonical = `https://emmbros.com${reqPath}`;
-  let ogImage = "https://emmbros.com/wp-content/uploads/2025/12/logo1.webp";
+  let canonical = `https://emmbros.com${normPath}`;
+  let ogImage = "https://emmbros.com/assets/images/logo1.webp";
   let ogType = "website";
   let robots = "index, follow";
   let jsonLd = null;
 
+  // Check known marketing pages
+  if (STATIC_PAGE_META[normPath]) {
+    title = STATIC_PAGE_META[normPath].title;
+    description = STATIC_PAGE_META[normPath].desc;
+  }
+
   // 1. Single Blog Post: /blog/:slug
-  const blogMatch = reqPath.match(/^\/blog\/([a-z0-9-]+)$/i);
+  const blogMatch = normPath.match(/^\/blog\/([a-z0-9-]+)$/i);
   if (blogMatch) {
     const slug = blogMatch[1];
     const post = await Post.findOne({ slug, status: "published" });
@@ -124,7 +192,7 @@ export async function injectSeoMetadata(htmlTemplate, reqPath) {
           "name": "Emmbros Autocomp Ltd",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://emmbros.com/wp-content/uploads/2025/12/logo1.webp",
+            "url": "https://emmbros.com/assets/images/logo1.webp",
           },
         },
       };
@@ -132,7 +200,7 @@ export async function injectSeoMetadata(htmlTemplate, reqPath) {
   }
 
   // 2. Single Job Posting: /careers/:slug
-  const careerMatch = reqPath.match(/^\/careers\/([a-z0-9-]+)$/i);
+  const careerMatch = normPath.match(/^\/careers\/([a-z0-9-]+)$/i);
   if (careerMatch) {
     const slug = careerMatch[1];
     const job = await Job.findOne({ slug, status: "open" });
@@ -161,7 +229,7 @@ export async function injectSeoMetadata(htmlTemplate, reqPath) {
           "@type": "Organization",
           "name": "Emmbros Autocomp Ltd",
           "sameAs": "https://emmbros.com",
-          "logo": "https://emmbros.com/wp-content/uploads/2025/12/logo1.webp",
+          "logo": "https://emmbros.com/assets/images/logo1.webp",
         },
         "jobLocation": {
           "@type": "Place",
@@ -179,13 +247,13 @@ export async function injectSeoMetadata(htmlTemplate, reqPath) {
   }
 
   // 3. Homepage Organization JSON-LD
-  if (reqPath === "/" || reqPath === "/index.html") {
+  if (normPath === "/" || normPath === "/index.html") {
     jsonLd = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Emmbros Autocomp Ltd",
       "url": "https://emmbros.com",
-      "logo": "https://emmbros.com/wp-content/uploads/2025/12/logo1.webp",
+      "logo": "https://emmbros.com/assets/images/logo1.webp",
       "description": "Leading Tier-1 manufacturer of closed-die automotive forging components in Baddi, Himachal Pradesh.",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -239,6 +307,6 @@ export async function injectSeoMetadata(htmlTemplate, reqPath) {
   }
   modifiedHtml = modifiedHtml.replace("</head>", `${metaBlock}\n</head>`);
 
-  metaCache.set(reqPath, { html: modifiedHtml, timestamp: Date.now() });
+  metaCache.set(normPath, { metaBlock, timestamp: Date.now() });
   return modifiedHtml;
 }

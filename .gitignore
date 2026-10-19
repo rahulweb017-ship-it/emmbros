@@ -1,7 +1,11 @@
 node_modules/
 client/dist/
 server/.env
+*.env
+*.log
 server/submissions.log
 server/uploads/
 tools/failed.txt
-
+tools/shots/
+.DS_Store
+Thumbs.db

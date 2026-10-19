@@ -128,6 +128,7 @@ if (SMTP_HOST && SMTP_USER && SMTP_PASS) {
     host: SMTP_HOST,
     port: Number(SMTP_PORT) || 587,
     secure: String(SMTP_SECURE) === "true" || Number(SMTP_PORT) === 465,
+    requireTLS: Number(SMTP_PORT) === 587,
     auth: { user: SMTP_USER, pass: SMTP_PASS },
   });
   console.log(`[mail] SMTP configured via ${SMTP_HOST}`);
@@ -269,7 +270,9 @@ if (fs.existsSync(CLIENT_DIST)) {
       setHeaders: (res, filePath) => {
         if (/\.(webp|jpg|jpeg|png|gif|svg|woff2?|ttf|eot|css|js|ico)$/i.test(filePath)) {
           res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
-        } else if (/\.(html|txt|xml)$/i.test(filePath)) {
+        } else if (/\.(html)$/i.test(filePath)) {
+          res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        } else if (/\.(txt|xml)$/i.test(filePath)) {
           res.setHeader("Cache-Control", "public, max-age=3600");
         }
       },
@@ -283,9 +286,11 @@ if (fs.existsSync(CLIENT_DIST)) {
       return res.status(404).send("File not found");
     }
     try {
-      if (rawIndexHtml) {
-        const injectedHtml = await injectSeoMetadata(rawIndexHtml, req.path);
+      if (fs.existsSync(indexHtmlPath)) {
+        const currentHtml = fs.readFileSync(indexHtmlPath, "utf-8");
+        const injectedHtml = await injectSeoMetadata(currentHtml, req.path);
         res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         return res.send(injectedHtml);
       }
       res.sendFile(indexHtmlPath);

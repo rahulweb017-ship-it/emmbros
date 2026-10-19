@@ -10,7 +10,7 @@ export interface SlideData {
 export const HERO_SLIDES: SlideData[] = [
   {
     id: 1,
-    image: "/wp-content/uploads/2626 new/Slide-1.jpg",
+    image: "/assets/images/slide-1.webp",
     heading: "Precision Engineered\nShafts & Components",
     subHeading: "High performance solution for demanding applications.\nDurable, Relaible, built exact specification.",
     buttonText: "Contact us",
@@ -18,7 +18,7 @@ export const HERO_SLIDES: SlideData[] = [
   },
   {
     id: 2,
-    image: "/wp-content/uploads/2626 new/Slide-2.jpg",
+    image: "/assets/images/slide-2.webp",
     heading: "Established Since 1991",
     subHeading: "Delivering precision-engineered components with over three decades of manufacturing excellence, trusted by OEMs worldwide.",
     buttonText: "Contact us",
@@ -26,7 +26,7 @@ export const HERO_SLIDES: SlideData[] = [
   },
   {
     id: 3,
-    image: "/wp-content/uploads/2626 new/Slide-3.jpg",
+    image: "/assets/images/slide-3.webp",
     heading: "Forging Our Way to On-Time Delivery",
     subHeading: "Every component forged with precision. Every deadline met with confidence.",
     buttonText: "Contact us",
@@ -34,7 +34,7 @@ export const HERO_SLIDES: SlideData[] = [
   },
   {
     id: 4,
-    image: "/wp-content/uploads/2626 new/Slide-4.jpg",
+    image: "/assets/images/slide-4.webp",
     heading: "State-of-the-Art Machining for Consistent Quality",
     subHeading: "Advanced machining technology delivering exceptional accuracy, repeatability, and quality in every component.",
     buttonText: "Contact us",

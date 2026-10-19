@@ -18,7 +18,7 @@ export function SettingsPage() {
   const [settings, setSettings] = useState({
     siteName: "Emmbros Autocomp Ltd",
     tagline: "Leading Automotive Forging Manufacturer",
-    logo: "/wp-content/uploads/2025/12/logo1.webp",
+    logo: "/assets/images/logo1.webp",
     favicon: "/favicon.ico",
     contactDetails: {
       address: "Plot No 46, Phase 1, Baddi, Himachal Pradesh 173205, India",
@@ -34,7 +34,7 @@ export function SettingsPage() {
       instagram: "",
     },
     defaultSeoTitleTemplate: "%title% | Emmbros Autocomp Ltd",
-    defaultOgImage: "/wp-content/uploads/2025/12/logo1.webp",
+    defaultOgImage: "/assets/images/logo1.webp",
     googleAnalyticsId: "",
     searchConsoleCode: "",
     customHeadScripts: "",

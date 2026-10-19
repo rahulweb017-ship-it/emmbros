@@ -363,6 +363,7 @@ export function JobEditPage() {
                   <option value="Sales & Marketing">Sales & Marketing</option>
                   <option value="Finance & Accounts">Finance & Accounts</option>
                   <option value="General Management">General Management</option>
+                  <option value="Other">Other</option>
                 </select>
               </FormField>
 
@@ -392,6 +393,7 @@ export function JobEditPage() {
                   <option value="Part-time">Part-time</option>
                   <option value="Contract">Contract</option>
                   <option value="Internship">Internship</option>
+                  <option value="Other">Other</option>
                 </select>
               </FormField>
 
