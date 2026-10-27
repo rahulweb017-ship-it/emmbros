@@ -26,9 +26,9 @@ export function WhoWeAre() {
 		<div className="eal-element eal-element-c1c1871 eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-914343b eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-0c934ad eal-widget eal-widget-image">
-															<img fetchpriority="high" decoding="async" width="615" height="542" src="/assets/images/new-project-25.webp" className="attachment-full size-full " alt="Emmbros Autocomp Modern Manufacturing Plant at Baddi" />															</div>
+															<img fetchpriority="high" width="615" height="542" src="/assets/images/new-project-25.webp" className="attachment-full size-full " alt="Emmbros Autocomp Modern Manufacturing Plant at Baddi" />															</div>
 				<div className="eal-element eal-element-8ded83f eal-absolute eal-widget eal-widget-image">
-															<img decoding="async" width="544" height="410" src="/assets/images/new-project-26.webp" className="attachment-full size-full " alt="Precision Engineering Workshop and Testing Lab" />															</div>
+															<img width="544" height="410" src="/assets/images/new-project-26.webp" className="attachment-full size-full " alt="Precision Engineering Workshop and Testing Lab" />															</div>
 				</div>
 		<div className="eal-element eal-element-3de028b eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-f77a0c3 eal-widget eal-widget-heading">
@@ -74,7 +74,7 @@ export function WhoWeAre() {
 							</div>
 							
 							<div className="leadership-img-col">
-								<img src="/assets/images/harish-mehta.png" alt="Mr. Harish Mehta" loading="lazy" />
+								<img src="/assets/images/harish-mehta.png" alt="Mr. Harish Mehta" />
 							</div>
 						</div>
 					</div>
@@ -90,7 +90,7 @@ export function WhoWeAre() {
 						<div className="leadership-slide-content reverse-mobile">
 							
 							<div className="leadership-img-col">
-								<img src="/assets/images/pulkit-mehta.png" alt="Mr. Pulkit Mehta" loading="lazy" />
+								<img src="/assets/images/pulkit-mehta.png" alt="Mr. Pulkit Mehta" />
 							</div>
 							
 							<div className="leadership-text-col">
@@ -130,24 +130,24 @@ export function WhoWeAre() {
 					</div>
 				</div>
 				<div className="eal-element eal-element-b301024 eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="1920" height="872" src="/assets/images/emm-mileston.jpg-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Historical Milestones and Expansion" />															</div>
+															<img width="1920" height="872" src="/assets/images/emm-mileston.jpg-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Historical Milestones and Expansion" />															</div>
 				</div>
 		<div className="eal-element eal-element-77d57ba eal-con-full eal-flex eal-con eal-parent" id="futureplan">
 				<div className="eal-element eal-element-a125a6d eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Shaping the Next 5 Years of Innovation</h2>				</div>
 				<div className="eal-element eal-element-5f72dfc eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="8" height="109" src="/assets/images/new-project-93.webp" className="attachment-full size-full " alt="Global Supplier Excellence Award" />															</div>
+															<img width="8" height="109" src="/assets/images/new-project-93.webp" className="attachment-full size-full " alt="Global Supplier Excellence Award" />															</div>
 		<div className="eal-element eal-element-0d37a8c eal-con-full diamond-wrap eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-25bd792 diamond-shape eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="59" height="59" src="/assets/images/new-project-90.webp" className="attachment-full size-full " alt="Strategic Investment in Gear Commodity Infrastructure | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Strategic Investment in Gear Commodity Infrastructure</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="59" height="59" src="/assets/images/new-project-90.webp" className="attachment-full size-full " alt="Strategic Investment in Gear Commodity Infrastructure | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Strategic Investment in Gear Commodity Infrastructure</h3></div></div>				</div>
 				<div className="eal-element eal-element-ecf6c9f diamond-shape eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="59" height="59" src="/assets/images/new-project-89.webp" className="attachment-full size-full " alt="Focus on Driveline Product Category | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Focus on Driveline Product Category</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="59" height="59" src="/assets/images/new-project-89.webp" className="attachment-full size-full " alt="Focus on Driveline Product Category | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Focus on Driveline Product Category</h3></div></div>				</div>
 				<div className="eal-element eal-element-c39b71b diamond-shape eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="59" height="59" src="/assets/images/new-project-88.webp" className="attachment-full size-full " alt="Strategic Investment in Cardan Shaft Category | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Strategic Investment in Cardan Shaft Category</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="59" height="59" src="/assets/images/new-project-88.webp" className="attachment-full size-full " alt="Strategic Investment in Cardan Shaft Category | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Strategic Investment in Cardan Shaft Category</h3></div></div>				</div>
 				<div className="eal-element eal-element-5eab52b diamond-shape eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="59" height="59" src="/assets/images/icon3.webp" className="attachment-full size-full " alt="Investment in Forging &amp; Heat Treatment  Capability | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Investment in Forging &amp; Heat Treatment  Capability</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="59" height="59" src="/assets/images/icon3.webp" className="attachment-full size-full " alt="Investment in Forging &amp; Heat Treatment  Capability | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Investment in Forging &amp; Heat Treatment  Capability</h3></div></div>				</div>
 				<div className="eal-element eal-element-466735a diamond-shape eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="59" height="59" src="/assets/images/icon2.webp" className="attachment-full size-full " alt="Capex Commitment – $10 Million (INR 86 Cr) over 5 Years | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Capex Commitment – $10 Million (INR 86 Cr) over 5 Years</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="59" height="59" src="/assets/images/icon2.webp" className="attachment-full size-full " alt="Capex Commitment – $10 Million (INR 86 Cr) over 5 Years | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Capex Commitment – $10 Million (INR 86 Cr) over 5 Years</h3></div></div>				</div>
 				</div>
 				</div>
 		<div className="eal-element eal-element-31ed04a eal-flex eal-con-boxed eal-con eal-parent" id="certification">
@@ -163,7 +163,7 @@ export function WhoWeAre() {
 					<div className="eal-kit-wid-con">
 																								<div className="profile-image-card eal-animation- eal-kit-team-img eal-kit-team-style-overlay text-center">
 
-													<img loading="lazy" decoding="async" width="378" height="532" src="/assets/images/certificate-one.webp" className="attachment-full size-full " alt="Certificate One | Emmbros Autocomp" />												<div className="hover-area">
+													<img width="378" height="532" src="/assets/images/certificate-one.webp" className="attachment-full size-full " alt="Certificate One | Emmbros Autocomp" />												<div className="hover-area">
 							<div className="profile-body">
 								<h2 className="profile-title">
 																	IATF 16949:2016																</h2>
@@ -182,7 +182,7 @@ Validity:09-Oct-25 to 08-Oct-28</p>
 					<div className="eal-kit-wid-con">
 																								<div className="profile-image-card eal-animation- eal-kit-team-img eal-kit-team-style-overlay text-center">
 
-													<img loading="lazy" decoding="async" width="378" height="532" src="/assets/images/certificate-two.webp" className="attachment-full size-full " alt="Certificate Two | Emmbros Autocomp" />												<div className="hover-area">
+													<img width="378" height="532" src="/assets/images/certificate-two.webp" className="attachment-full size-full " alt="Certificate Two | Emmbros Autocomp" />												<div className="hover-area">
 							<div className="profile-body">
 								<h2 className="profile-title">
 																	ISO 45001 : 2018																</h2>
@@ -201,7 +201,7 @@ Validity : 29-Aug-2025 to 28-Aug-2028</p>
 					<div className="eal-kit-wid-con">
 																								<div className="profile-image-card eal-animation- eal-kit-team-img eal-kit-team-style-overlay text-center">
 
-													<img loading="lazy" decoding="async" width="378" height="532" src="/assets/images/certificate-three.webp" className="attachment-full size-full " alt="Certificate Three | Emmbros Autocomp" />												<div className="hover-area">
+													<img width="378" height="532" src="/assets/images/certificate-three.webp" className="attachment-full size-full " alt="Certificate Three | Emmbros Autocomp" />												<div className="hover-area">
 							<div className="profile-body">
 								<h2 className="profile-title">
 																	ISO 14001 : 2015																</h2>
@@ -220,7 +220,7 @@ Validity : 29-Aug-2025 to 28- Aug-2028</p>
 					<div className="eal-kit-wid-con">
 																								<div className="profile-image-card eal-animation- eal-kit-team-img eal-kit-team-style-overlay text-center">
 
-													<img loading="lazy" decoding="async" width="378" height="532" src="/assets/images/certificate-four.webp" className="attachment-full size-full " alt="Certificate Four | Emmbros Autocomp" />												<div className="hover-area">
+													<img width="378" height="532" src="/assets/images/certificate-four.webp" className="attachment-full size-full " alt="Certificate Four | Emmbros Autocomp" />												<div className="hover-area">
 							<div className="profile-body">
 								<h2 className="profile-title">
 																	ISO 9001 : 2015																</h2>

@@ -28,7 +28,7 @@ export function GearBoxParts() {
 		<div className="eal-element eal-element-af3b2f6 eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-ad61169 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-5897308 eal-widget eal-widget-image">
-															<img fetchpriority="high" decoding="async" width="1296" height="816" src="/assets/images/gemini_generated_image_ac4cppac4cppac4c.webp" className="attachment-full size-full " alt="Precision Gear Box Parts &amp; Planetary Carriers" />															</div>
+															<img fetchpriority="high" width="1296" height="816" src="/assets/images/gemini_generated_image_ac4cppac4cppac4c.webp" className="attachment-full size-full " alt="Precision Gear Box Parts &amp; Planetary Carriers" />															</div>
 				</div>
 		<div className="eal-element eal-element-fb7dbb8 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-43534ec eal-widget eal-widget-heading">
@@ -43,23 +43,23 @@ export function GearBoxParts() {
 					<div className="eal-con-inner">
 		<div className="eal-element eal-element-21deb8a e-grid eal-con-full eal-con eal-child">
 				<div className="eal-element eal-element-8f90dbe eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img decoding="async" width="1297" height="816" src="/assets/images/gemini_generated_image_73wmp873wmp873wm-1.webp" className="attachment-full size-full " alt="Deep Hole Drilled Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Deep Hole Drilled Shaft</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1297" height="816" src="/assets/images/gemini_generated_image_73wmp873wmp873wm-1.webp" className="attachment-full size-full " alt="Deep Hole Drilled Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Deep Hole Drilled Shaft</h3></div></div>				</div>
 				<div className="eal-element eal-element-05ee70f eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="1298" height="816" src="/assets/images/gemini_generated_image_pefc4gpefc4gpefc-1.webp" className="attachment-full size-full " alt="Bull Pinion Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Bull Pinion Shaft</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1298" height="816" src="/assets/images/gemini_generated_image_pefc4gpefc4gpefc-1.webp" className="attachment-full size-full " alt="Bull Pinion Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Bull Pinion Shaft</h3></div></div>				</div>
 				<div className="eal-element eal-element-b5714d0 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="560" height="352" src="/assets/images/new-project-70.webp" className="attachment-full size-full " alt="Intermediate Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Intermediate Shaft </h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="560" height="352" src="/assets/images/new-project-70.webp" className="attachment-full size-full " alt="Intermediate Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Intermediate Shaft </h3></div></div>				</div>
 				<div className="eal-element eal-element-3a5a355 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="1298" height="816" src="/assets/images/gemini_generated_image_1nkmod1nkmod1nkm-1.webp" className="attachment-full size-full " alt="PTO Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">PTO Shaft</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1298" height="816" src="/assets/images/gemini_generated_image_1nkmod1nkmod1nkm-1.webp" className="attachment-full size-full " alt="PTO Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">PTO Shaft</h3></div></div>				</div>
 				<div className="eal-element eal-element-b617bd1 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="1298" height="816" src="/assets/images/gemini_generated_image_83p8ee83p8ee83p8-1.webp" className="attachment-full size-full " alt="Counter Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Counter Shaft</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1298" height="816" src="/assets/images/gemini_generated_image_83p8ee83p8ee83p8-1.webp" className="attachment-full size-full " alt="Counter Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Counter Shaft</h3></div></div>				</div>
 				<div className="eal-element eal-element-f6fefe9 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="560" height="352" src="/assets/images/new-project-68.webp" className="attachment-full size-full " alt="Clutch Drum | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Clutch Drum</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="560" height="352" src="/assets/images/new-project-68.webp" className="attachment-full size-full " alt="Clutch Drum | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Clutch Drum</h3></div></div>				</div>
 				<div className="eal-element eal-element-d833604 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="1298" height="816" src="/assets/images/gemini_generated_image_e5vdy5e5vdy5e5vd-1.webp" className="attachment-full size-full " alt="Helical Gear | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Helical Gear</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1298" height="816" src="/assets/images/gemini_generated_image_e5vdy5e5vdy5e5vd-1.webp" className="attachment-full size-full " alt="Helical Gear | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Helical Gear</h3></div></div>				</div>
 				<div className="eal-element eal-element-f988f37 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="560" height="332" src="/assets/images/new-project-2026-03-18t192503.996.webp" className="attachment-full size-full " alt="Input Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Input Shaft</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="560" height="332" src="/assets/images/new-project-2026-03-18t192503.996.webp" className="attachment-full size-full " alt="Input Shaft | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Input Shaft</h3></div></div>				</div>
 				<div className="eal-element eal-element-6226d73 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img loading="lazy" decoding="async" width="1297" height="816" src="/assets/images/gemini_generated_image_av2uq6av2uq6av2u-1.webp" className="attachment-full size-full " alt="Fly Wheel Hub | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Fly Wheel Hub</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="1297" height="816" src="/assets/images/gemini_generated_image_av2uq6av2uq6av2u-1.webp" className="attachment-full size-full " alt="Fly Wheel Hub | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Fly Wheel Hub</h3></div></div>				</div>
 				</div>
 					</div>
 				</div>
@@ -70,31 +70,31 @@ export function GearBoxParts() {
 		<div className="eal-element eal-element-2d1dd1f eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-9be6758 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-31648bc eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="95" height="72" src="/assets/images/new-project-58.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-58.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
 				<div className="eal-element eal-element-a5a4a8c eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Automotive</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-0c43c8e eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-8e689bb eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="95" height="72" src="/assets/images/truck.webp" className="attachment-full size-full " alt="Truck | Emmbros Autocomp" />															</div>
+															<img width="95" height="72" src="/assets/images/truck.webp" className="attachment-full size-full " alt="Truck | Emmbros Autocomp" />															</div>
 				<div className="eal-element eal-element-b38f798 eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Heavy Vehicle</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-fb74cd1 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-e9dd075 eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="95" height="72" src="/assets/images/new-project-59.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-59.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
 				<div className="eal-element eal-element-c5ef02d eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Agriculture</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-0964a02 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-be8e25a eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="95" height="72" src="/assets/images/new-project-2026-03-26t174004.390.webp" className="attachment-full size-full " alt="2026 03 26T174004.390 | Emmbros Autocomp" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-2026-03-26t174004.390.webp" className="attachment-full size-full " alt="2026 03 26T174004.390 | Emmbros Autocomp" />															</div>
 				<div className="eal-element eal-element-f094d68 eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Windmill</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-5987e6f eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-d2ffbd4 eal-widget eal-widget-image">
-															<img loading="lazy" decoding="async" width="95" height="72" src="/assets/images/new-project-60.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-60.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Gear Box Parts" />															</div>
 				<div className="eal-element eal-element-277edb5 eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Off-highway Construction Vehicle</h2>				</div>
 				</div>

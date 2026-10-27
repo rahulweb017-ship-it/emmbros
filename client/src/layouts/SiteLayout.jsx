@@ -7,7 +7,7 @@ import { ScrollToTop } from "../components/common/ScrollToTop";
 
 export function SiteLayout() {
   return (
-    <div className="site-layout-wrapper" style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div className="site-layout-wrapper eal-kit-14308 eal-default eal-template-full-width eal-page" style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Header />
       <main id="main-content" style={{ flex: 1 }}>
         <Outlet />

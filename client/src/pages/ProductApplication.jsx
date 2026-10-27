@@ -57,7 +57,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/front-axle-shaft/">
-										<img loading="lazy" decoding="async" src="/assets/images/front-axle.webp" alt="Front Axle Shafts &amp; Wheel Shafts Manufacturer | Emmbros Autocomp" width="540" height="297" />
+										<img src="/assets/images/front-axle.webp" alt="Front Axle Shafts &amp; Wheel Shafts Manufacturer | Emmbros Autocomp" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
@@ -83,7 +83,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/rear-axle-shaft/">
-										<img loading="lazy" decoding="async" src="/assets/images/rear-axle.webp" alt="OEM Rear Axle Shafts Manufacturer | Emmbros Autocomp" width="540" height="297" />
+										<img src="/assets/images/rear-axle.webp" alt="OEM Rear Axle Shafts Manufacturer | Emmbros Autocomp" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
@@ -109,7 +109,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/gear-box-parts/">
-										<img loading="lazy" decoding="async" src="/assets/images/gear-box.webp" alt="OEM Gearbox Parts, Planet Carriers &amp; Sprockets | Emmbros" width="540" height="297" />
+										<img src="/assets/images/gear-box.webp" alt="OEM Gearbox Parts, Planet Carriers &amp; Sprockets | Emmbros" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
@@ -135,7 +135,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/driveline-parts/">
-										<img loading="lazy" decoding="async" src="/assets/images/driveline.webp" alt="OEM Driveline Parts, Cardan Shafts &amp; Yokes Manufacturer | Emmbros" width="540" height="297" />
+										<img src="/assets/images/driveline.webp" alt="OEM Driveline Parts, Cardan Shafts &amp; Yokes Manufacturer | Emmbros" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
@@ -161,7 +161,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/hydraulic-parts/">
-										<img loading="lazy" decoding="async" src="/assets/images/hydraulics.webp" alt="OEM Hydraulic Parts &amp; Brake Pistons Manufacturer | Emmbros" width="540" height="297" />
+										<img src="/assets/images/hydraulics.webp" alt="OEM Hydraulic Parts &amp; Brake Pistons Manufacturer | Emmbros" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
@@ -187,7 +187,7 @@ export function ProductApplication() {
 							<article className="emm-card">
 								<div className="emm-card-img-wrap">
 									<a href="/product-application/planetary-wheel-drive-parts/">
-										<img loading="lazy" decoding="async" src="/assets/images/planetary-wheel-drive.webp" alt="Planetary Wheel Drive Parts &amp; Flange Hubs | Emmbros" width="540" height="297" />
+										<img src="/assets/images/planetary-wheel-drive.webp" alt="Planetary Wheel Drive Parts &amp; Flange Hubs | Emmbros" width="540" height="297" />
 									</a>
 								</div>
 								<div className="emm-card-body">
