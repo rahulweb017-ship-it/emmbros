@@ -34,7 +34,7 @@ export function Home() {
 				<div id="emmbros-hero-slider" className="emmbros-hero-slider">
 					
 					<div className={`hero-slide ${activeSlide === 0 ? "active" : ""}`}>
-						<img src="/assets/images/slide-1.webp" alt="Precision Engineered Shafts &amp; Components" className="hero-slide-bg" width="1920" height="857" fetchpriority="high" />
+						<img src="/assets/images/slide-1.webp" alt="Precision Engineered Shafts &amp; Components" className="hero-slide-bg" width="1920" height="857" fetchPriority="high" loading="eager" />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<h1 className="hero-title">Precision Engineered
@@ -46,7 +46,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 1 ? "active" : ""}`}>
-						<img src="/assets/images/slide-2.webp" alt="Established Since 1991" className="hero-slide-bg" width="1920" height="857" />
+						<img src="/assets/images/slide-2.webp" alt="Established Since 1991" className="hero-slide-bg" width="1920" height="857"  loading="lazy" />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">Established Since 1991</div>
@@ -56,7 +56,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 2 ? "active" : ""}`}>
-						<img src="/assets/images/slide-3.webp" alt="Forging Our Way to On-Time Delivery" className="hero-slide-bg" width="1920" height="864" />
+						<img src="/assets/images/slide-3.webp" alt="Forging Our Way to On-Time Delivery" className="hero-slide-bg" width="1920" height="864"  loading="lazy" />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">Forging Our Way to<br />On-Time Delivery</div>
@@ -66,7 +66,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 3 ? "active" : ""}`}>
-						<img src="/assets/images/slide-4.webp" alt="State-of-the-Art Machining for Consistent Quality" className="hero-slide-bg" width="1920" height="857" />
+						<img src="/assets/images/slide-4.webp" alt="State-of-the-Art Machining for Consistent Quality" className="hero-slide-bg" width="1920" height="857"  loading="lazy" />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">State-of-the-Art Machining for Consistent Quality</div>
@@ -111,13 +111,13 @@ Durable, Relaible, built exact specification.</p>
 				<div className="eal-element eal-element-f417dc9 eal-absolute e-transform eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Emmbros <span className="lblue">Autocomp</span></h2>				</div>
 				<div className="eal-element eal-element-d66a6a4 eal-widget eal-widget-image">
-															<img fetchpriority="high" width="1920" height="870" src="/assets/images/hero-img-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd" />															</div>
+															<img fetchpriority="high" width="1920" height="870" src="/assets/images/hero-img-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd"  loading="lazy" />															</div>
 				</div>
 		<div className="eal-element eal-element-ce3074a eal-con-full e-grid eal-con eal-child">
 				<div className="eal-element eal-element-e6a1fc6 eal-widget eal-widget-image">
-															<img width="737" height="469" src="/assets/images/katha-plant-image.jpg-e1770114833911.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd Katha Plant" />															</div>
+															<img width="737" height="469" src="/assets/images/katha-plant-image.jpg-e1770114833911.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd Katha Plant"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-ab7a5aa eal-widget eal-widget-image">
-															<img width="1038" height="557" src="/assets/images/new-emm-image.jpg.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd" />															</div>
+															<img width="1038" height="557" src="/assets/images/new-emm-image.jpg.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd"  loading="lazy" />															</div>
 				</div>
 				</div>
 		<div className="eal-element eal-element-f737db8 eal-con-full eal-flex eal-con eal-child">
@@ -186,7 +186,7 @@ Durable, Relaible, built exact specification.</p>
 		<div className="eal-element eal-element-46627ea eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-ab30bc6 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-7e5f4a4 eal-widget__width-auto eal-widget eal-widget-image">
-															<img width="95" height="83" src="/assets/images/new-project-48.webp" className="attachment-full size-full " alt="Emmbros Certified Quality and Engineering Excellence" />															</div>
+															<img width="95" height="83" src="/assets/images/new-project-48.webp" className="attachment-full size-full " alt="Emmbros Certified Quality and Engineering Excellence"  loading="lazy" />															</div>
 				</div>
 				</div>
 				</div>
@@ -202,7 +202,7 @@ Durable, Relaible, built exact specification.</p>
 		<div className="eal-element eal-element-e417c2e eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-7b26640 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-c19d425 eal-widget__width-auto eal-widget eal-widget-image">
-															<img width="85" height="85" src="/assets/images/new-project-49.webp" className="attachment-full size-full " alt="Global Supply Capabilities and On-Time Delivery" />															</div>
+															<img width="85" height="85" src="/assets/images/new-project-49.webp" className="attachment-full size-full " alt="Global Supply Capabilities and On-Time Delivery"  loading="lazy" />															</div>
 				</div>
 				</div>
 				</div>
@@ -235,17 +235,17 @@ Durable, Relaible, built exact specification.</p>
 						</div>
 		<div className="eal-element eal-element-29ea24b e-grid eal-con-full bg-blur eal-con eal-child">
 				<div className="eal-element eal-element-00cee11 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/front-axle-shaft/" tabIndex="-1"><img width="540" height="297" src="/assets/images/front-axle.webp" className="attachment-full size-full " alt="Front Axle Parts" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/front-axle-shaft/">Front Axle Parts</a></h4></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/front-axle-shaft/" tabIndex="-1"><img width="540" height="297" src="/assets/images/front-axle.webp" className="attachment-full size-full " alt="Front Axle Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/front-axle-shaft/">Front Axle Parts</a></h4></div></div>				</div>
 				<div className="eal-element eal-element-a969ac3 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/rear-axle-shaft/" tabIndex="-1"><img width="540" height="297" src="/assets/images/rear-axle.webp" className="attachment-full size-full " alt="Rear Axle Parts" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/rear-axle-shaft/">Rear Axle Parts</a></h4></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/rear-axle-shaft/" tabIndex="-1"><img width="540" height="297" src="/assets/images/rear-axle.webp" className="attachment-full size-full " alt="Rear Axle Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/rear-axle-shaft/">Rear Axle Parts</a></h4></div></div>				</div>
 				<div className="eal-element eal-element-e84fbd2 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/gear-box-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/gear-box.webp" className="attachment-full size-full " alt="Gear Box Parts" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/gear-box-parts/">Gear Box Parts</a></h4></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/gear-box-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/gear-box.webp" className="attachment-full size-full " alt="Gear Box Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h4 className="eal-image-box-title"><a href="/product-application/gear-box-parts/">Gear Box Parts</a></h4></div></div>				</div>
 				<div className="eal-element eal-element-144c414 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/driveline-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/driveline.webp" className="attachment-full size-full " alt="Driveline Parts" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/driveline-parts/">Driveline Parts</a></h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/driveline-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/driveline.webp" className="attachment-full size-full " alt="Driveline Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/driveline-parts/">Driveline Parts</a></h3></div></div>				</div>
 				<div className="eal-element eal-element-8d0a95c eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/hydraulic-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/hydraulics.webp" className="attachment-full size-full " alt="Hydraulics Parts" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/hydraulic-parts/">Hydraulic Parts</a></h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/hydraulic-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/hydraulics.webp" className="attachment-full size-full " alt="Hydraulics Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/hydraulic-parts/">Hydraulic Parts</a></h3></div></div>				</div>
 				<div className="eal-element eal-element-b887957 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/planetary-wheel-drive-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/planetary-wheel-drive.webp" className="attachment-full size-full " alt="Planetary Wheel Drive Parts" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/planetary-wheel-drive-parts/">Planetary Wheel Drive Parts</a></h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><a href="/product-application/planetary-wheel-drive-parts/" tabIndex="-1"><img width="540" height="297" src="/assets/images/planetary-wheel-drive.webp" className="attachment-full size-full " alt="Planetary Wheel Drive Parts"  loading="lazy" /></a></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title"><a href="/product-application/planetary-wheel-drive-parts/">Planetary Wheel Drive Parts</a></h3></div></div>				</div>
 				</div>
 				</div>
 		<div className="eal-element eal-element-4b05a61 eal-flex eal-con-boxed eal-con eal-parent">
@@ -262,7 +262,7 @@ Durable, Relaible, built exact specification.</p>
 					className="eal-custom-embed-image"
 					width="1280"
 					height="720"
-				/>
+				 loading="lazy" />
 				<div className="eal-custom-embed-play" role="button" aria-label="Play Video" tabIndex="0">
 					<i aria-hidden="true" className="eicon-play"></i>
 				</div>
@@ -293,25 +293,25 @@ Durable, Relaible, built exact specification.</p>
 		<div className="eal-element eal-element-8aea452 e-grid eal-con-full eal-con eal-child">
 		<div className="eal-element eal-element-cb0ce20 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-46c4e80 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-40.webp" className="attachment-full size-full " alt="Aggriculture parts" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Agriculture</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-40.webp" className="attachment-full size-full " alt="Aggriculture parts"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Agriculture</h3></div></div>				</div>
 				</div>
 		<div className="eal-element eal-element-f45720f eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-e5520f7 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-2026-03-28t161357.419.webp" className="attachment-full size-full " alt="Commercial Vehicle parts" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Commercial Vehicles</h3><p className="eal-image-box-description">
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-2026-03-28t161357.419.webp" className="attachment-full size-full " alt="Commercial Vehicle parts"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Commercial Vehicles</h3><p className="eal-image-box-description">
 </p></div></div>				</div>
 				</div>
 		<div className="eal-element eal-element-0122f15 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-6f115e6 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-43.webp" className="attachment-full size-full " alt="Construction Equpiment" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Construction Equipment</h3><p className="eal-image-box-description">
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-43.webp" className="attachment-full size-full " alt="Construction Equpiment"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Construction Equipment</h3><p className="eal-image-box-description">
 </p></div></div>				</div>
 				</div>
 		<div className="eal-element eal-element-90de240 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-dfe81bb eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-41.webp" className="attachment-full size-full " alt="Warehousing &amp; Material Handling Parts" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Warehousing &amp; Material Handling</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-41.webp" className="attachment-full size-full " alt="Warehousing &amp; Material Handling Parts"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Warehousing &amp; Material Handling</h3></div></div>				</div>
 				</div>
 		<div className="eal-element eal-element-42c20d9 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-d2f2671 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-42.webp" className="attachment-full size-full " alt="Wind Energy parts" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Wind Energy</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="128" height="128" src="/assets/images/new-project-42.webp" className="attachment-full size-full " alt="Wind Energy parts"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Wind Energy</h3></div></div>				</div>
 				</div>
 				</div>
 					</div>
@@ -335,29 +335,29 @@ Durable, Relaible, built exact specification.</p>
 		<div className="eal-element eal-element-44f9d05 eal-flex eal-con-boxed eal-con eal-parent">
 					<div className="eal-con-inner">
 				<div className="eal-element eal-element-88ddc31 eal-widget eal-widget-image">
-															<img width="248" height="100" src="/assets/images/new-project-30-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Precision Manufacturing Plant" />															</div>
+															<img width="248" height="100" src="/assets/images/new-project-30-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Precision Manufacturing Plant"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-1babde9 eal-widget eal-widget-image">
-															<img width="400" height="100" src="/assets/images/new-project-31.webp" className="attachment-full size-full " alt="Engineering Products to Perfection" />															</div>
+															<img width="400" height="100" src="/assets/images/new-project-31.webp" className="attachment-full size-full " alt="Engineering Products to Perfection"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-465b47e eal-widget eal-widget-image">
-															<img width="243" height="100" src="/assets/images/new-project-37-1.webp" className="attachment-full size-full " alt="37 1 | Emmbros Autocomp" />															</div>
+															<img width="243" height="100" src="/assets/images/new-project-37-1.webp" className="attachment-full size-full " alt="37 1 | Emmbros Autocomp"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-61286c2 eal-widget eal-widget-image">
-															<img width="193" height="100" src="/assets/images/new-project-2026-04-27t154744.797.webp" className="attachment-full size-full " alt="2026 04 27T154744.797 | Emmbros Autocomp" />															</div>
+															<img width="193" height="100" src="/assets/images/new-project-2026-04-27t154744.797.webp" className="attachment-full size-full " alt="2026 04 27T154744.797 | Emmbros Autocomp"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-9fe4351 eal-widget eal-widget-image">
-															<img width="400" height="100" src="/assets/images/new-project-33.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home" />															</div>
+															<img width="400" height="100" src="/assets/images/new-project-33.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home"  loading="lazy" />															</div>
 					</div>
 				</div>
 		<div className="eal-element eal-element-463ace5 eal-flex eal-con-boxed eal-con eal-parent">
 					<div className="eal-con-inner">
 				<div className="eal-element eal-element-751be3a eal-widget eal-widget-image">
-															<img width="400" height="100" src="/assets/images/new-project-34.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home" />															</div>
+															<img width="400" height="100" src="/assets/images/new-project-34.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-1ed1645 eal-widget eal-widget-image">
-															<img width="400" height="100" src="/assets/images/new-project-39.webp" className="attachment-full size-full " alt="Precision Automotive Shaft Forgings" />															</div>
+															<img width="400" height="100" src="/assets/images/new-project-39.webp" className="attachment-full size-full " alt="Precision Automotive Shaft Forgings"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-b8b3755 eal-widget eal-widget-image">
-															<img width="400" height="100" src="/assets/images/new-project-36.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home" />															</div>
+															<img width="400" height="100" src="/assets/images/new-project-36.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Home"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-f18e3c5 eal-widget eal-widget-image">
-															<img width="352" height="100" src="/assets/images/kubota.webp" className="attachment-full size-full " alt="Kubota | Emmbros Autocomp" />															</div>
+															<img width="352" height="100" src="/assets/images/kubota.webp" className="attachment-full size-full " alt="Kubota | Emmbros Autocomp"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-fe5ba27 eal-widget eal-widget-image">
-															<img width="193" height="100" src="/assets/images/new-project-2026-04-27t154818.164.webp" className="attachment-full size-full " alt="2026 04 27T154818.164 | Emmbros Autocomp" />															</div>
+															<img width="193" height="100" src="/assets/images/new-project-2026-04-27t154818.164.webp" className="attachment-full size-full " alt="2026 04 27T154818.164 | Emmbros Autocomp"  loading="lazy" />															</div>
 					</div>
 				</div>
 					</div>
@@ -373,7 +373,7 @@ Durable, Relaible, built exact specification.</p>
 				<div className="eal-element eal-element-fa2ee92 eal-widget eal-widget-text-editor">
 									<p>Emmbros Autocomp Ltd is a globally trusted supplier, serving customers across <strong>India, USA, Europe, and Asia.</strong> Furthermore, with a balanced export and domestic portfolio, we support leading OEMs in agriculture, construction, wind energy, and automotive sectors. Ultimately, our global footprint is backed by strong logistics, consistent quality, and long-term partnerships built on trust and performance.</p>								</div>
 				<div className="eal-element eal-element-d555c14 eal-widget eal-widget-image">
-															<img width="1064" height="515" src="/assets/images/new-project-53.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd" />															</div>
+															<img width="1064" height="515" src="/assets/images/new-project-53.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd"  loading="lazy" />															</div>
 					</div>
 				</div>
 				</div>

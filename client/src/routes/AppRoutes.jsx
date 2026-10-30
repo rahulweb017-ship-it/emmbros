@@ -7,6 +7,9 @@ import { LoadingSpinner } from "../admin/components/LoadingSpinner";
 import { Home } from "../pages/Home";
 import { WhoWeAre } from "../pages/WhoWeAre";
 import { WhatWeDo } from "../pages/WhatWeDo";
+import { QualityCertifications } from "../pages/QualityCertifications";
+import { IndustriesClients } from "../pages/IndustriesClients";
+import { Contact } from "../pages/Contact";
 import { ProductApplication } from "../pages/ProductApplication";
 import { FrontAxleShaft } from "../pages/products/FrontAxleShaft";
 import { RearAxleShaft } from "../pages/products/RearAxleShaft";
@@ -34,8 +37,16 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/who-we-are/" element={<WhoWeAre />} />
+        <Route path="/about" element={<Navigate to="/who-we-are" replace />} />
+        <Route path="/about/" element={<Navigate to="/who-we-are" replace />} />
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/what-we-do/" element={<WhatWeDo />} />
+        <Route path="/quality-certifications" element={<QualityCertifications />} />
+        <Route path="/quality-certifications/" element={<QualityCertifications />} />
+        <Route path="/industries-clients" element={<IndustriesClients />} />
+        <Route path="/industries-clients/" element={<IndustriesClients />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact/" element={<Contact />} />
         <Route path="/product-application" element={<ProductApplication />} />
         <Route path="/product-application/" element={<ProductApplication />} />
         <Route path="/product-application/front-axle-shaft" element={<FrontAxleShaft />} />

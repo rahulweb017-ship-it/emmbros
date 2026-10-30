@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Briefcase, MapPin, Clock, ArrowRight, Search } from "lucide-react";
+import { Briefcase, MapPin, Clock, ArrowRight } from "lucide-react";
 import { apiClient } from "../../api/apiClient";
+import { PageMeta } from "../../components/common/PageMeta";
+import { TechnicalSeoSection } from "../../components/seo/TechnicalSeoSection";
 
 export function CareersListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -38,22 +39,9 @@ export function CareersListPage() {
   }, [department, searchQuery]);
 
   return (
-    <div className="public-careers-view" style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 20px" }}>
-      <Helmet>
-        <title>Careers & Open Job Vacancies | Emmbros Autocomp</title>
-        <meta
-          name="description"
-          content="Explore career opportunities in automotive forging, CNC machining, metallurgy, and engineering at Emmbros Autocomp Ltd in Baddi, Himachal Pradesh."
-        />
-        <link rel="canonical" href="https://emmbros.com/careers" />
-        <meta property="og:title" content="Careers & Open Job Vacancies | Emmbros Autocomp" />
-        <meta
-          property="og:description"
-          content="Join Emmbros Autocomp Ltd. Explore career opportunities in automotive forging, quality engineering, and supply chain management."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://emmbros.com/careers" />
-      </Helmet>
+    <article>
+      <div className="public-careers-view" style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 20px" }}>
+        <PageMeta canonicalUrl="/careers" />
 
       {/* Hero Header */}
       <div style={{ textAlign: "center", marginBottom: 40 }}>
@@ -111,8 +99,8 @@ export function CareersListPage() {
         </div>
       ) : jobs.length === 0 ? (
         <div style={{ textAlign: "center", padding: 60, background: "#f9fafb", borderRadius: 12 }}>
-          <h3 style={{ fontSize: 18, color: "#374151" }}>No open job vacancies right now</h3>
-          <p style={{ color: "#6b7280", marginTop: 8 }}>Check back soon or send your resume to careers@emmbros.com!</p>
+          <h2 style={{ fontSize: 20, color: "#374151" }}>Current Engineering &amp; Plant Opportunities</h2>
+          <p style={{ color: "#6b7280", marginTop: 8 }}>Check back soon or send your resume to enquiry@emmbros.com or apply via our <Link to="/career" style={{ color: "#034464", fontWeight: 600 }}>Career Application Form</Link>.</p>
         </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
@@ -187,6 +175,8 @@ export function CareersListPage() {
           ))}
         </div>
       )}
-    </div>
+      </div>
+      <TechnicalSeoSection sectionKey="careers" />
+    </article>
   );
 }

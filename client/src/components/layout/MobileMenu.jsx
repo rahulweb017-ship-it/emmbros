@@ -42,7 +42,7 @@ export function MobileMenu({ isOpen, onClose }) {
           }}
         >
           <Link
-            to="/who-we-are/"
+            to="/who-we-are"
             onClick={onClose}
             style={{ color: "inherit", textDecoration: "none" }}
           >
@@ -84,11 +84,11 @@ export function MobileMenu({ isOpen, onClose }) {
               marginBottom: 8,
             }}
           >
-            <Link to="/who-we-are/#about" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🏢 About us</Link>
-            <Link to="/who-we-are/#leadership" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>👨 Leadership</Link>
-            <Link to="/who-we-are/#ourjourney" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>📈 Our Journey</Link>
-            <Link to="/who-we-are/#futureplan" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🚀 Future Plan</Link>
-            <Link to="/who-we-are/#certification" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🧾 Certification</Link>
+            <Link to="/who-we-are#about" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🏢 About us</Link>
+            <Link to="/who-we-are#leadership" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>👨 Leadership</Link>
+            <Link to="/who-we-are#ourjourney" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>📈 Our Journey</Link>
+            <Link to="/who-we-are#futureplan" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🚀 Future Plan</Link>
+            <Link to="/quality-certifications" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🧾 Certification</Link>
           </div>
         )}
       </div>
@@ -109,7 +109,7 @@ export function MobileMenu({ isOpen, onClose }) {
           }}
         >
           <Link
-            to="/what-we-do/"
+            to="/what-we-do"
             onClick={onClose}
             style={{ color: "inherit", textDecoration: "none" }}
           >
@@ -151,12 +151,12 @@ export function MobileMenu({ isOpen, onClose }) {
               marginBottom: 8,
             }}
           >
-            <Link to="/what-we-do/#forging" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🔧 Forging Solutions</Link>
-            <Link to="/what-we-do/#heattreatment" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🔥 Heat Treatment Technology</Link>
-            <Link to="/what-we-do/#manufacturing" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>⚙️ Precision Machining</Link>
-            <Link to="/what-we-do/#qualitylab" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🧪 Quality &amp; Testing</Link>
-            <Link to="/what-we-do/#research" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>💡 Research &amp; Development</Link>
-            <Link to="/what-we-do/#csr-activity" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🌱 CSR Activity</Link>
+            <Link to="/what-we-do#forging" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🔧 Forging Solutions</Link>
+            <Link to="/what-we-do#heattreatment" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🔥 Heat Treatment Technology</Link>
+            <Link to="/what-we-do#manufacturing" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>⚙️ Precision Machining</Link>
+            <Link to="/quality-certifications" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🧪 Quality &amp; Testing</Link>
+            <Link to="/what-we-do#research" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>💡 Research &amp; Development</Link>
+            <Link to="/what-we-do#csr-activity" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>🌱 CSR Activity</Link>
           </div>
         )}
       </div>
@@ -177,7 +177,7 @@ export function MobileMenu({ isOpen, onClose }) {
           }}
         >
           <Link
-            to="/product-application/"
+            to="/product-application"
             onClick={onClose}
             style={{ color: "inherit", textDecoration: "none" }}
           >
@@ -219,19 +219,19 @@ export function MobileMenu({ isOpen, onClose }) {
               marginBottom: 8,
             }}
           >
-            <Link to="/product-application/front-axle-shaft/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Front Axle Parts</Link>
-            <Link to="/product-application/rear-axle-shaft/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Rear Axle Parts</Link>
-            <Link to="/product-application/gear-box-parts/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Gear Box Parts</Link>
-            <Link to="/product-application/driveline-parts/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Driveline Parts</Link>
-            <Link to="/product-application/hydraulic-parts/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Hydraulic Parts</Link>
-            <Link to="/product-application/planetary-wheel-drive-parts/" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Planetary Wheel Drive Parts</Link>
+            <Link to="/product-application/front-axle-shaft" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Front Axle Parts</Link>
+            <Link to="/product-application/rear-axle-shaft" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Rear Axle Parts</Link>
+            <Link to="/product-application/gear-box-parts" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Gear Box Parts</Link>
+            <Link to="/product-application/driveline-parts" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Driveline Parts</Link>
+            <Link to="/product-application/hydraulic-parts" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Hydraulic Parts</Link>
+            <Link to="/product-application/planetary-wheel-drive-parts" onClick={onClose} style={{ color: "#333", textDecoration: "none", fontSize: "15px" }}>Planetary Wheel Drive Parts</Link>
           </div>
         )}
       </div>
 
       {/* Career */}
       <Link
-        to="/career/"
+        to="/career"
         onClick={onClose}
         style={{
           padding: "12px 0",
@@ -267,6 +267,7 @@ export function MobileMenu({ isOpen, onClose }) {
           alt="Emmpower Automotive Spares by Emmbros"
           width="120"
           height="38"
+          loading="lazy"
           style={{ maxHeight: 34, width: "auto", objectFit: "contain" }}
         />
       </a>

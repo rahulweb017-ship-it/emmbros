@@ -90,7 +90,52 @@ app.use((req, res, next) => {
   next();
 });
 
-// 301 Redirect Middleware (Intercepts incoming requests before routes)
+// Force Canonical Host (emmbros.com non-www over HTTPS, 301 redirect www & emmbros.in)
+const LEGACY_SHORT_REDIRECTS = {
+  "/about": "/who-we-are",
+  "/front-axle-shaft": "/product-application/front-axle-shaft",
+  "/rear-axle-shaft": "/product-application/rear-axle-shaft",
+  "/gear-box-parts": "/product-application/gear-box-parts",
+  "/driveline-parts": "/product-application/driveline-parts",
+  "/hydraulic-parts": "/product-application/hydraulic-parts",
+  "/planetary-wheel-drive-parts": "/product-application/planetary-wheel-drive-parts",
+};
+
+app.use((req, res, next) => {
+  const host = (req.headers.host || "").toLowerCase();
+  const proto = req.headers["x-forwarded-proto"];
+  const isLocal = host.startsWith("localhost") || host.startsWith("127.0.0.1");
+
+  if (!isLocal) {
+    if (
+      proto === "http" ||
+      host.startsWith("www.") ||
+      host === "emmbros.in" ||
+      host === "www.emmbros.in"
+    ) {
+      return res.redirect(301, `https://emmbros.com${req.originalUrl}`);
+    }
+  }
+
+  // Trailing slash normalization (redirect /page/ -> /page, except /api and root /)
+  if (req.path.length > 1 && req.path.endsWith("/") && !req.path.startsWith("/api/")) {
+    const cleanPath = req.path.replace(/\/+$/, "");
+    const target = LEGACY_SHORT_REDIRECTS[cleanPath.toLowerCase()] || cleanPath;
+    const qs = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+    return res.redirect(301, `${target}${qs}`);
+  }
+
+  // Legacy short product URLs -> 301 to canonical nested path
+  const legacyTarget = LEGACY_SHORT_REDIRECTS[req.path.toLowerCase()];
+  if (legacyTarget) {
+    const qs = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+    return res.redirect(301, `${legacyTarget}${qs}`);
+  }
+
+  next();
+});
+
+// 301 Redirect Middleware from Database (Intercepts incoming requests before routes)
 app.use(async (req, res, next) => {
   if (req.path.startsWith("/api") || req.path.startsWith("/admin") || path.extname(req.path)) {
     return next();
@@ -238,13 +283,20 @@ app.use(errorHandler);
 // Serve uploaded media files directly
 app.use("/uploads", express.static(UPLOADS_DIR, { maxAge: "30d" }));
 
-// Serve the built React client with Server-Side Meta Injection
+// Serve the built React client with Pre-Rendered SSG HTML + Dynamic CMS Fallback + Real HTTP 404
+function escapeHtml(str = "") {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 if (fs.existsSync(CLIENT_DIST)) {
   const indexHtmlPath = path.join(CLIENT_DIST, "index.html");
-  let rawIndexHtml = "";
-  if (fs.existsSync(indexHtmlPath)) {
-    rawIndexHtml = fs.readFileSync(indexHtmlPath, "utf-8");
-  }
+  const spaShellPath = path.join(CLIENT_DIST, "_spa_shell.html");
+  const notFoundHtmlPath = path.join(CLIENT_DIST, "404.html");
 
   // WebP content negotiation
   app.get(/^\/wp-content\/uploads\/.+\.(jpe?g|png)$/i, (req, res, next) => {
@@ -265,11 +317,12 @@ if (fs.existsSync(CLIENT_DIST)) {
     next();
   });
 
-  // Serve static assets with caching
+  // Serve static assets with long cache headers (1 year immutable on hashed assets & images)
   app.use(
     express.static(CLIENT_DIST, {
       maxAge: "30d",
       index: false,
+      redirect: false,
       setHeaders: (res, filePath) => {
         if (/\.(webp|jpg|jpeg|png|gif|svg|woff2?|ttf|eot|css|js|ico)$/i.test(filePath)) {
           res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
@@ -282,25 +335,49 @@ if (fs.existsSync(CLIENT_DIST)) {
     })
   );
 
-  // Catch-all route for SPA navigation with Server-Side Crawlable Meta Injection
+  // Route handler for Pre-Rendered Static Pages, Dynamic CMS Pages, and Real HTTP 404
   app.get("*", async (req, res, next) => {
     if (req.path.startsWith("/api/")) return next();
     if (path.extname(req.path) && !req.path.endsWith(".html")) {
       return res.status(404).send("File not found");
     }
+
+    const cleanPath = req.path.replace(/\/+$/, "") || "/";
+
+    // 1. Check if a pre-rendered static HTML file exists for this exact route
+    const prerenderFile =
+      cleanPath === "/"
+        ? indexHtmlPath
+        : path.join(CLIENT_DIST, cleanPath.replace(/^\//, ""), "index.html");
+
+    if (fs.existsSync(prerenderFile)) {
+      res.setHeader("Content-Type", "text/html; charset=utf-8");
+      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+      return res.status(200).sendFile(prerenderFile);
+    }
+
+    // 2. Check if it is an Admin route or a valid published CMS route (/blog/:slug or /careers/:slug)
     try {
-      if (fs.existsSync(indexHtmlPath)) {
-        const currentHtml = fs.readFileSync(indexHtmlPath, "utf-8");
-        const injectedHtml = await injectSeoMetadata(currentHtml, req.path);
+      const shellPath = fs.existsSync(spaShellPath) ? spaShellPath : indexHtmlPath;
+      const shellHtml = fs.readFileSync(shellPath, "utf-8");
+      const injectedHtml = await injectSeoMetadata(shellHtml, cleanPath);
+
+      if (injectedHtml) {
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-        return res.send(injectedHtml);
+        return res.status(200).send(injectedHtml);
       }
-      res.sendFile(indexHtmlPath);
     } catch (err) {
-      console.error("[seo] Error injecting meta tags:", err.message);
-      res.sendFile(indexHtmlPath);
+      console.error("[seo] Error resolving dynamic route:", err.message);
     }
+
+    // 3. Unknown URL -> Return real HTTP 404 with pre-rendered 404.html
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    if (fs.existsSync(notFoundHtmlPath)) {
+      return res.status(404).sendFile(notFoundHtmlPath);
+    }
+    return res.status(404).send("404 Page Not Found");
   });
 } else {
   console.warn(`[static] ${CLIENT_DIST} not found. Run "npm run build" in client/ first.`);

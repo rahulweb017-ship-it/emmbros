@@ -1,3 +1,4 @@
+import { TechnicalSeoSection } from "../../components/seo/TechnicalSeoSection";
 import React from "react";
 import { PageMeta } from "../../components/common/PageMeta";
 import "../../styles/pages/hydraulic-parts.css";
@@ -28,7 +29,7 @@ export function HydraulicParts() {
 		<div className="eal-element eal-element-19ef8f1 eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-350a495 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-ee29158 eal-widget eal-widget-image">
-															<img fetchpriority="high" width="1536" height="1024" src="/assets/images/chatgpt-image-mar-17-2026-04_49_43-pm.webp" className="attachment-full size-full " alt="Precision Hydraulic Parts &amp; Brake Pistons Manufacturing" />															</div>
+															<img fetchpriority="high" width="1536" height="1024" src="/assets/images/chatgpt-image-mar-17-2026-04_49_43-pm.webp" className="attachment-full size-full " alt="Precision Hydraulic Parts &amp; Brake Pistons Manufacturing"  loading="lazy" />															</div>
 				</div>
 		<div className="eal-element eal-element-c25d0fa eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-bf8b441 eal-widget eal-widget-heading">
@@ -43,17 +44,17 @@ export function HydraulicParts() {
 					<div className="eal-con-inner">
 		<div className="eal-element eal-element-d7794a4 e-grid eal-con-full eal-con eal-child">
 				<div className="eal-element eal-element-268c0d4 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/new-project-84.webp" className="attachment-full size-full " alt="Dump End | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Dump End</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/new-project-84.webp" className="attachment-full size-full " alt="Dump End | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Dump End</h3></div></div>				</div>
 				<div className="eal-element eal-element-ba297ec eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/lever-1.webp" className="attachment-full size-full " alt="Lever | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Lever</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/lever-1.webp" className="attachment-full size-full " alt="Lever | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Lever</h3></div></div>				</div>
 				<div className="eal-element eal-element-efedd13 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/boom-lock.webp" className="attachment-full size-full " alt="Boom Lock | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Boom Lock</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/boom-lock.webp" className="attachment-full size-full " alt="Boom Lock | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Boom Lock</h3></div></div>				</div>
 				<div className="eal-element eal-element-ab7f5ad eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/gland.webp" className="attachment-full size-full " alt="Gland Cylinder Bottom | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Gland Cylinder Bottom</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/gland.webp" className="attachment-full size-full " alt="Gland Cylinder Bottom | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Gland Cylinder Bottom</h3></div></div>				</div>
 				<div className="eal-element eal-element-b553a36 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/sterring-2538.webp" className="attachment-full size-full " alt="Sterring Knuckle | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Sterring Knuckle</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/sterring-2538.webp" className="attachment-full size-full " alt="Sterring Knuckle | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Sterring Knuckle</h3></div></div>				</div>
 				<div className="eal-element eal-element-d9725f8 eal-position-top eal-widget eal-widget-image-box">
-					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/startor3-1.webp" className="attachment-full size-full " alt="Stator | Emmbros Autocomp" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Stator</h3></div></div>				</div>
+					<div className="eal-image-box-wrapper"><figure className="eal-image-box-img"><img width="860" height="541" src="/assets/images/startor3-1.webp" className="attachment-full size-full " alt="Stator | Emmbros Autocomp"  loading="lazy" /></figure><div className="eal-image-box-content"><h3 className="eal-image-box-title">Stator</h3></div></div>				</div>
 				</div>
 					</div>
 				</div>
@@ -64,25 +65,25 @@ export function HydraulicParts() {
 		<div className="eal-element eal-element-bce0ed0 eal-con-full eal-flex eal-con eal-child">
 		<div className="eal-element eal-element-1fdbb87 eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-7a3135d eal-widget eal-widget-image">
-															<img width="95" height="72" src="/assets/images/new-project-58.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-58.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-f09f92e eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Automotive</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-e7592ad eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-1c14a03 eal-widget eal-widget-image">
-															<img width="95" height="72" src="/assets/images/truck.webp" className="attachment-full size-full " alt="Truck | Emmbros Autocomp" />															</div>
+															<img width="95" height="72" src="/assets/images/truck.webp" className="attachment-full size-full " alt="Truck | Emmbros Autocomp"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-8535c79 eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Heavy Vehicle</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-0d2d8ac eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-afc1a7d eal-widget eal-widget-image">
-															<img width="95" height="72" src="/assets/images/new-project-59.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-59.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-0a2ec0e eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Agriculture</h2>				</div>
 				</div>
 		<div className="eal-element eal-element-a095ffa eal-con-full eal-flex eal-con eal-child">
 				<div className="eal-element eal-element-1d53910 eal-widget eal-widget-image">
-															<img width="95" height="72" src="/assets/images/new-project-60.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts" />															</div>
+															<img width="95" height="72" src="/assets/images/new-project-60.webp" className="attachment-full size-full " alt="Emmbros Precision Component - Hydraulic Parts"  loading="lazy" />															</div>
 				<div className="eal-element eal-element-1461ef4 eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Off-highway Construction Vehicle</h2>				</div>
 				</div>
@@ -103,6 +104,7 @@ export function HydraulicParts() {
 			
 
 
+      <TechnicalSeoSection sectionKey="hydraulic-parts" />
     </div>
   );
 }

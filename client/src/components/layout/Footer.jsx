@@ -11,9 +11,10 @@ export function Footer() {
           <Link to="/" style={{ display: "inline-block", marginBottom: 16 }}>
             <img
               src="/assets/images/logo1.webp"
-              alt="Emmbros Autocomp Ltd"
+              alt="Emmbros Autocomp Ltd Logo"
               width="240"
               height="56"
+              loading="lazy"
               style={{ maxHeight: 52, width: "auto", objectFit: "contain" }}
             />
           </Link>
@@ -116,15 +117,16 @@ export function Footer() {
           <div style={{ display: "flex", gap: 14, alignItems: "flex-start", marginBottom: 14 }}>
             <img
               src="/assets/images/icon.webp"
-              alt="Regd & Works"
+              alt="Emmbros Autocomp Registered and Works Baddi Address Icon"
               width="47"
               height="49"
+              loading="lazy"
               style={{ width: 42, height: "auto", flexShrink: 0 }}
             />
             <div>
-              <h3 style={{ margin: "0 0 6px", fontSize: "18px", fontWeight: 700, color: "#111827", fontFamily: '"Basic", Sans-serif' }}>
+              <h2 style={{ margin: "0 0 6px", fontSize: "18px", fontWeight: 700, color: "#111827", fontFamily: '"Basic", Sans-serif' }}>
                 Regd &amp; Works
-              </h3>
+              </h2>
               <p style={{ margin: 0, fontSize: "14px", lineHeight: "1.5", color: "#555555" }}>
                 Village Katha, Baddi , Distt. Solan. 173205 (HP) India.
               </p>
@@ -155,15 +157,16 @@ export function Footer() {
           <div style={{ display: "flex", gap: 14, alignItems: "flex-start", marginBottom: 14 }}>
             <img
               src="/assets/images/new-project-54.webp"
-              alt="Corp & Works"
+              alt="Emmbros Autocomp Corporate and Works Baddi Address Icon"
               width="47"
               height="49"
+              loading="lazy"
               style={{ width: 42, height: "auto", flexShrink: 0 }}
             />
             <div>
-              <h3 style={{ margin: "0 0 6px", fontSize: "18px", fontWeight: 700, color: "#111827", fontFamily: '"Basic", Sans-serif' }}>
+              <h2 style={{ margin: "0 0 6px", fontSize: "18px", fontWeight: 700, color: "#111827", fontFamily: '"Basic", Sans-serif' }}>
                 Corp &amp; Works
-              </h3>
+              </h2>
               <p style={{ margin: 0, fontSize: "14px", lineHeight: "1.5", color: "#555555" }}>
                 Village Bhud, Baddi, Distt.Solan. 173205 (HP) India.
               </p>
@@ -190,9 +193,48 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Crawlable Internal Navigation Links Strip */}
+      <nav
+        aria-label="Footer Navigation"
+        style={{
+          borderTop: "1px solid #f1f5f9",
+          padding: "18px 20px",
+          background: "#f8fafc",
+          fontSize: "13px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "10px 18px",
+          }}
+        >
+          <Link to="/" style={{ color: "#334155", textDecoration: "none" }}>Home</Link>
+          <Link to="/who-we-are" style={{ color: "#334155", textDecoration: "none" }}>About Emmbros</Link>
+          <Link to="/what-we-do" style={{ color: "#334155", textDecoration: "none" }}>Forging &amp; Machining</Link>
+          <Link to="/quality-certifications" style={{ color: "#334155", textDecoration: "none" }}>Quality &amp; Certifications</Link>
+          <Link to="/industries-clients" style={{ color: "#334155", textDecoration: "none" }}>Industries &amp; OEM Clients</Link>
+          <Link to="/product-application" style={{ color: "#334155", textDecoration: "none" }}>Product Applications</Link>
+          <Link to="/product-application/rear-axle-shaft" style={{ color: "#334155", textDecoration: "none" }}>Rear Axle Shafts</Link>
+          <Link to="/product-application/front-axle-shaft" style={{ color: "#334155", textDecoration: "none" }}>Front Axle Shafts</Link>
+          <Link to="/product-application/driveline-parts" style={{ color: "#334155", textDecoration: "none" }}>Driveline Parts</Link>
+          <Link to="/product-application/gear-box-parts" style={{ color: "#334155", textDecoration: "none" }}>Gearbox Parts</Link>
+          <Link to="/product-application/hydraulic-parts" style={{ color: "#334155", textDecoration: "none" }}>Hydraulic Parts</Link>
+          <Link to="/product-application/planetary-wheel-drive-parts" style={{ color: "#334155", textDecoration: "none" }}>Planetary Wheel Drive Parts</Link>
+          <Link to="/career" style={{ color: "#334155", textDecoration: "none" }}>Career</Link>
+          <Link to="/careers" style={{ color: "#334155", textDecoration: "none" }}>Open Positions</Link>
+          <Link to="/blog" style={{ color: "#334155", textDecoration: "none" }}>Engineering Blog</Link>
+          <Link to="/contact" style={{ color: "#334155", textDecoration: "none" }}>Contact Us</Link>
+        </div>
+      </nav>
+
       {/* Bottom Copyright Strip */}
       <div style={{ borderTop: "1px solid #e9e9e9", padding: "16px 20px", textAlign: "center", fontSize: "14px", color: "#777777" }}>
-        Copyright © 2026 Embross Autocomp Ltd. All rights reserved.
+        Copyright © 2026 Emmbros Autocomp Ltd. All rights reserved.
       </div>
     </footer>
   );

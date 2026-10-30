@@ -4,7 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const rootEl = document.getElementById("root");
+const appElement = (
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
@@ -13,3 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+if (rootEl && rootEl.hasChildNodes() && rootEl.innerHTML.trim() !== "<!--app-html-->") {
+  ReactDOM.hydrateRoot(rootEl, appElement);
+} else if (rootEl) {
+  ReactDOM.createRoot(rootEl).render(appElement);
+}

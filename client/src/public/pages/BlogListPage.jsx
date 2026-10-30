@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Calendar, User, Tag, ArrowRight, Search } from "lucide-react";
+import { Calendar, Tag, ArrowRight } from "lucide-react";
 import { apiClient } from "../../api/apiClient";
+import { PageMeta } from "../../components/common/PageMeta";
+import { TechnicalSeoSection } from "../../components/seo/TechnicalSeoSection";
 
 export function BlogListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,22 +45,9 @@ export function BlogListPage() {
   }, [page, category, searchQuery]);
 
   return (
-    <div className="public-blog-view" style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 20px" }}>
-      <Helmet>
-        <title>Engineering Blog & Technical Insights | Emmbros Autocomp</title>
-        <meta
-          name="description"
-          content="Read technical insights, automotive forging trends, heat treatment technology, and manufacturing innovations from Emmbros Autocomp Ltd."
-        />
-        <link rel="canonical" href="https://emmbros.com/blog" />
-        <meta property="og:title" content="Engineering Blog & Technical Insights | Emmbros Autocomp" />
-        <meta
-          property="og:description"
-          content="Read technical insights, automotive forging trends, heat treatment technology, and manufacturing innovations from Emmbros Autocomp Ltd."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://emmbros.com/blog" />
-      </Helmet>
+    <article>
+      <div className="public-blog-view" style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 20px" }}>
+        <PageMeta canonicalUrl="/blog" />
 
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 40 }}>
@@ -128,8 +116,8 @@ export function BlogListPage() {
         </div>
       ) : posts.length === 0 ? (
         <div style={{ textAlign: "center", padding: 60, background: "#f9fafb", borderRadius: 12 }}>
-          <h3 style={{ fontSize: 18, color: "#374151" }}>No published blog articles found</h3>
-          <p style={{ color: "#6b7280", marginTop: 8 }}>Check back soon for new technical publications!</p>
+          <h2 style={{ fontSize: 20, color: "#374151" }}>Latest Automotive Forging Publications</h2>
+          <p style={{ color: "#6b7280", marginTop: 8 }}>Explore our engineering articles and metallurgical guides below.</p>
         </div>
       ) : (
         <div
@@ -158,6 +146,9 @@ export function BlogListPage() {
                   <img
                     src={post.featuredImage.url}
                     alt={post.featuredImage.alt || post.title}
+                    width="400"
+                    height="200"
+                    loading="lazy"
                     style={{ width: "100%", height: 200, objectFit: "cover" }}
                   />
                 </Link>
@@ -209,6 +200,8 @@ export function BlogListPage() {
           ))}
         </div>
       )}
-    </div>
+      </div>
+      <TechnicalSeoSection sectionKey="blog" />
+    </article>
   );
 }

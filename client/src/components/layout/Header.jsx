@@ -24,6 +24,7 @@ export function Header() {
             className="emmbros-logo-img"
             width="280"
             height="66"
+            loading="eager"
             style={{ maxHeight: 65, width: "auto", objectFit: "contain" }}
           />
         </Link>
@@ -138,6 +139,7 @@ export function Header() {
                 alt="Emmpower Automotive Spares by Emmbros"
                 width="135"
                 height="42"
+                loading="eager"
                 style={{ maxHeight: 38, width: "auto", objectFit: "contain" }}
               />
             </a>
@@ -154,7 +156,7 @@ export function Header() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to="/who-we-are/"
+                  to="/who-we-are"
                   style={{
                     color: location.pathname.startsWith("/who-we-are") ? "#034464" : "#242424",
                     fontFamily: '"Basic", Sans-serif',
@@ -186,11 +188,11 @@ export function Header() {
                       zIndex: 1001,
                     }}
                   >
-                    <Link to="/who-we-are/#about" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🏢 About us</Link>
-                    <Link to="/who-we-are/#leadership" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>👨 Leadership</Link>
-                    <Link to="/who-we-are/#ourjourney" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>📈 Our Journey</Link>
-                    <Link to="/who-we-are/#futureplan" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🚀 Future Plan</Link>
-                    <Link to="/who-we-are/#certification" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🧾 Certification</Link>
+                    <Link to="/who-we-are#about" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🏢 About us</Link>
+                    <Link to="/who-we-are#leadership" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>👨 Leadership</Link>
+                    <Link to="/who-we-are#ourjourney" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>📈 Our Journey</Link>
+                    <Link to="/who-we-are#futureplan" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🚀 Future Plan</Link>
+                    <Link to="/quality-certifications" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🧾 Certification</Link>
                   </div>
                 )}
               </div>
@@ -203,7 +205,7 @@ export function Header() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to="/what-we-do/"
+                  to="/what-we-do"
                   style={{
                     color: location.pathname.startsWith("/what-we-do") ? "#034464" : "#242424",
                     fontFamily: '"Basic", Sans-serif',
@@ -235,12 +237,12 @@ export function Header() {
                       zIndex: 1001,
                     }}
                   >
-                    <Link to="/what-we-do/#forging" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🔧 Forging Solutions</Link>
-                    <Link to="/what-we-do/#heattreatment" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🔥 Heat Treatment Technology</Link>
-                    <Link to="/what-we-do/#manufacturing" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>⚙️ Precision Machining</Link>
-                    <Link to="/what-we-do/#qualitylab" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🧪 Quality &amp; Testing</Link>
-                    <Link to="/what-we-do/#research" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>💡 Research &amp; Development</Link>
-                    <Link to="/what-we-do/#csr-activity" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🌱 CSR Activity</Link>
+                    <Link to="/what-we-do#forging" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🔧 Forging Solutions</Link>
+                    <Link to="/what-we-do#heattreatment" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🔥 Heat Treatment Technology</Link>
+                    <Link to="/what-we-do#manufacturing" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>⚙️ Precision Machining</Link>
+                    <Link to="/quality-certifications" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🧪 Quality &amp; Testing</Link>
+                    <Link to="/what-we-do#research" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>💡 Research &amp; Development</Link>
+                    <Link to="/what-we-do#csr-activity" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>🌱 CSR Activity</Link>
                   </div>
                 )}
               </div>
@@ -253,7 +255,7 @@ export function Header() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to="/product-application/"
+                  to="/product-application"
                   style={{
                     color: location.pathname.startsWith("/product-application") ? "#034464" : "#242424",
                     fontFamily: '"Basic", Sans-serif',
@@ -285,19 +287,19 @@ export function Header() {
                       zIndex: 1001,
                     }}
                   >
-                    <Link to="/product-application/front-axle-shaft/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Front Axle Parts</Link>
-                    <Link to="/product-application/rear-axle-shaft/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Rear Axle Parts</Link>
-                    <Link to="/product-application/gear-box-parts/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Gear Box Parts</Link>
-                    <Link to="/product-application/driveline-parts/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Driveline Parts</Link>
-                    <Link to="/product-application/hydraulic-parts/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Hydraulic Parts</Link>
-                    <Link to="/product-application/planetary-wheel-drive-parts/" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Planetary Wheel Drive Parts</Link>
+                    <Link to="/product-application/front-axle-shaft" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Front Axle Parts</Link>
+                    <Link to="/product-application/rear-axle-shaft" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Rear Axle Parts</Link>
+                    <Link to="/product-application/gear-box-parts" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Gear Box Parts</Link>
+                    <Link to="/product-application/driveline-parts" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Driveline Parts</Link>
+                    <Link to="/product-application/hydraulic-parts" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Hydraulic Parts</Link>
+                    <Link to="/product-application/planetary-wheel-drive-parts" style={{ display: "block", padding: "10px 18px", color: "#333", textDecoration: "none", fontSize: "15px", fontFamily: '"Basic", Sans-serif' }}>Planetary Wheel Drive Parts</Link>
                   </div>
                 )}
               </div>
 
               {/* Career */}
               <Link
-                to="/career/"
+                to="/career"
                 style={{
                   color: location.pathname === "/career" || location.pathname === "/career/" ? "#034464" : "#242424",
                   fontFamily: '"Basic", Sans-serif',
