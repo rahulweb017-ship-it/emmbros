@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { MobileMenu } from "./MobileMenu";
+import "../../styles/components/header.css";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname, location.hash]);
+
   return (
     <header className="emmbros-site-header" style={{ position: "sticky", top: 0, zIndex: 1000, background: "#ffffff", borderBottom: "1px solid #e9e9e9", boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 90 }}>
+      <div className="emmbros-header-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 90 }}>
         {/* Left: Full Height Emmbros Brand Logo */}
-        <Link to="/" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
+        <Link to="/" className="emmbros-logo-link" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
           <img
             src="/assets/images/logo1.webp"
             alt="Emmbros Autocomp Ltd Logo"
+            className="emmbros-logo-img"
             width="280"
             height="66"
             style={{ maxHeight: 65, width: "auto", objectFit: "contain" }}
@@ -25,7 +31,7 @@ export function Header() {
         {/* Right: Desktop 2-Tier Layout (Top Info Strip + Main Nav) */}
         <div className="header-right-col" style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", flex: 1, marginLeft: 30 }}>
           {/* Tier 1: Top Contact Bar */}
-          <div className="header-top-tier" style={{ display: "flex", alignItems: "center", borderBottom: "1px solid #e9e9e9", paddingBottom: 6, marginBottom: 8, fontSize: "14px" }}>
+          <div className="header-top-tier" style={{ alignItems: "center", borderBottom: "1px solid #e9e9e9", paddingBottom: 6, marginBottom: 8, fontSize: "14px" }}>
             {/* Chat WhatsApp Link */}
             <a
               href="https://api.whatsapp.com/send/?phone=919816931822&text=How+can+i+help+you%3F&type=phone_number&app_absent=0"
@@ -139,7 +145,7 @@ export function Header() {
 
           {/* Tier 2: Navigation Links Bar */}
           <div className="header-nav-tier" style={{ display: "flex", alignItems: "center" }}>
-            <nav className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: 30 }}>
+            <nav className="desktop-nav" style={{ alignItems: "center", gap: 30 }}>
               {/* Who We Are */}
               <div
                 className="nav-dropdown-item"
@@ -311,7 +317,6 @@ export function Header() {
               className="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
-                display: "none",
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -319,8 +324,9 @@ export function Header() {
                 color: "#034464",
               }}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
