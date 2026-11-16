@@ -21,6 +21,7 @@ import {
   createPage,
   updatePage,
   deletePage,
+  syncDefaultPages,
 } from "../controllers/pageController.js";
 import {
   uploadMedia,
@@ -76,6 +77,7 @@ router.get("/applications", requireRole("admin", "editor"), getAllApplications);
 router.put("/applications/:id/status", requireRole("admin", "editor"), updateApplicationStatus);
 router.delete("/applications/:id", requireRole("admin", "editor"), deleteApplication);
 
+router.post("/pages/sync", requireRole("admin", "editor"), syncDefaultPages);
 router.get("/pages", requireRole("admin", "editor"), getAdminPages);
 router.post("/pages", requireRole("admin", "editor"), createPage);
 router.get("/pages/:id", requireRole("admin", "editor"), getAdminPageById);

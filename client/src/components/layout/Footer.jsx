@@ -225,8 +225,7 @@ export function Footer() {
           <Link to="/product-application/gear-box-parts" style={{ color: "#334155", textDecoration: "none" }}>Gearbox Parts</Link>
           <Link to="/product-application/hydraulic-parts" style={{ color: "#334155", textDecoration: "none" }}>Hydraulic Parts</Link>
           <Link to="/product-application/planetary-wheel-drive-parts" style={{ color: "#334155", textDecoration: "none" }}>Planetary Wheel Drive Parts</Link>
-          <Link to="/career" style={{ color: "#334155", textDecoration: "none" }}>Career</Link>
-          <Link to="/careers" style={{ color: "#334155", textDecoration: "none" }}>Open Positions</Link>
+          <Link to="/career" style={{ color: "#334155", textDecoration: "none" }}>Careers</Link>
           <Link to="/blog" style={{ color: "#334155", textDecoration: "none" }}>Engineering Blog</Link>
           <Link to="/contact" style={{ color: "#334155", textDecoration: "none" }}>Contact Us</Link>
         </div>

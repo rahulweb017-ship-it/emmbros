@@ -34,7 +34,7 @@ export function Home() {
 				<div id="emmbros-hero-slider" className="emmbros-hero-slider">
 					
 					<div className={`hero-slide ${activeSlide === 0 ? "active" : ""}`}>
-						<img src="/assets/images/slide-1.webp" alt="Precision Engineered Shafts &amp; Components" className="hero-slide-bg" width="1920" height="857" fetchPriority="high" loading="eager" />
+						<img src="/assets/images/slide-1.webp" alt="Precision Engineered Shafts &amp; Components" className="hero-slide-bg" width="1920" height="857" fetchPriority="high" loading="eager" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "1920 / 857" }} />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<h1 className="hero-title">Precision Engineered
@@ -46,7 +46,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 1 ? "active" : ""}`}>
-						<img src="/assets/images/slide-2.webp" alt="Established Since 1991" className="hero-slide-bg" width="1920" height="857"  loading="lazy" />
+						<img src="/assets/images/slide-2.webp" alt="Established Since 1991" className="hero-slide-bg" width="1920" height="857" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "1920 / 857" }} />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">Established Since 1991</div>
@@ -56,7 +56,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 2 ? "active" : ""}`}>
-						<img src="/assets/images/slide-3.webp" alt="Forging Our Way to On-Time Delivery" className="hero-slide-bg" width="1920" height="864"  loading="lazy" />
+						<img src="/assets/images/slide-3.webp" alt="Forging Our Way to On-Time Delivery" className="hero-slide-bg" width="1920" height="864" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "1920 / 864" }} />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">Forging Our Way to<br />On-Time Delivery</div>
@@ -66,7 +66,7 @@ Durable, Relaible, built exact specification.</p>
 
 					
 					<div className={`hero-slide ${activeSlide === 3 ? "active" : ""}`}>
-						<img src="/assets/images/slide-4.webp" alt="State-of-the-Art Machining for Consistent Quality" className="hero-slide-bg" width="1920" height="857"  loading="lazy" />
+						<img src="/assets/images/slide-4.webp" alt="State-of-the-Art Machining for Consistent Quality" className="hero-slide-bg" width="1920" height="857" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "1920 / 857" }} />
 						<div className="hero-overlay"></div>
 						<div className="hero-content-wrapper">
 							<div className="hero-title" role="heading" aria-level="2">State-of-the-Art Machining for Consistent Quality</div>
@@ -111,13 +111,13 @@ Durable, Relaible, built exact specification.</p>
 				<div className="eal-element eal-element-f417dc9 eal-absolute e-transform eal-widget eal-widget-heading">
 					<h2 className="eal-heading-title eal-size-default">Emmbros <span className="lblue">Autocomp</span></h2>				</div>
 				<div className="eal-element eal-element-d66a6a4 eal-widget eal-widget-image">
-															<img fetchpriority="high" width="1920" height="870" src="/assets/images/hero-img-1.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd"  loading="lazy" />															</div>
+															<img width="1920" height="870" src="/assets/images/hero-img-1.webp" className="attachment-full size-full" alt="Emmbros Autocomp Ltd" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "1920 / 870" }} />															</div>
 				</div>
 		<div className="eal-element eal-element-ce3074a eal-con-full e-grid eal-con eal-child">
 				<div className="eal-element eal-element-e6a1fc6 eal-widget eal-widget-image">
-															<img width="737" height="469" src="/assets/images/katha-plant-image.jpg-e1770114833911.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd Katha Plant"  loading="lazy" />															</div>
+															<img width="737" height="469" src="/assets/images/katha-plant-image.jpg-e1770114833911.webp" className="attachment-full size-full" alt="Emmbros Autocomp Ltd Katha Plant" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "737 / 469" }} />															</div>
 				<div className="eal-element eal-element-ab7a5aa eal-widget eal-widget-image">
-															<img width="1038" height="557" src="/assets/images/new-emm-image.jpg.webp" className="attachment-full size-full " alt="Emmbros Autocomp Ltd"  loading="lazy" />															</div>
+															<img width="1038" height="557" src="/assets/images/new-emm-image.jpg.webp" className="attachment-full size-full" alt="Emmbros Autocomp Ltd" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "1038 / 557" }} />															</div>
 				</div>
 				</div>
 		<div className="eal-element eal-element-f737db8 eal-con-full eal-flex eal-con eal-child">
@@ -260,9 +260,11 @@ Durable, Relaible, built exact specification.</p>
 					src="/assets/images/image-7.webp"
 					alt="Inside Emmbros - Engineering Excellence in Motion"
 					className="eal-custom-embed-image"
-					width="1280"
-					height="720"
-				 loading="lazy" />
+					width="1920"
+					height="1078"
+					loading="lazy"
+					style={{ width: "100%", height: "auto", aspectRatio: "1920 / 1078" }}
+				/>
 				<div className="eal-custom-embed-play" role="button" aria-label="Play Video" tabIndex="0">
 					<i aria-hidden="true" className="eicon-play"></i>
 				</div>

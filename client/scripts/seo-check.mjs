@@ -175,16 +175,48 @@ for (const route of allRoutes) {
     }
   }
 
-  // 10. Check JSON-LD validity
+  // 10. Check JSON-LD validity & required schemas
   const jsonLdMatches = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
   if (jsonLdMatches.length === 0) {
     errors.push(`[${route}] Missing JSON-LD structured data script`);
   } else {
+    const parsedNodes = [];
     for (const jm of jsonLdMatches) {
       try {
-        JSON.parse(jm[1]);
+        const parsed = JSON.parse(jm[1]);
+        if (Array.isArray(parsed)) parsedNodes.push(...parsed);
+        else parsedNodes.push(parsed);
       } catch (e) {
         errors.push(`[${route}] Invalid JSON-LD syntax: ${e.message}`);
+      }
+    }
+
+    // Check AutoPartsStore markup
+    const hasAutoPartsStore = parsedNodes.some((node) => {
+      const t = node["@type"];
+      if (Array.isArray(t)) return t.includes("AutoPartsStore");
+      return t === "AutoPartsStore";
+    });
+    if (!hasAutoPartsStore) {
+      errors.push(`[${route}] Missing Schema.org AutoPartsStore markup in JSON-LD`);
+    }
+
+    // Check Plant Locations on key entity pages
+    if (["/", "/contact", "/who-we-are", "/what-we-do", "/product-application"].includes(route)) {
+      const plantIds = ["#plant-katha", "#plant-bhud", "#plant-epip"];
+      for (const pid of plantIds) {
+        const hasPlant = parsedNodes.some((n) => n["@id"] && n["@id"].includes(pid));
+        if (!hasPlant) {
+          errors.push(`[${route}] Missing verified Plant Location node "${pid}" in JSON-LD`);
+        }
+      }
+    }
+
+    // Check Product markup on product application pages
+    if (route.startsWith("/product-application/")) {
+      const hasProduct = parsedNodes.some((n) => n["@type"] === "Product");
+      if (!hasProduct) {
+        errors.push(`[${route}] Missing Schema.org Product markup in JSON-LD`);
       }
     }
   }
@@ -221,6 +253,17 @@ if (!fs.existsSync(robotsPath)) {
   const robotsTxt = fs.readFileSync(robotsPath, "utf-8");
   if (!robotsTxt.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) {
     errors.push(`dist/robots.txt missing Sitemap declaration`);
+  }
+}
+
+// 12. Check llms.txt & llms-full.txt
+const llmsPath = path.join(distDir, "llms.txt");
+if (!fs.existsSync(llmsPath)) {
+  errors.push(`Missing dist/llms.txt`);
+} else {
+  const llmsContent = fs.readFileSync(llmsPath, "utf-8");
+  if (!llmsContent.includes("# Emmbros Autocomp Ltd") || !llmsContent.includes("https://emmbros.com/")) {
+    errors.push(`dist/llms.txt is malformed or missing key header/links`);
   }
 }
 

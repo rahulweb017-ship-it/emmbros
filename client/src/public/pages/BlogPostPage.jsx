@@ -1,16 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Calendar, User, ArrowLeft, Tag } from "lucide-react";
 import { apiClient } from "../../api/apiClient";
+import { useInitialData } from "../../context/InitialDataContext.jsx";
 
 export function BlogPostPage() {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const initialData = useInitialData();
+  const isInitialPostMatch = Boolean(initialData?.post && initialData.post.slug === slug);
+
+  const [post, setPost] = useState(() => (isInitialPostMatch ? initialData.post : null));
+  const [loading, setLoading] = useState(() => !isInitialPostMatch);
   const [error, setError] = useState(null);
 
+  const isInitialMount = useRef(true);
+
   useEffect(() => {
+    // If we already have the post matching this slug from SSR initialData, don't refetch
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      if (isInitialPostMatch && post) {
+        return;
+      }
+    }
+
+    if (post && post.slug === slug) return;
+
     async function fetchPost() {
       setLoading(true);
       setError(null);
@@ -92,7 +108,7 @@ export function BlogPostPage() {
         )}
         <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
           <Calendar size={14} />
-          {new Date(post.publishedAt || post.createdAt).toLocaleDateString("en-IN", {
+          {new Date(post.publishedAt || post.createdAt || Date.now()).toLocaleDateString("en-IN", {
             day: "numeric",
             month: "long",
             year: "numeric",
@@ -105,26 +121,42 @@ export function BlogPostPage() {
         )}
       </div>
 
-      {/* Main Title */}
-      <h1 style={{ fontSize: 36, fontWeight: 800, color: "#111827", lineHeight: 1.25, marginBottom: 24 }}>
+      {/* Title */}
+      <h1 style={{ fontSize: 36, fontWeight: 800, color: "#111827", lineHeight: 1.25, marginBottom: 20 }}>
         {post.title}
       </h1>
 
       {/* Featured Image */}
       {post.featuredImage?.url && (
-        <img
-          src={post.featuredImage.url}
-          alt={post.featuredImage.alt || post.title}
-          style={{ width: "100%", maxHeight: 440, objectFit: "cover", borderRadius: 12, marginBottom: 32 }}
-        />
+        <div style={{ marginBottom: 32, borderRadius: 12, overflow: "hidden" }}>
+          <img
+            src={post.featuredImage.url}
+            alt={post.featuredImage.alt || post.title}
+            width="800"
+            height="420"
+            style={{ width: "100%", maxHeight: 420, objectFit: "cover" }}
+          />
+        </div>
       )}
 
-      {/* Rich Text Body Content */}
+      {/* Article Body */}
       <div
-        className="blog-content-body"
-        style={{ fontSize: 17, lineHeight: 1.7, color: "#374151" }}
+        className="blog-post-content"
+        style={{ fontSize: 17, lineHeight: 1.8, color: "#1f2937" }}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
+      {/* Tags */}
+      {post.tags && post.tags.length > 0 && (
+        <div style={{ marginTop: 40, paddingTop: 20, borderTop: "1px solid #e5e7eb", display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+          <span style={{ fontSize: 13, fontWeight: 600, color: "#6b7280" }}>Tags:</span>
+          {post.tags.map((tag) => (
+            <span key={tag} style={{ background: "#f3f4f6", color: "#4b5563", padding: "3px 10px", borderRadius: 12, fontSize: 12 }}>
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

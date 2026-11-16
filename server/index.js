@@ -94,6 +94,7 @@ app.use((req, res, next) => {
 // Force Canonical Host (emmbros.com non-www over HTTPS, 301 redirect www & emmbros.in)
 const LEGACY_SHORT_REDIRECTS = {
   "/about": "/who-we-are",
+  "/careers": "/career",
   "/front-axle-shaft": "/product-application/front-axle-shaft",
   "/rear-axle-shaft": "/product-application/rear-axle-shaft",
   "/gear-box-parts": "/product-application/gear-box-parts",
@@ -345,7 +346,24 @@ if (fs.existsSync(CLIENT_DIST)) {
 
     const cleanPath = req.path.replace(/\/+$/, "") || "/";
 
-    // 1. Check if a pre-rendered static HTML file exists for this exact route
+    // 1. Dynamic Server-Side Rendering (SSR) for /blog and /blog/:slug
+    // Ensures search engines crawl full article content, schema markup, and zero "Loading..." text
+    if (cleanPath === "/blog" || cleanPath.startsWith("/blog/")) {
+      try {
+        const shellPath = fs.existsSync(spaShellPath) ? spaShellPath : indexHtmlPath;
+        const shellHtml = fs.readFileSync(shellPath, "utf-8");
+        const injectedHtml = await injectSeoMetadata(shellHtml, cleanPath);
+        if (injectedHtml) {
+          res.setHeader("Content-Type", "text/html; charset=utf-8");
+          res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+          return res.status(200).send(injectedHtml);
+        }
+      } catch (err) {
+        console.error("[ssr] Error rendering dynamic blog route:", err.message);
+      }
+    }
+
+    // 2. Check if a pre-rendered static HTML file exists for this exact route
     const prerenderFile =
       cleanPath === "/"
         ? indexHtmlPath
@@ -357,7 +375,7 @@ if (fs.existsSync(CLIENT_DIST)) {
       return res.status(200).sendFile(prerenderFile);
     }
 
-    // 2. Check if it is an Admin route or a valid published CMS route (/blog/:slug or /careers/:slug)
+    // 3. Dynamic CMS Fallback (/careers/:slug or admin routes)
     try {
       const shellPath = fs.existsSync(spaShellPath) ? spaShellPath : indexHtmlPath;
       const shellHtml = fs.readFileSync(shellPath, "utf-8");
@@ -372,7 +390,7 @@ if (fs.existsSync(CLIENT_DIST)) {
       console.error("[seo] Error resolving dynamic route:", err.message);
     }
 
-    // 3. Unknown URL -> Return real HTTP 404 with pre-rendered 404.html
+    // 4. Unknown URL -> Return real HTTP 404 with pre-rendered 404.html
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     if (fs.existsSync(notFoundHtmlPath)) {

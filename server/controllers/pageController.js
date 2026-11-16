@@ -1,4 +1,5 @@
 import { Page } from "../models/Page.js";
+import { DEFAULT_PAGES } from "../config/defaultPages.js";
 import { slugify } from "../utils/helpers.js";
 import { pageZodSchema, pageUpdateZodSchema } from "../utils/validators.js";
 
@@ -110,6 +111,28 @@ export async function deletePage(req, res, next) {
       return res.status(404).json({ ok: false, error: "Page not found." });
     }
     res.json({ ok: true, message: "Page deleted successfully." });
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function syncDefaultPages(req, res, next) {
+  try {
+    let syncedCount = 0;
+    for (const defPage of DEFAULT_PAGES) {
+      const existing = await Page.findOne({ slug: defPage.slug });
+      if (!existing) {
+        await Page.create(defPage);
+        syncedCount++;
+      }
+    }
+    const total = await Page.countDocuments();
+    res.json({
+      ok: true,
+      message: `Sync completed. ${syncedCount} new page(s) inserted. Total: ${total} pages.`,
+      syncedCount,
+      total,
+    });
   } catch (err) {
     next(err);
   }

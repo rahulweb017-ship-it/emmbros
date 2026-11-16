@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { DEFAULT_POSTS } from "../../server/config/defaultPosts.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const clientRoot = path.resolve(__dirname, "..");
@@ -12,7 +13,8 @@ function escapeHtml(str = "") {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 async function runPrerender() {
@@ -43,16 +45,36 @@ async function runPrerender() {
 
   const allRoutes = [...PUBLIC_PRERENDER_ROUTES, "/404"];
 
+  // Common categories for blog
+  const blogCategories = [...new Set(DEFAULT_POSTS.map((p) => p.category).filter(Boolean))];
+  const blogInitialData = {
+    posts: DEFAULT_POSTS,
+    pagination: { page: 1, limit: 9, total: DEFAULT_POSTS.length, totalPages: 1 },
+    categories: blogCategories,
+  };
+
   for (const route of allRoutes) {
     const cfg = SEO_PAGES[route];
     if (!cfg || !cfg.title || !cfg.description || !cfg.canonicalPath) {
       throw new Error(`[Prerender Error] Missing SEO metadata in seoConfig.js for route: ${route}`);
     }
 
-    const { appHtml } = render(route === "/404" ? "/404-not-found-page" : route);
+    // If route is /blog, pass blogInitialData so real articles are rendered during SSG!
+    let routeInitialData = null;
+    if (route === "/blog") {
+      routeInitialData = blogInitialData;
+    }
+
+    const targetUrl = route === "/404" ? "/404-not-found-page" : route;
+    const { appHtml } = render(targetUrl, routeInitialData);
     const canonicalUrl = getCanonicalUrl(cfg.canonicalPath);
     const ogImageUrl = cfg.ogImage.startsWith("http") ? cfg.ogImage : `${SITE_URL}${cfg.ogImage}`;
     const jsonLdGraph = buildPageJsonLd(route);
+
+    let stateScript = "";
+    if (routeInitialData) {
+      stateScript = `\n    <script>window.__INITIAL_DATA__ = ${JSON.stringify(routeInitialData).replace(/</g, "\\u003c")};</script>`;
+    }
 
     const seoHeadBlock = [
       `<title>${escapeHtml(cfg.title)}</title>`,
@@ -71,7 +93,7 @@ async function runPrerender() {
       `<meta name="twitter:title" content="${escapeHtml(cfg.title)}" />`,
       `<meta name="twitter:description" content="${escapeHtml(cfg.description)}" />`,
       `<meta name="twitter:image" content="${escapeHtml(ogImageUrl)}" />`,
-      `<script type="application/ld+json">${JSON.stringify(jsonLdGraph)}</script>`,
+      `<script type="application/ld+json">${JSON.stringify(jsonLdGraph)}</script>${stateScript}`,
     ].join("\n    ");
 
     const pageHtml = templateHtml
@@ -92,18 +114,96 @@ async function runPrerender() {
     }
   }
 
-  // Generate sitemap.xml at build time
+  // Pre-render each individual blog article for Static Site Generation (SSG)
+  for (const post of DEFAULT_POSTS) {
+    const postRoute = `/blog/${post.slug}`;
+    const postInitialData = { post };
+    const { appHtml } = render(postRoute, postInitialData);
+
+    const postCanonical = post.seo?.canonicalUrl || `${SITE_URL}/blog/${post.slug}`;
+    const postTitle = post.seo?.metaTitle || `${post.title} | ${SITE_NAME}`;
+    const postDesc = post.seo?.metaDescription || post.excerpt;
+    const postOgImage = post.seo?.ogImage || post.featuredImage?.url || `${SITE_URL}/assets/images/logo1.webp`;
+
+    const articleJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: postDesc,
+      image: [postOgImage],
+      datePublished: new Date(post.publishedAt || Date.now()).toISOString(),
+      dateModified: new Date(post.publishedAt || Date.now()).toISOString(),
+      author: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/assets/images/logo1.webp`,
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": postCanonical,
+      },
+    };
+
+    const postStateScript = `\n    <script>window.__INITIAL_DATA__ = ${JSON.stringify(postInitialData).replace(/</g, "\\u003c")};</script>`;
+
+    const postHeadBlock = [
+      `<title>${escapeHtml(postTitle)}</title>`,
+      `<meta name="description" content="${escapeHtml(postDesc)}" />`,
+      `<link rel="canonical" href="${escapeHtml(postCanonical)}" />`,
+      `<meta name="robots" content="index, follow" />`,
+      `<meta property="og:title" content="${escapeHtml(postTitle)}" />`,
+      `<meta property="og:description" content="${escapeHtml(postDesc)}" />`,
+      `<meta property="og:url" content="${escapeHtml(postCanonical)}" />`,
+      `<meta property="og:type" content="article" />`,
+      `<meta property="og:site_name" content="${escapeHtml(SITE_NAME)}" />`,
+      `<meta property="og:image" content="${escapeHtml(postOgImage)}" />`,
+      `<meta property="og:image:width" content="1200" />`,
+      `<meta property="og:image:height" content="630" />`,
+      `<meta name="twitter:card" content="summary_large_image" />`,
+      `<meta name="twitter:title" content="${escapeHtml(postTitle)}" />`,
+      `<meta name="twitter:description" content="${escapeHtml(postDesc)}" />`,
+      `<meta name="twitter:image" content="${escapeHtml(postOgImage)}" />`,
+      `<script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>${postStateScript}`,
+    ].join("\n    ");
+
+    const articleHtml = templateHtml
+      .replace("<!--seo-head-->", postHeadBlock)
+      .replace("<!--app-html-->", appHtml);
+
+    const articleOutDir = path.join(distDir, "blog", post.slug);
+    fs.mkdirSync(articleOutDir, { recursive: true });
+    fs.writeFileSync(path.join(articleOutDir, "index.html"), articleHtml, "utf-8");
+    console.log(`[SSG] Pre-rendered Article ${postRoute} -> dist/blog/${post.slug}/index.html`);
+  }
+
+  // Generate sitemap.xml at build time (including static routes + pre-rendered blog articles)
   const today = new Date().toISOString().split("T")[0];
-  const sitemapItems = PUBLIC_PRERENDER_ROUTES.map((route) => {
-    const cfg = SEO_PAGES[route];
-    const loc = getCanonicalUrl(cfg.canonicalPath);
-    return `  <url>
+  const sitemapItems = [
+    ...PUBLIC_PRERENDER_ROUTES.map((route) => {
+      const cfg = SEO_PAGES[route];
+      const loc = getCanonicalUrl(cfg.canonicalPath);
+      return `  <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${cfg.changefreq || "weekly"}</changefreq>
     <priority>${cfg.priority || "0.8"}</priority>
   </url>`;
-  }).join("\n");
+    }),
+    ...DEFAULT_POSTS.map((post) => `  <url>
+    <loc>${SITE_URL}/blog/${post.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`),
+  ].join("\n");
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -111,7 +211,7 @@ ${sitemapItems}
 </urlset>
 `;
   fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapXml, "utf-8");
-  console.log(`[SSG] Generated dist/sitemap.xml (${PUBLIC_PRERENDER_ROUTES.length} canonical URLs)`);
+  console.log(`[SSG] Generated dist/sitemap.xml with ${PUBLIC_PRERENDER_ROUTES.length + DEFAULT_POSTS.length} canonical URLs`);
 
   // Generate robots.txt at build time
   const robotsTxt = `User-agent: *
@@ -120,15 +220,34 @@ Disallow: /admin/
 Disallow: /api/
 
 Sitemap: ${SITE_URL}/sitemap.xml
+# LLM & AI Agent Context: ${SITE_URL}/llms.txt
 `;
   fs.writeFileSync(path.join(distDir, "robots.txt"), robotsTxt, "utf-8");
   console.log(`[SSG] Generated dist/robots.txt`);
 
-  // Generate .htaccess for Apache / cPanel hosting (301 canonical host + trailing slash + 404)
+  // Deploy llms.txt and llms-full.txt to dist/ for LLMs and AI agent crawlers
+  const publicDir = path.join(clientRoot, "public");
+  for (const llmFile of ["llms.txt", "llms-full.txt"]) {
+    const src = path.join(publicDir, llmFile);
+    const dest = path.join(distDir, llmFile);
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, dest);
+      console.log(`[SSG] Deployed dist/${llmFile}`);
+    }
+  }
+
+  // Clean up legacy dist/careers if present so Express/Apache won't serve a directory index
+  const legacyCareersDir = path.join(distDir, "careers");
+  if (fs.existsSync(legacyCareersDir)) {
+    fs.rmSync(legacyCareersDir, { recursive: true, force: true });
+    console.log(`[SSG] Removed legacy directory: ${legacyCareersDir}`);
+  }
+
+  // Generate .htaccess for Apache / cPanel hosting
   const htaccess = `<IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Force HTTPS and non-www emmbros.com (including emmbros.in -> emmbros.com)
+  # Force HTTPS and non-www emmbros.com
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^www\\. [NC,OR]
   RewriteCond %{HTTP_HOST} ^(www\\.)?emmbros\\.in$ [NC]
@@ -140,6 +259,7 @@ Sitemap: ${SITE_URL}/sitemap.xml
   RewriteRule ^(.+)/$ https://emmbros.com/$1 [L,R=301]
 
   # Legacy short product URLs -> canonical nested URLs
+  RewriteRule ^careers/?$ /career [L,R=301]
   RewriteRule ^front-axle-shaft/?$ /product-application/front-axle-shaft [L,R=301]
   RewriteRule ^rear-axle-shaft/?$ /product-application/rear-axle-shaft [L,R=301]
   RewriteRule ^gear-box-parts/?$ /product-application/gear-box-parts [L,R=301]
@@ -159,8 +279,8 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(distDir, ".htaccess"), htaccess, "utf-8");
 
-  // Clean up temporary dist-ssr folder
-  fs.rmSync(ssrDir, { recursive: true, force: true });
+  // Keep dist-ssr available for Node server SSR! (Do NOT delete ssrDir)
+  console.log(`[SSG] Retaining ${ssrDir} for server-side dynamic SSR rendering.`);
 }
 
 runPrerender().catch((err) => {

@@ -34,7 +34,6 @@ async function runVerification() {
     "/product-application/planetary-wheel-drive-parts",
     "/career",
     "/blog",
-    "/careers",
   ];
 
   for (const r of routes) {

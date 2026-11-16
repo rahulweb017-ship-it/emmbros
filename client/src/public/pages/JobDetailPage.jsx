@@ -94,7 +94,7 @@ export function JobDetailPage() {
         </Helmet>
         <h1 style={{ fontSize: 32, fontWeight: 700, color: "#111827", marginBottom: 16 }}>Job Posting Closed or Not Found</h1>
         <p style={{ color: "#4b5563", marginBottom: 24 }}>This vacancy is either closed or no longer accepting applications.</p>
-        <Link to="/careers" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#2563eb", fontWeight: 600, textDecoration: "none" }}>
+        <Link to="/career" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#2563eb", fontWeight: 600, textDecoration: "none" }}>
           <ArrowLeft size={16} /> View All Careers
         </Link>
       </div>
@@ -120,7 +120,7 @@ export function JobDetailPage() {
       </Helmet>
 
       {/* Back Link */}
-      <Link to="/careers" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#4b5563", fontSize: 14, fontWeight: 500, textDecoration: "none", marginBottom: 24 }}>
+      <Link to="/career" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#4b5563", fontSize: 14, fontWeight: 500, textDecoration: "none", marginBottom: 24 }}>
         <ArrowLeft size={16} /> Back to Open Positions
       </Link>
 

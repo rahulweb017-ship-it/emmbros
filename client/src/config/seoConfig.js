@@ -1,12 +1,130 @@
 export const SITE_URL = "https://emmbros.com";
 export const SITE_NAME = "Emmbros Autocomp Ltd";
 
+export const PLANT_LOCATIONS_SCHEMA = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["AutoPartsStore", "AutomotiveBusiness", "LocalBusiness"],
+    "@id": `${SITE_URL}/#plant-katha`,
+    name: "Emmbros Autocomp Ltd – Regd & Works (Katha Plant)",
+    alternateName: "EAL Katha Plant (Unit 1)",
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    branchOf: { "@id": `${SITE_URL}/#organization` },
+    description:
+      "Primary registered manufacturing works of Emmbros Autocomp Limited in Katha, Baddi. Features heavy closed-die forging presses, horizontal upsetters, and driveline manufacturing facilities.",
+    image: `${SITE_URL}/assets/images/katha-plant-image.jpg-e1770114833911.webp`,
+    telephone: "+91-78077-72004",
+    email: "reception@emmbros.com",
+    priceRange: "$$$",
+    currenciesAccepted: "INR, USD, EUR",
+    paymentAccepted: "Wire Transfer, Commercial Letter of Credit, Bank Transfer",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Village Katha",
+      addressLocality: "Baddi, District Solan",
+      addressRegion: "Himachal Pradesh",
+      postalCode: "173205",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.9578,
+      longitude: 76.7914,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": ["AutoPartsStore", "AutomotiveBusiness", "LocalBusiness"],
+    "@id": `${SITE_URL}/#plant-bhud`,
+    name: "Emmbros Autocomp Ltd – Corporate Office & Works (Bhud Plant)",
+    alternateName: "EAL Bhud Plant (Unit 2)",
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    branchOf: { "@id": `${SITE_URL}/#organization` },
+    description:
+      "Corporate headquarters and precision manufacturing plant of Emmbros Autocomp Limited in Bhud, Baddi, housing CNC turning centers, finish grinding, and quality testing labs.",
+    image: `${SITE_URL}/assets/images/new-project-54.webp`,
+    telephone: "+91-78078-80990",
+    email: "enquiry@emmbros.com",
+    priceRange: "$$$",
+    currenciesAccepted: "INR, USD, EUR",
+    paymentAccepted: "Wire Transfer, Commercial Letter of Credit, Bank Transfer",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Village Bhud",
+      addressLocality: "Baddi, District Solan",
+      addressRegion: "Himachal Pradesh",
+      postalCode: "173205",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.9421,
+      longitude: 76.8042,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": ["AutoPartsStore", "AutomotiveBusiness", "LocalBusiness"],
+    "@id": `${SITE_URL}/#plant-epip`,
+    name: "Emmbros Autocomp Ltd – EPIP Forging & Machining Works",
+    alternateName: "EAL EPIP Plant (Unit 3)",
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    branchOf: { "@id": `${SITE_URL}/#organization` },
+    description:
+      "Advanced manufacturing facility at EPIP Phase-1, Jharmajri, Baddi, equipped with vertical induction hardening scanners, spline rolling machines, and central metallurgical laboratory.",
+    image: `${SITE_URL}/assets/images/new-project-30-1.webp`,
+    telephone: "+91-98169-31822",
+    email: "enquiry@emmbros.com",
+    priceRange: "$$$",
+    currenciesAccepted: "INR, USD, EUR",
+    paymentAccepted: "Wire Transfer, Commercial Letter of Credit, Bank Transfer",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Plot No. 63, EPIP Phase-1, Jharmajri",
+      addressLocality: "Baddi, District Solan",
+      addressRegion: "Himachal Pradesh",
+      postalCode: "174103",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.9384,
+      longitude: 76.8103,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+  },
+];
+
 export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": ["Organization", "AutoPartsStore", "AutomotiveBusiness"],
   "@id": `${SITE_URL}/#organization`,
   name: "Emmbros Autocomp Ltd",
   legalName: "Emmbros Autocomp Limited",
+  alternateName: ["Emmbros", "Emmbros Autocomp", "EAL"],
   url: `${SITE_URL}/`,
   logo: {
     "@type": "ImageObject",
@@ -21,6 +139,8 @@ export const ORGANIZATION_SCHEMA = {
   telephone: "+91-98169-31822",
   email: "enquiry@emmbros.com",
   priceRange: "$$$",
+  currenciesAccepted: "INR, USD, EUR",
+  paymentAccepted: "Wire Transfer, Commercial Letter of Credit, Bank Transfer",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Plot No. 63, EPIP Phase-1, Jharmajri",
@@ -34,6 +154,14 @@ export const ORGANIZATION_SCHEMA = {
     latitude: 30.9384,
     longitude: 76.8103,
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -43,12 +171,83 @@ export const ORGANIZATION_SCHEMA = {
       areaServed: ["IN", "US", "DE", "IT", "TR", "GB"],
       availableLanguage: ["English", "Hindi"],
     },
+    {
+      "@type": "ContactPoint",
+      telephone: "+91-78077-72004",
+      email: "reception@emmbros.com",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    "@id": `${SITE_URL}/#product-catalog`,
+    name: "Emmbros Autocomp OEM Forged & Machined Components",
+    itemListElement: [
+      {
+        "@type": "OfferCatalog",
+        name: "Rear Axle Shafts",
+        url: `${SITE_URL}/product-application/rear-axle-shaft`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Front Axle Shafts",
+        url: `${SITE_URL}/product-application/front-axle-shaft`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Driveline Parts & Cardan Shafts",
+        url: `${SITE_URL}/product-application/driveline-parts`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Gearbox Parts & Transmission Gears",
+        url: `${SITE_URL}/product-application/gear-box-parts`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Hydraulic Parts & Cylinder Pistons",
+        url: `${SITE_URL}/product-application/hydraulic-parts`,
+      },
+      {
+        "@type": "OfferCatalog",
+        name: "Planetary Wheel Drive & Flange Hubs",
+        url: `${SITE_URL}/product-application/planetary-wheel-drive-parts`,
+      },
+    ],
+  },
+  subOrganization: [
+    { "@id": `${SITE_URL}/#plant-katha` },
+    { "@id": `${SITE_URL}/#plant-bhud` },
+    { "@id": `${SITE_URL}/#plant-epip` },
+  ],
+  department: [
+    { "@id": `${SITE_URL}/#plant-katha` },
+    { "@id": `${SITE_URL}/#plant-bhud` },
+    { "@id": `${SITE_URL}/#plant-epip` },
+  ],
+  knowsAbout: [
+    "Automotive Forging",
+    "Rear Axle Shafts",
+    "Front Axle Shafts",
+    "Driveline Parts",
+    "Cardan Shafts",
+    "Transmission Gears",
+    "Hydraulic Parts",
+    "Planetary Wheel Drive",
+    "Closed-Die Forging",
+    "Upsetter Forging",
+    "Induction Hardening",
+    "CNC Machining",
+    "IATF 16949 Quality Management",
   ],
   sameAs: [
     "https://www.facebook.com/emmbrosautocompltd",
     "https://www.instagram.com/emmbrosautocomp1/",
     "https://www.linkedin.com/in/emmbros-autocomp-limited-83724a94/",
     "https://emmpower.in/",
+    "https://www.youtube.com/watch?v=LwSK2Yxii4c",
   ],
 };
 
@@ -162,6 +361,7 @@ export const SEO_PAGES = {
     robots: "index, follow",
     priority: "0.9",
     changefreq: "weekly",
+    schemaType: "Catalog",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Product Application", path: "/product-application" },
@@ -181,7 +381,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Rear Axle Shafts",
       sku: "EAL-RAS-001",
+      mpn: "EAL-RAS-SERIES",
       category: "Automotive Driveline & Axle Components",
+      material: "SAE 4140, EN19C, SAE 1541, EN8DCr, SAE 15B41",
+      capacity: "500,000+ shafts annually",
+      weightRange: "0.5 kg to 65 kg",
       description:
         "Precision upset-forged, CNC-machined, and induction-hardened rear axle shafts (flanged and full-floating) for commercial vehicles, agricultural tractors, and off-highway equipment.",
     },
@@ -205,7 +409,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Front Axle Shafts & Wheel Shafts",
       sku: "EAL-FAS-002",
+      mpn: "EAL-FAS-SERIES",
       category: "Automotive Front Axle Components",
+      material: "EN19 (SAE 4140), 42CrMo4, SAE 1045, EN24",
+      capacity: "Tier-1 OEM high-volume production line",
+      weightRange: "1.0 kg to 45 kg",
       description:
         "Closed-die forged and induction-hardened front axle shafts, 4WD front wheel drive shafts, stub axles, and steering spindles for tractors and heavy-duty vehicles.",
     },
@@ -229,7 +437,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Driveline Parts, Cardan Shafts & Yokes",
       sku: "EAL-DLP-003",
+      mpn: "EAL-DLP-SERIES",
       category: "Automotive Driveline Components",
+      material: "Carbon & Micro-Alloy Forging Steels (SAE 1045, 20MnCr5)",
+      capacity: "High-speed forgings with complete heat traceability",
+      weightRange: "0.5 kg to 35 kg",
       description:
         "Forged and precision-machined driveline components including cardan shafts, propeller shafts, flange yokes, slip yokes, weld yokes, and companion flanges.",
     },
@@ -253,7 +465,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Gearbox Parts & Transmission Shafts",
       sku: "EAL-GBP-004",
+      mpn: "EAL-GBP-SERIES",
       category: "Automotive Transmission Components",
+      material: "Case-Hardening Alloy Steels (16MnCr5, 20MnCr5, SAE 8620)",
+      capacity: "Automated CNC gear cell and spline rolling line",
+      weightRange: "0.8 kg to 30 kg",
       description:
         "Closed-die forged and CNC-machined gearbox parts, main shafts, counter shafts, input shafts, planet carriers, and transmission gears for OEMs.",
     },
@@ -277,7 +493,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Hydraulic Lift Shafts & Cylinder Pistons",
       sku: "EAL-HYP-005",
+      mpn: "EAL-HYP-SERIES",
       category: "Hydraulic & Fluid Power Forgings",
+      material: "High-Tensile Micro-Alloyed Carbon Steel, EN8D",
+      capacity: "Integrated forging, induction hardening and precision cylindrical grinding",
+      weightRange: "1.0 kg to 40 kg",
       description:
         "Forged and precision-ground hydraulic lift shafts, rockshafts, cylinder pistons, and fluid system components for tractors and construction machinery.",
     },
@@ -301,7 +521,11 @@ export const SEO_PAGES = {
     productInfo: {
       name: "OEM Planetary Wheel Drive Parts & Flange Hubs",
       sku: "EAL-PWD-006",
+      mpn: "EAL-PWD-SERIES",
       category: "Planetary Axle & Wheel Drive Components",
+      material: "High-Toughness Forged Alloy Steel, EN19 / 42CrMo4",
+      capacity: "Heavy press forging & 5-axis CNC machining line",
+      weightRange: "2.0 kg to 65 kg",
       description:
         "Heavy-duty forged planetary carriers, wheel hubs, spindle shafts, and ring gear supports for off-highway, mining, and construction equipment.",
     },
@@ -341,21 +565,6 @@ export const SEO_PAGES = {
       { name: "Blog", path: "/blog" },
     ],
   },
-  "/careers": {
-    title: "Open Engineering & Plant Jobs Baddi | Emmbros Autocomp Ltd",
-    description:
-      "View current job openings in metallurgy, forging operations, CNC programming, and quality assurance at Emmbros Autocomp in Baddi. Submit your resume today.",
-    canonicalPath: "/careers",
-    ogImage: "/assets/og/careers-og.webp",
-    ogType: "website",
-    robots: "index, follow",
-    priority: "0.7",
-    changefreq: "weekly",
-    breadcrumbs: [
-      { name: "Home", path: "/" },
-      { name: "Open Positions", path: "/careers" },
-    ],
-  },
   "/404": {
     title: "Page Not Found - 404 Error | Emmbros Autocomp Limited",
     description:
@@ -373,6 +582,80 @@ export const SEO_PAGES = {
 
 export const PUBLIC_PRERENDER_ROUTES = Object.keys(SEO_PAGES).filter((r) => r !== "/404");
 
+export function buildProductSchema(prod, canonicalUrl, ogImageUrl) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${canonicalUrl}#product`,
+    name: prod.name,
+    sku: prod.sku,
+    mpn: prod.mpn || prod.sku,
+    category: prod.category,
+    description: prod.description,
+    image: [ogImageUrl],
+    brand: {
+      "@type": "Brand",
+      name: "Emmbros Autocomp",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Emmbros Autocomp Ltd",
+    },
+    offers: {
+      "@type": "Offer",
+      "@id": `${canonicalUrl}#offer`,
+      url: canonicalUrl,
+      priceCurrency: "INR",
+      price: "0",
+      priceValidUntil: "2027-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "AutoPartsStore",
+        "@id": `${SITE_URL}/#organization`,
+        name: "Emmbros Autocomp Ltd",
+      },
+      areaServed: ["IN", "US", "DE", "IT", "TR", "GB"],
+      eligibleRegion: ["IN", "US", "DE", "IT", "TR", "GB"],
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
+    },
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "Material Grade",
+        value: prod.material || "High-Tensile Alloy & Carbon Steels",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Manufacturing Process",
+        value: "Closed-Die Press Forging, Upsetter Forging, Induction Hardening, CNC Machining",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Quality Certifications",
+        value: "IATF 16949:2016, ISO 9001:2015, ISO 14001:2015, ISO 45001:2018",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Production Facility",
+        value: "Emmbros Autocomp Baddi Plants (Katha, Bhud, EPIP Jharmajri)",
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Country of Origin",
+        value: "India",
+      },
+      ...(prod.capacity
+        ? [{ "@type": "PropertyValue", name: "Annual Capacity", value: prod.capacity }]
+        : []),
+      ...(prod.weightRange
+        ? [{ "@type": "PropertyValue", name: "Component Weight Range", value: prod.weightRange }]
+        : []),
+    ],
+  };
+}
+
 export function buildPageJsonLd(routePath, customMeta = {}) {
   const norm = normalizeCanonicalPath(routePath);
   const pageConfig = SEO_PAGES[norm] || {};
@@ -382,6 +665,17 @@ export function buildPageJsonLd(routePath, customMeta = {}) {
     : `${SITE_URL}${customMeta.ogImage || pageConfig.ogImage || "/assets/og/home-og.webp"}`;
 
   const graph = [ORGANIZATION_SCHEMA];
+
+  // Inject verified Plant Locations on Home, Contact, About, Manufacturing, and Catalog pages
+  if (
+    norm === "/" ||
+    norm === "/contact" ||
+    norm === "/who-we-are" ||
+    norm === "/what-we-do" ||
+    norm === "/product-application"
+  ) {
+    graph.push(...PLANT_LOCATIONS_SCHEMA);
+  }
 
   if (norm === "/") {
     graph.push({
@@ -421,31 +715,46 @@ export function buildPageJsonLd(routePath, customMeta = {}) {
     });
   }
 
-  if (pageConfig.schemaType === "Product" && pageConfig.productInfo) {
-    const prod = pageConfig.productInfo;
+  // Catalog Category page: inject ItemList and all 6 Products
+  if (norm === "/product-application" || pageConfig.schemaType === "Catalog") {
+    const productRoutes = [
+      "/product-application/rear-axle-shaft",
+      "/product-application/front-axle-shaft",
+      "/product-application/driveline-parts",
+      "/product-application/gear-box-parts",
+      "/product-application/hydraulic-parts",
+      "/product-application/planetary-wheel-drive-parts",
+    ];
+
+    const catalogItems = productRoutes.map((pRoute, idx) => {
+      const pCfg = SEO_PAGES[pRoute];
+      const pProd = pCfg.productInfo;
+      const pCanonical = getCanonicalUrl(pCfg.canonicalPath);
+      const pOgImage = pCfg.ogImage.startsWith("http") ? pCfg.ogImage : `${SITE_URL}${pCfg.ogImage}`;
+      return {
+        "@type": "ListItem",
+        position: idx + 1,
+        name: pProd.name,
+        url: pCanonical,
+        item: buildProductSchema(pProd, pCanonical, pOgImage),
+      };
+    });
+
     graph.push({
       "@context": "https://schema.org",
-      "@type": "Product",
-      "@id": `${canonicalUrl}#product`,
-      name: prod.name,
-      sku: prod.sku,
-      category: prod.category,
-      description: prod.description,
-      image: [ogImageUrl],
-      brand: {
-        "@type": "Brand",
-        name: "Emmbros Autocomp Ltd",
-      },
-      manufacturer: { "@id": `${SITE_URL}/#organization` },
-      offers: {
-        "@type": "Offer",
-        url: canonicalUrl,
-        priceCurrency: "INR",
-        price: "0",
-        availability: "https://schema.org/InStock",
-        seller: { "@id": `${SITE_URL}/#organization` },
-      },
+      "@type": "ItemList",
+      "@id": `${canonicalUrl}#catalog`,
+      name: "Emmbros Autocomp OEM Automotive Components Catalog",
+      description:
+        "OEM catalog of precision forged and CNC-machined rear axle shafts, front axle shafts, driveline parts, transmission gears, hydraulic parts, and planetary drives.",
+      numberOfItems: catalogItems.length,
+      itemListElement: catalogItems,
     });
+  }
+
+  // Individual Product page
+  if (pageConfig.schemaType === "Product" && pageConfig.productInfo) {
+    graph.push(buildProductSchema(pageConfig.productInfo, canonicalUrl, ogImageUrl));
   }
 
   return graph;

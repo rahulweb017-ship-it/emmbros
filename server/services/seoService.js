@@ -1,5 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { Post } from "../models/Post.js";
 import { Job } from "../models/Job.js";
+import { DEFAULT_POSTS } from "../config/defaultPosts.js";
 import {
   SITE_URL,
   SITE_NAME,
@@ -9,6 +13,25 @@ import {
   normalizeCanonicalPath,
   buildPageJsonLd,
 } from "../../client/src/config/seoConfig.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SSR_DIR = path.resolve(__dirname, "../../client/dist-ssr");
+
+let cachedSsrRenderer = null;
+
+async function getSsrRenderer() {
+  if (cachedSsrRenderer) return cachedSsrRenderer;
+  const ssrFile = path.join(SSR_DIR, "entry-server.js");
+  if (fs.existsSync(ssrFile)) {
+    try {
+      cachedSsrRenderer = await import(pathToFileURL(ssrFile).href);
+      return cachedSsrRenderer;
+    } catch (err) {
+      console.warn("[ssr] Warning: Could not load SSR module:", err.message);
+    }
+  }
+  return null;
+}
 
 function escapeHtml(str = "") {
   return String(str)
@@ -36,13 +59,16 @@ export async function getSitemapXml() {
     };
   });
 
-  // Fetch published blog posts
-  const posts = await Post.find({ status: "published" }).select("slug updatedAt createdAt");
+  // Fetch published blog posts from DB, fallback to default posts
+  let posts = await Post.find({ status: "published" }).select("slug updatedAt createdAt");
+  if (!posts || posts.length === 0) {
+    posts = DEFAULT_POSTS;
+  }
   const postUrls = posts.map((p) => ({
     loc: `${SITE_URL}/blog/${p.slug}`,
-    lastmod: (p.updatedAt || p.createdAt || new Date()).toISOString().split("T")[0],
+    lastmod: (p.updatedAt || p.createdAt || p.publishedAt || new Date()).toISOString().split("T")[0],
     priority: "0.8",
-    changefreq: "weekly",
+    changefreq: "monthly",
   }));
 
   // Fetch open jobs
@@ -85,18 +111,115 @@ Sitemap: ${SITE_URL}/sitemap.xml
 
 export async function resolveDynamicCmsMeta(reqPath) {
   const normPath = normalizeCanonicalPath(reqPath);
+  const renderer = await getSsrRenderer();
 
-  // 1. Single Blog Post: /blog/:slug
+  // 1. Blog Listing Directory: /blog
+  if (normPath === "/blog") {
+    let posts = await Post.find({ status: "published" })
+      .sort({ publishedAt: -1, createdAt: -1 })
+      .limit(12)
+      .lean();
+
+    if (!posts || posts.length === 0) {
+      posts = DEFAULT_POSTS;
+    }
+
+    const categories = [...new Set(posts.map((p) => p.category).filter(Boolean))];
+    const initialData = {
+      posts,
+      pagination: { page: 1, limit: 12, total: posts.length, totalPages: 1 },
+      categories,
+    };
+
+    let bodyHtml = "";
+    if (renderer && typeof renderer.render === "function") {
+      try {
+        const rendered = renderer.render("/blog", initialData);
+        bodyHtml = rendered.appHtml;
+      } catch (err) {
+        console.error("[ssr] Error rendering /blog:", err.message);
+      }
+    }
+
+    const title = "Engineering & Manufacturing Blog | Emmbros Autocomp Ltd";
+    const description =
+      "Explore technical articles, closed-die forging innovations, induction hardening metallurgy, and OEM case studies from Emmbros Autocomp Ltd.";
+    const canonical = `${SITE_URL}/blog`;
+    const ogImage = `${SITE_URL}/assets/images/logo1.webp`;
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "Emmbros Autocomp Engineering Blog",
+      url: canonical,
+      description,
+      publisher: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/assets/images/logo1.webp`,
+        },
+      },
+      blogPost: posts.map((p) => ({
+        "@type": "BlogPosting",
+        headline: p.title,
+        url: `${SITE_URL}/blog/${p.slug}`,
+        datePublished: new Date(p.publishedAt || p.createdAt || Date.now()).toISOString(),
+      })),
+    };
+
+    return {
+      title,
+      description,
+      canonical,
+      ogImage,
+      ogType: "website",
+      robots: "index, follow",
+      jsonLd,
+      bodyHtml,
+      initialData,
+    };
+  }
+
+  // 2. Single Blog Post: /blog/:slug
   const blogMatch = normPath.match(/^\/blog\/([a-z0-9-]+)$/i);
   if (blogMatch) {
     const slug = blogMatch[1];
-    const post = await Post.findOne({ slug, status: "published" });
+    let post = await Post.findOne({ slug, status: "published" }).lean();
+    if (!post) {
+      post = DEFAULT_POSTS.find((p) => p.slug === slug);
+    }
     if (!post) return null;
+
+    const initialData = { post };
+    let bodyHtml = "";
+
+    if (renderer && typeof renderer.render === "function") {
+      try {
+        const rendered = renderer.render(`/blog/${slug}`, initialData);
+        bodyHtml = rendered.appHtml;
+      } catch (err) {
+        console.error(`[ssr] Error rendering /blog/${slug}:`, err.message);
+      }
+    }
+
+    // Fallback if SSR renderer is absent
+    if (!bodyHtml) {
+      bodyHtml = `<article style="max-width:840px;margin:40px auto;padding:0 20px">
+        <h1>${escapeHtml(post.title)}</h1>
+        <div style="font-size:14px;color:#6b7280;margin-bottom:20px">${post.category || "General"} | ${new Date(post.publishedAt || post.createdAt || Date.now()).toDateString()}</div>
+        ${post.featuredImage?.url ? `<img src="${post.featuredImage.url}" alt="${escapeHtml(post.featuredImage.alt || post.title)}" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:24px" />` : ""}
+        <div>${post.content || ""}</div>
+      </article>`;
+    }
+
     const title = post.seo?.metaTitle || `${post.title} | Emmbros Autocomp Ltd`;
     const description =
       post.seo?.metaDescription || post.excerpt || stripTags(post.content).slice(0, 155);
     const canonical = post.seo?.canonicalUrl || `${SITE_URL}/blog/${post.slug}`;
-    const ogImage = post.seo?.ogImage || post.featuredImage?.url || `${SITE_URL}/assets/og/blog-og.webp`;
+    const ogImage = post.seo?.ogImage || post.featuredImage?.url || `${SITE_URL}/assets/images/logo1.webp`;
     let robots = "index, follow";
     if (post.seo?.noindex) robots = "noindex, follow";
     if (post.seo?.nofollow) robots = post.seo?.noindex ? "noindex, nofollow" : "index, nofollow";
@@ -107,8 +230,8 @@ export async function resolveDynamicCmsMeta(reqPath) {
       headline: post.title,
       description,
       image: [ogImage],
-      datePublished: (post.publishedAt || post.createdAt).toISOString(),
-      dateModified: post.updatedAt.toISOString(),
+      datePublished: new Date(post.publishedAt || post.createdAt || Date.now()).toISOString(),
+      dateModified: new Date(post.updatedAt || post.publishedAt || Date.now()).toISOString(),
       author: {
         "@type": "Organization",
         name: SITE_NAME,
@@ -122,7 +245,12 @@ export async function resolveDynamicCmsMeta(reqPath) {
           url: `${SITE_URL}/assets/images/logo1.webp`,
         },
       },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": canonical,
+      },
     };
+
     return {
       title,
       description,
@@ -131,13 +259,12 @@ export async function resolveDynamicCmsMeta(reqPath) {
       ogType: "article",
       robots,
       jsonLd,
-      bodyHtml: `<article style="max-width:900px;margin:40px auto;padding:0 20px"><h1>${escapeHtml(
-        post.title
-      )}</h1><div>${post.content || ""}</div></article>`,
+      bodyHtml,
+      initialData,
     };
   }
 
-  // 2. Single Job Posting: /careers/:slug
+  // 3. Single Job Posting: /careers/:slug
   const careerMatch = normPath.match(/^\/careers\/([a-z0-9-]+)$/i);
   if (careerMatch) {
     const slug = careerMatch[1];
@@ -212,6 +339,11 @@ export async function injectSeoMetadata(htmlShell, reqPath) {
   const cmsMeta = await resolveDynamicCmsMeta(normPath);
   if (!cmsMeta) return null;
 
+  let stateScript = "";
+  if (cmsMeta.initialData) {
+    stateScript = `\n    <script>window.__INITIAL_DATA__ = ${JSON.stringify(cmsMeta.initialData).replace(/</g, "\\u003c")};</script>`;
+  }
+
   const seoHeadBlock = [
     `<title>${escapeHtml(cmsMeta.title)}</title>`,
     `<meta name="description" content="${escapeHtml(cmsMeta.description)}" />`,
@@ -229,7 +361,7 @@ export async function injectSeoMetadata(htmlShell, reqPath) {
     `<meta name="twitter:title" content="${escapeHtml(cmsMeta.title)}" />`,
     `<meta name="twitter:description" content="${escapeHtml(cmsMeta.description)}" />`,
     `<meta name="twitter:image" content="${escapeHtml(cmsMeta.ogImage)}" />`,
-    `<script type="application/ld+json">${JSON.stringify(cmsMeta.jsonLd)}</script>`,
+    `<script type="application/ld+json">${JSON.stringify(cmsMeta.jsonLd)}</script>${stateScript}`,
   ].join("\n    ");
 
   return htmlShell

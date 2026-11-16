@@ -1,0 +1,102 @@
+# Emmbros Autocomp Ltd - Comprehensive Technical & Metallurgy Dossier
+
+> Expanded technical documentation, engineering standards, alloy chemistry specifications, heat treatment protocols, and manufacturing equipment details for Emmbros Autocomp Limited (Baddi, Himachal Pradesh, India).
+
+## 1. Company Profile
+- **Legal Name**: Emmbros Autocomp Limited (EAL)
+- **Founded**: 1991
+- **Headquarters**: Plot No. 63, EPIP Phase-1, Jharmajri, Baddi, District Solan, Himachal Pradesh – 174103, India
+- **Core Industry**: Tier-1 OEM Automotive, Tractor, and Heavy Industrial Forgings & Driveline Components
+- **Annual Capacity**: 500,000+ axle shafts; 25,000+ metric tonnes of forged alloy components
+- **Key OEM Customers**: Tata Motors, Ashok Leyland, Mahindra & Mahindra, Escorts Kubota, and international drivetrain assemblers
+
+## 2. Manufacturing Plant Directory
+1. **Regd & Works (Katha Plant - Unit 1)**
+   - Address: Village Katha, Baddi, District Solan, HP 173205, India
+   - GPS Coordinates: 30.9578° N, 76.7914° E
+   - Primary Operations: Closed-die forging presses (1,000 MT to 2,000 MT), horizontal upsetter forging machines (3-inch to 5-inch bar capacity), billet induction heaters, raw alloy steel stockyard.
+   - Telephone: +91-78077-72004 | Email: reception@emmbros.com
+
+2. **Corporate Office & Works (Bhud Plant - Unit 2)**
+   - Address: Village Bhud, Baddi, District Solan, HP 173205, India
+   - GPS Coordinates: 30.9421° N, 76.8042° E
+   - Primary Operations: Multi-axis CNC turning centers, vertical machining centers (VMC), horizontal machining centers (HMC), precision cylindrical grinding, and executive management.
+   - Telephone: +91-78078-80990 | Email: enquiry@emmbros.com
+
+3. **EPIP Forging & Machining Works (Unit 3)**
+   - Address: Plot No. 63, EPIP Phase-1, Jharmajri, Baddi, District Solan, HP 174103, India
+   - GPS Coordinates: 30.9384° N, 76.8103° E
+   - Primary Operations: Automated dual-spindle vertical CNC induction hardening scanners, continuous polymer quench systems, spline cold-rolling machines (DIN 5480, ANSI B92.1), continuous tempering furnaces, central metallurgical quality testing lab, and OEM sales desk.
+   - Telephone: +91-98169-31822 | Email: enquiry@emmbros.com
+
+## 3. Product Catalog with Metallurgy Specifications
+
+### A. OEM Rear Axle Shafts (Full-Floating & Flanged)
+- **URL**: https://emmbros.com/product-application/rear-axle-shaft
+- **SKU**: EAL-RAS-001 | **MPN**: EAL-RAS-SERIES
+- **Weight Range**: 0.5 kg to 65 kg (Length up to 1,250 mm; Flange diameter up to 240 mm)
+- **Steel Grades**:
+  - SAE 1541: Carbon 0.36–0.44%, Manganese 1.35–1.65%, Silicon 0.15–0.35%
+  - SAE 15B41: Boron-treated for enhanced deep hardenability (Boron 0.0008–0.003%)
+  - EN19 / SAE 4140 (42CrMo4): Chromium-Molybdenum alloy for severe torsional fatigue life
+  - EN8D / SAE 1045: Medium carbon steel for agricultural utility applications
+- **Heat Treatment**: Full-body or selective induction scanning (Frequency: 10 kHz to 30 kHz); Effective case depth: 4.0 mm to 9.5 mm at 50 HRC cutoff; Surface hardness: 54–62 HRC; Core hardness: 28–34 HRC.
+- **Splines**: Involute cold-rolled or hobbed to DIN 5480, ANSI B92.1, and JIS D 2001 tolerances.
+
+### B. OEM Front Axle Shafts & Wheel Spindles
+- **URL**: https://emmbros.com/product-application/front-axle-shaft
+- **SKU**: EAL-FAS-002 | **MPN**: EAL-FAS-SERIES
+- **Weight Range**: 1.0 kg to 45 kg
+- **Applications**: 4WD tractor driven front axles, commercial truck steering axles, off-road dumpers.
+- **Steel Grades**: EN19 (42CrMo4), EN24 (34CrNiMo6), SAE 1045.
+- **Quality Checks**: 100% Magnetic Particle Inspection (MPI) on critical fillet transitions and spline runouts.
+
+### C. OEM Driveline Parts, Cardan Shafts & Yokes
+- **URL**: https://emmbros.com/product-application/driveline-parts
+- **SKU**: EAL-DLP-003 | **MPN**: EAL-DLP-SERIES
+- **Weight Range**: 0.5 kg to 35 kg
+- **Product Forms**: Companion flanges, slip yokes, weld yokes, end yokes, stub shafts, propeller shaft components.
+- **Steel Grades**: SAE 1045, 20MnCr5, SAE 1141 micro-alloyed forging grades.
+
+### D. OEM Gearbox Parts & Transmission Shafts
+- **URL**: https://emmbros.com/product-application/gear-box-parts
+- **SKU**: EAL-GBP-004 | **MPN**: EAL-GBP-SERIES
+- **Weight Range**: 0.8 kg to 30 kg
+- **Product Forms**: Transmission input shafts, countershafts, main shafts, planet carriers, bull gears, speed gears.
+- **Steel Grades**: 16MnCr5, 20MnCr5, SAE 8620 case-carburizing steels; Case depth: 0.8 mm to 1.6 mm (58–62 HRC).
+
+### E. OEM Hydraulic Lift Shafts & Cylinder Pistons
+- **URL**: https://emmbros.com/product-application/hydraulic-parts
+- **SKU**: EAL-HYP-005 | **MPN**: EAL-HYP-SERIES
+- **Weight Range**: 1.0 kg to 40 kg
+- **Product Forms**: Hydraulic rockshafts, lift arms, hydraulic brake pistons, fluid power connectors.
+- **Steel Grades**: EN8D, micro-alloyed carbon steel, medium carbon alloy forgings.
+
+### F. OEM Planetary Wheel Drives & Flange Hubs
+- **URL**: https://emmbros.com/product-application/planetary-wheel-drive-parts
+- **SKU**: EAL-PWD-006 | **MPN**: EAL-PWD-SERIES
+- **Weight Range**: 2.0 kg to 65 kg
+- **Product Forms**: Planetary carriers, wheel flange hubs, ring gear supports, sun gears.
+- **Steel Grades**: EN19 (42CrMo4), EN24, 20MnCr5.
+
+## 4. Quality Management & Laboratory Equipment
+- **Accreditations**:
+  - IATF 16949:2016 (Automotive Quality Management System)
+  - ISO 9001:2015 (Quality Management System)
+  - ISO 14001:2015 (Environmental Management System)
+  - ISO 45001:2018 (Occupational Health & Safety)
+- **Metallurgical Lab Instruments**:
+  - Optical Emission Spectrometer (28 chemical channels including C, Mn, Si, Cr, Ni, Mo, B, V, Al)
+  - CNC Coordinate Measuring Machine (CMM, accuracy: 1.8 µm + L/300)
+  - Micro-Vickers Hardness Tester (HV 0.1 to HV 5.0 for case depth profiling)
+  - Rockwell & Brinell Hardness Testers (HRC / HBW)
+  - Fluorescent Magnetic Particle Inspection (MPI) benches (ASTM E1444 compliant)
+  - Ultrasonic Flaw Detector (ASTM A388 compliant for internal bar soundness)
+  - Optical Metallurgical Microscope for micro-structure (martensite rating, ASTM E45 inclusion rating)
+
+## 5. Contact & Commercial Inquiry Channel
+- **RFQ Submission**: https://emmbros.com/contact
+- **Central Sales Email**: enquiry@emmbros.com
+- **Direct Desk Telephone**: +91-98169-31822 / +91-78077-72004 / +91-78078-80990
+- **Supported CAD / Drawing Formats**: STEP (.stp), IGES (.igs), Parasolid (.x_t), DWG (.dwg), PDF (.pdf)
+- **Sample Turnaround**: Prototype and PPAP Level 3 sample delivery within 3–4 weeks from tooling completion.

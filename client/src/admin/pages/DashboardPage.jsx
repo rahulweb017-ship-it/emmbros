@@ -9,6 +9,11 @@ import {
   TrendingUp,
   Activity,
   UserCheck,
+  FileCode,
+  ArrowRightLeft,
+  ExternalLink,
+  Clock,
+  Sparkles,
 } from "lucide-react";
 import { apiClient } from "../../api/apiClient";
 import { StatusBadge } from "../components/StatusBadge";
@@ -21,6 +26,7 @@ export function DashboardPage() {
     draftPosts: 0,
     openJobs: 0,
     mediaCount: 0,
+    pagesCount: 0,
   });
   const [recentPosts, setRecentPosts] = useState([]);
   const [recentJobs, setRecentJobs] = useState([]);
@@ -30,16 +36,18 @@ export function DashboardPage() {
     async function fetchDashboardData() {
       setLoading(true);
       try {
-        const [postsRes, jobsRes, mediaRes, logsRes] = await Promise.all([
+        const [postsRes, jobsRes, mediaRes, pagesRes, logsRes] = await Promise.all([
           apiClient.get("/api/admin/posts?limit=5"),
           apiClient.get("/api/admin/jobs?limit=5"),
           apiClient.get("/api/admin/media?limit=1"),
+          apiClient.get("/api/admin/pages?limit=1"),
           apiClient.get("/api/admin/activity-logs?limit=8"),
         ]);
 
         const posts = postsRes.data || [];
         const jobs = jobsRes.data || [];
         const mediaTotal = mediaRes.pagination?.total || 0;
+        const pagesTotal = pagesRes.pagination?.total || 0;
         const logs = logsRes.data || [];
 
         const published = posts.filter((p) => p.status === "published").length;
@@ -51,6 +59,7 @@ export function DashboardPage() {
           draftPosts: drafts,
           openJobs: jobsRes.pagination?.total ? open : jobs.length,
           mediaCount: mediaTotal,
+          pagesCount: pagesTotal,
         });
 
         setRecentPosts(posts);
@@ -72,17 +81,28 @@ export function DashboardPage() {
 
   return (
     <div className="admin-dashboard-view">
+      {/* Page Header */}
       <div className="admin-page-header">
         <div>
+          <div className="admin-badge-pill">
+            <Sparkles size={13} />
+            <span>Admin Control Center</span>
+          </div>
           <h1 className="admin-page-title">Dashboard Overview</h1>
-          <p className="admin-page-subtitle">Welcome to Emmbros Autocomp Admin & Content Management</p>
+          <p className="admin-page-subtitle">
+            Welcome to Emmbros Autocomp content management & SEO console
+          </p>
         </div>
-        <div className="flex-row-gap">
+        <div className="flex-row-gap" style={{ display: "flex", gap: "10px" }}>
+          <Link to="/admin/pages" className="admin-btn admin-btn-secondary">
+            <FileCode size={15} />
+            <span>Pages & SEO</span>
+          </Link>
           <Link to="/admin/posts/new" className="admin-btn admin-btn-primary">
             <Plus size={16} />
             <span>New Post</span>
           </Link>
-          <Link to="/admin/jobs/new" className="admin-btn admin-btn-secondary">
+          <Link to="/admin/jobs/new" className="admin-btn admin-btn-primary">
             <Plus size={16} />
             <span>Post Job</span>
           </Link>
@@ -132,45 +152,82 @@ export function DashboardPage() {
         </div>
       </div>
 
+      {/* Quick Action Shortcuts Banner */}
+      <div className="admin-quick-links-bar">
+        <span className="admin-quick-links-title">Quick Navigation:</span>
+        <div className="admin-quick-pills">
+          <Link to="/admin/pages" className="admin-quick-pill">
+            <FileCode size={13} />
+            <span>16 Website Pages & SEO</span>
+          </Link>
+          <Link to="/admin/redirects" className="admin-quick-pill">
+            <ArrowRightLeft size={13} />
+            <span>301 Redirect Rules</span>
+          </Link>
+          <Link to="/admin/media" className="admin-quick-pill">
+            <ImageIcon size={13} />
+            <span>Media Library</span>
+          </Link>
+          <a href="/" target="_blank" rel="noreferrer" className="admin-quick-pill external">
+            <ExternalLink size={13} />
+            <span>Visit Live Website</span>
+          </a>
+        </div>
+      </div>
+
       {/* Recent Activity & Logs Grid */}
       <div className="admin-dashboard-grid">
         {/* Recent Posts */}
         <div className="admin-card">
           <div className="admin-card-header">
-            <h2 className="admin-card-title">Recent Blog Posts</h2>
-            <Link to="/admin/posts" className="admin-btn admin-btn-secondary" style={{ padding: "4px 8px", fontSize: 12 }}>
+            <div>
+              <h2 className="admin-card-title">Recent Blog Posts</h2>
+              <span className="admin-card-caption">Latest articles published on website</span>
+            </div>
+            <Link to="/admin/posts" className="admin-link-btn">
               <span>View All</span>
-              <ArrowRight size={12} />
+              <ArrowRight size={13} />
             </Link>
           </div>
 
           {recentPosts.length === 0 ? (
-            <p className="admin-form-hint">No blog posts created yet.</p>
+            <div className="admin-empty-box">
+              <FileText size={32} className="admin-empty-icon" />
+              <p className="admin-empty-title">No blog posts created yet</p>
+              <p className="admin-empty-text">Create your first blog post to populate your technical insights feed.</p>
+              <Link to="/admin/posts/new" className="admin-btn admin-btn-sm admin-btn-primary" style={{ marginTop: 12 }}>
+                <Plus size={14} />
+                <span>Create Post</span>
+              </Link>
+            </div>
           ) : (
-            <table className="admin-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Category</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentPosts.map((post) => (
-                  <tr key={post._id}>
-                    <td>
-                      <strong>{post.title}</strong>
-                      <br />
-                      <span className="admin-form-hint">/{post.slug}</span>
-                    </td>
-                    <td>{post.category || "General"}</td>
-                    <td>
-                      <StatusBadge status={post.status} />
-                    </td>
+            <div className="admin-table-container">
+              <table className="admin-table">
+                <thead>
+                  <tr>
+                    <th>Title & URL</th>
+                    <th>Category</th>
+                    <th>Status</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {recentPosts.map((post) => (
+                    <tr key={post._id}>
+                      <td>
+                        <strong style={{ color: "#0f172a", fontSize: 13 }}>{post.title}</strong>
+                        <div style={{ color: "#64748b", fontSize: 11, marginTop: 2 }}>/blog/{post.slug}</div>
+                      </td>
+                      <td>
+                        <span className="admin-badge-soft">{post.category || "General"}</span>
+                      </td>
+                      <td>
+                        <StatusBadge status={post.status} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
 
@@ -178,38 +235,45 @@ export function DashboardPage() {
         <div className="admin-card">
           <div className="admin-card-header">
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <Activity size={18} color="#2271b1" />
-              <h2 className="admin-card-title">Audit Activity Feed</h2>
+              <div className="admin-card-icon-tag">
+                <Activity size={16} />
+              </div>
+              <div>
+                <h2 className="admin-card-title">Audit Activity Feed</h2>
+                <span className="admin-card-caption">Real-time system action logging</span>
+              </div>
             </div>
-            <span style={{ fontSize: 12, color: "#646970" }}>Live System Audit</span>
+            <span className="admin-live-badge">
+              <span className="admin-live-dot"></span>
+              Live Feed
+            </span>
           </div>
 
           {activityLogs.length === 0 ? (
-            <p className="admin-form-hint">No activity logged yet.</p>
+            <div className="admin-empty-box">
+              <Activity size={32} className="admin-empty-icon" />
+              <p className="admin-empty-title">No activity logged yet</p>
+              <p className="admin-empty-text">Administrative actions, edits, and logins will be tracked here in real time.</p>
+            </div>
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div className="admin-activity-stream">
               {activityLogs.map((log) => (
-                <div
-                  key={log._id}
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: 10,
-                    padding: "8px 12px",
-                    borderRadius: 6,
-                    background: "#f6f7f7",
-                    border: "1px solid #f0f0f1",
-                  }}
-                >
-                  <UserCheck size={16} color="#0073aa" style={{ marginTop: 2 }} />
-                  <div style={{ flex: 1, fontSize: 13 }}>
-                    <div>
-                      <strong>{log.userName}</strong> ({log.action.replace(/_/g, " ")})
-                    </div>
-                    <div style={{ fontSize: 12, color: "#50575e", marginTop: 2 }}>{log.details}</div>
+                <div key={log._id} className="admin-activity-item">
+                  <div className="admin-activity-dot-line">
+                    <span className="admin-activity-dot"></span>
                   </div>
-                  <div style={{ fontSize: 11, color: "#8c8f94", whiteSpace: "nowrap" }}>
-                    {new Date(log.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                  <div className="admin-activity-content">
+                    <div className="admin-activity-head">
+                      <strong className="admin-activity-user">{log.userName || "System"}</strong>
+                      <span className="admin-activity-action">{log.action ? log.action.replace(/_/g, " ") : "performed action"}</span>
+                    </div>
+                    {log.details && (
+                      <div className="admin-activity-details">{log.details}</div>
+                    )}
+                    <div className="admin-activity-time">
+                      <Clock size={11} />
+                      <span>{new Date(log.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}</span>
+                    </div>
                   </div>
                 </div>
               ))}

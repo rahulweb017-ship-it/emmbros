@@ -22,10 +22,10 @@ export function Header() {
             src="/assets/images/logo1.webp"
             alt="Emmbros Autocomp Ltd Logo"
             className="emmbros-logo-img"
-            width="280"
-            height="66"
+            width="316"
+            height="59"
             loading="eager"
-            style={{ maxHeight: 65, width: "auto", objectFit: "contain" }}
+            style={{ maxHeight: 59, width: "auto", objectFit: "contain", aspectRatio: "316 / 59" }}
           />
         </Link>
 
@@ -137,10 +137,10 @@ export function Header() {
               <img
                 src="/assets/images/logo-1.webp"
                 alt="Emmpower Automotive Spares by Emmbros"
-                width="135"
-                height="42"
+                width="171"
+                height="94"
                 loading="eager"
-                style={{ maxHeight: 38, width: "auto", objectFit: "contain" }}
+                style={{ maxHeight: 38, width: "auto", objectFit: "contain", aspectRatio: "171 / 94" }}
               />
             </a>
           </div>

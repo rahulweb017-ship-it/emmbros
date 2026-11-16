@@ -81,7 +81,8 @@ export function AppRoutes() {
         {/* CMS Public Views */}
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
-        <Route path="/careers" element={<CareersListPage />} />
+        <Route path="/careers" element={<Navigate to="/career" replace />} />
+        <Route path="/careers/" element={<Navigate to="/career" replace />} />
         <Route path="/careers/:slug" element={<JobDetailPage />} />
 
         {/* 404 Catch-All */}

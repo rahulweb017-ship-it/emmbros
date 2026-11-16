@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ensureAdminSeeded } from "./seedOnStart.js";
+import { ensureAdminSeeded, ensurePagesSeeded, ensurePostsSeeded } from "./seedOnStart.js";
 
 let memoryServer = null;
 
@@ -19,8 +19,10 @@ export async function connectDB() {
       console.log(`[db] Connected to in-memory MongoDB at ${memoryUri}`);
     }
 
-    // Automatically ensure initial admin user is seeded
+    // Automatically ensure initial admin user and default pages are seeded
     await ensureAdminSeeded();
+    await ensurePagesSeeded();
+    await ensurePostsSeeded();
   } catch (err) {
     console.error("[db] MongoDB connection error:", err.message);
     process.exit(1);
