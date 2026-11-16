@@ -27,6 +27,7 @@ const SUBMISSIONS_LOG = path.join(__dirname, "submissions.log");
 
 const app = express();
 app.disable("x-powered-by");
+app.set("trust proxy", "loopback");
 
 // Connect to MongoDB
 connectDB();
@@ -383,4 +384,4 @@ if (fs.existsSync(CLIENT_DIST)) {
   console.warn(`[static] ${CLIENT_DIST} not found. Run "npm run build" in client/ first.`);
 }
 
-app.listen(PORT, () => console.log(`[server] listening on http://localhost:${PORT}`));
+app.listen(PORT, "127.0.0.1", () => console.log(`[server] listening on http://localhost:${PORT}`));
